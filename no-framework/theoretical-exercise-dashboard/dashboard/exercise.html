@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exerciseStyle.css">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <title>Exercise Tracker</title>
+</head>
+<body>
+    
+    <section id="menu">
+        <div class="logo">
+            <!-- Adding the logo -->
+            <img src="images/logo.png" alt="logo">
+            <h2>Dynamic</h2>
+
+        </div>
+
+        <div class="items">
+            <li><i class="fa fa-pie-chart" aria-hidden="true"><a href="#">Dashboard</a></i></li>
+            <li><i class="fa fa-user" aria-hidden="true"><a href="#">Statistics</a></i></li>
+            <li><i class="fa fa-id-badge" aria-hidden="true"><a href="#">Friends Activity</a></i></li>
+            <li><i class="fa fa-filter" aria-hidden="true"><a href="#">People Search</a></i></li>
+            <li><i class="fa fa-lock" aria-hidden="true"><a href="#">Admin</a></i></li>
+            <!-- Font awesome icon for friends activity -->
+
+
+
+            
+
+        </div>
+    </section>
+
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class="fa fa-bars"></i>
+                </div>
+                <div class="search">
+                    <!-- Icon -->
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <!-- Input field -->
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+
+            <!-- Bell icon and pfp on top right -->
+            <div class="profile">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+                <img src="images/1.png" alt="pfp">
+            </div>
+        </div>
+
+        <!-- The title -->
+        <h3 class="i-name">
+            Dashboard
+            <button class="add-workout">
+                <i></i>
+                Add Workout
+            </button>
+        </h3>
+
+        
+
+        <div class="values">
+            <div class="val-box">
+                <i class="fa fa-users"></i>
+                <div>
+                    <h3>Legs</h3>
+                    <span>Workout Today</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fa fa-level-up"></i>
+                <div>
+                    <h3>Normal</h3>
+                    <span>Intensity</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fa fa-globe"></i>
+                <div>
+                    <h3>In X Days</h3>
+                    <span>Rest Day</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fa fa-thermometer-three-quarters"></i>
+                <div>
+                    <h3>For X Days</h3>
+                    <span>Streak</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Creating the table -->
+        <div class="board">
+            <table width="100%">
+                <thead>
+                    <!-- Add a row -->
+                    <tr> 
+                        <!-- Add a column -->
+                        <td>Name</td>
+                        <td>Intensity</td>
+                        <td>Workout</td>
+                        <td>Rest</td>
+                        <td>Streak</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="people">
+                            <!-- Their pfp image -->
+                            <img src="images/1.png" alt="pfp">
+                            <div class="people-de">
+                                <!-- Their name -->
+                                <h5>John Doe</h5>
+                                <!-- Their email -->
+                                <p>john@example.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <!-- Their intensity -->
+                            <h5>Normal</h5>
+                            <p>Go at a normal pace</p>
+                        </td>
+
+                        <td class="active"><p>Active</p></td>
+                        <td class="role">
+                            <p>Owner</p>
+                        </td>
+
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <!-- Their pfp image -->
+                            <img src="images/2.png" alt="pfp">
+                            <div class="people-de">
+                                <!-- Their name -->
+                                <h5>John Doe</h5>
+                                <!-- Their email -->
+                                <p>john@example.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <!-- Their intensity -->
+                            <h5>Normal</h5>
+                            <p>Go at a normal pace</p>
+                        </td>
+
+                        <td class="active"><p>Active</p></td>
+                        <td class="role">
+                            <p>Owner</p>
+                        </td>
+
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <!-- Their pfp image -->
+                            <img src="images/3.png" alt="pfp">
+                            <div class="people-de">
+                                <!-- Their name -->
+                                <h5>John Doe</h5>
+                                <!-- Their email -->
+                                <p>john@example.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <!-- Their intensity -->
+                            <h5>Normal</h5>
+                            <p>Go at a normal pace</p>
+                        </td>
+
+                        <td class="active"><p>Active</p></td>
+                        <td class="role">
+                            <p>Owner</p>
+                        </td>
+
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <!-- We'll move this functionality later to VueJS -->
+    <script>
+        $('#menu-btn').click(function(){
+            // Activate the "active" class
+            $('#menu').toggleClass('active');
+        });
+    </script>
+    
+</body>
+</html>

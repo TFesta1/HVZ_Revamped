@@ -1,1 +1,0 @@
-export default () => <h1 className="title">Weeklong</h1>

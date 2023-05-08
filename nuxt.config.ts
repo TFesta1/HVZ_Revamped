@@ -1,0 +1,43 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+import { resolve } from 'path'
+export default defineNuxtConfig({
+    app: {
+        head: {
+            title: 'Nuxt Typescript Tailwind Starter',
+            meta: [
+                {
+                    // Creates <meta name="Description" content="Repo for Nuxt3">
+                    name: "Description",
+                    content: "Repo for Nuxt3"
+                }
+            ]
+        }
+    },
+
+    alias: {
+        '@': resolve(__dirname, './src'),
+    },
+    css: [
+        '~/assets/main.scss'
+    ],
+    modules: [
+        '@nuxt/content',
+        '@pinia/nuxt'
+    ],
+
+    // https://tailwindcss.com/docs/guides/nuxtjs#3
+    // npm install -D tailwindcss postcss autoprefixer
+    // npx tailwindcss init
+    postcss: {
+        plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
+        },
+    },
+
+    ssr: true, //false: resembles static website true: resembles server side rendering
+    // https://nuxt.com/docs/api/composables/use-fetch --> Notice how theres a "Pending" portion of AsyncData (response)
+    
+
+
+})

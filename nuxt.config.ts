@@ -18,7 +18,7 @@ export default defineNuxtConfig({
         '@': resolve(__dirname, './src'),
     },
     css: [
-        '~/assets/main.scss'
+        '~/assets/main.css'
     ],
     modules: [
         '@nuxt/content',

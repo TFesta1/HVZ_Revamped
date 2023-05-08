@@ -23,7 +23,7 @@
     // })
     // const { sayHello } = useUtils() --> Composables
     const { $sayHello } = useNuxtApp()
-    $sayHello("Tanner")
+    // $sayHello("Tanner")
 </script>
 
 <template>

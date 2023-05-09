@@ -23,6 +23,7 @@
   "dependencies": {
     "@pinia/nuxt": "^0.4.9",
     "dotenv": "^16.0.3",
-    "pinia": "^2.0.35"
+    "pinia": "^2.0.35",
+    "mongodb": "^5.4.0"
   }
 }

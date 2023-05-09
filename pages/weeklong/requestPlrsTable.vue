@@ -1,10 +1,13 @@
 <script setup lang="ts">
+    useHead({
+        title: "Requested Players",
+    })
 
 </script>
 
 <template>
     <div>
-        Header
+        <p>hello</p>
     </div>
 </template>
 

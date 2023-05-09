@@ -1,3 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    
+}
+
+.navbar li {
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar li {
+        margin-bottom: 0;
+    }
+}
+
+.navbar a {
+    font-family: 'Your Custom Font', sans-serif;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+}
+
+  

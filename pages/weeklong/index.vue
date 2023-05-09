@@ -3,10 +3,10 @@
         title: "Weeklong",
     })
 
-    const headers : string[] = ["Name", "Team", "Tags", "Days Survived"]
-    const data : string[][] = [["John Doe", "25", "johndoe@example.com", "johndoe@example.com"], 
-                                ["John Doe", "25", "johndoe@example.com", "johndoe@example.com"],
-                                ["John Doe", "25", "johndoe@example.com", "johndoe@example.com"]]
+    const headers : string[] = ["Name", "Team", "Tags", "Days Survived", "Mod"]
+    const data : string[][] = [["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"], 
+                                ["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"],
+                                ["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"]]
 
 
 </script>

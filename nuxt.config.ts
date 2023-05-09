@@ -35,6 +35,14 @@ export default defineNuxtConfig({
         },
     },
 
+    nitro:
+    {
+        plugins: [
+            '~/server/index.ts'
+        ],
+        // https://nuxt.com/docs/2.x/configuration-glossary/configuration-generate
+    },
+
     ssr: true, //false: resembles static website true: resembles server side rendering
     // https://nuxt.com/docs/api/composables/use-fetch --> Notice how theres a "Pending" portion of AsyncData (response)
     

@@ -1,5 +1,5 @@
 <script setup>
-const counter = useCounter()
+  const counter = useCounter()
 </script>
 <template>
   <div>

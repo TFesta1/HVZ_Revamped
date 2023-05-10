@@ -8,6 +8,9 @@
                                 ["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"],
                                 ["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"]]
 
+    // const { data: products, pending } = await useLazyAsyncData("products", () => $fetch('api/products'))
+    // refreshNuxtData("products")
+
 
 </script>
 

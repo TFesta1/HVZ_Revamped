@@ -1,7 +1,7 @@
 import { Nitro } from 'nitropack';
 import { MongoClient, ObjectId } from 'mongodb';
-
-export default async (_nitroApp : Nitro) => {
+// _nitroApp : Nitro
+export default async function initializeNitroApp() {
     console.log("Nitro")
 
     const url = process.env.MONGO_URL ?? "";

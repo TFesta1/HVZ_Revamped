@@ -1,7 +1,7 @@
 <!-- At the root directory -->
 <!-- https://nuxt.com/modules -->
 <script setup lang="ts">
-    const resp = await $fetch('/api/hello')
+    // const resp = await $fetch('/api/hello')
     const productsShow = ref();
     const title = ref("This is a dynamic title")
     // console.log(resp)
@@ -23,7 +23,7 @@
     // })
     // const { sayHello } = useUtils() --> Composables
     const { $sayHello } = useNuxtApp()
-    // $sayHello("Tanner")
+    $sayHello("Tanner")
 </script>
 
 <template>

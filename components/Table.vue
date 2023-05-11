@@ -11,6 +11,7 @@
     });
     // Destructure the props to access them
     const { headers, data } = props;
+    refreshNuxtData("users")
     // console.log(headers)
 
 </script>

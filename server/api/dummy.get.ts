@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 
 // NOTE, double check that a username isn't already in the DB before inserting
 const fakeData = [{
-     "nickname": "",
+     "nickname": "Kenter",
      "username": "Reyna",
      "email": "",
      "password": "hashedPassword",
@@ -23,9 +23,10 @@ const fakeData = [{
      "team": "Screw the panda team",
      "isHuman": true,
      "coins": 0,
+     "daysSurvived": 2
 },
 {
-     "nickname": "",
+     "nickname": "Kyle",
      "username": "Panda",
      "email": "",
      "password": "hashedPassword",
@@ -37,9 +38,10 @@ const fakeData = [{
      "team": "Panda Team",
      "isHuman": true,
      "coins": 100,
+     "daysSurvived": 3
 },
 {
-     "nickname": "",
+     "nickname": "Jenny",
      "username": "DefinitelyNotOZ",
      "email": "",
      "password": "hashedPassword",
@@ -51,6 +53,7 @@ const fakeData = [{
      "team": "Panda Team",
      "isHuman": true,
      "coins": 0,
+     "daysSurvived": 1
 }]
 
 

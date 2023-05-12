@@ -33,4 +33,17 @@
     padding: 0 0.5rem;
 }
 
+.animate-pulse {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
   

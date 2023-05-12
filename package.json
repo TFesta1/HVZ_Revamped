@@ -22,8 +22,9 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.9",
+    "axios": "^1.4.0",
     "dotenv": "^16.0.3",
-    "pinia": "^2.0.35",
-    "mongodb": "^5.4.0"
+    "mongodb": "^5.4.0",
+    "pinia": "^2.0.35"
   }
 }

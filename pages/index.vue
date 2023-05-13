@@ -24,7 +24,7 @@
 
         console.log(user.value?.email)
         // console.log(user.value?.user_metadata)
-        
+        // console.log(user.value?.id)
     }) 
     
 

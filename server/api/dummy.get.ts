@@ -14,14 +14,12 @@ const fakeData = [{
      "nickname": "Kenter",
      "username": "Reyna",
      "email": "",
-     "password": "hashedPassword",
      "photo": "https://robohash.org/hicveldicta.png?size=50x50&set=set1",
      "isMod": true,
      "isAdmin": false,
      "zombieHumanOz": 0, // 0 = human, 1 = zombie, 2 = oz
      "tags": 0,
      "team": "Screw the panda team",
-     "isHuman": true,
      "coins": 0,
      "daysSurvived": 2
 },
@@ -29,14 +27,12 @@ const fakeData = [{
      "nickname": "Kyle",
      "username": "Panda",
      "email": "",
-     "password": "hashedPassword",
      "photo": "https://robohash.org/hicveldicta.png?size=50x50&set=set1",
      "isMod": false,
      "isAdmin": true,
      "zombieHumanOz": 1, // 0 = human, 1 = zombie, 2 = oz
      "tags": 3,
      "team": "Panda Team",
-     "isHuman": true,
      "coins": 100,
      "daysSurvived": 3
 },
@@ -44,14 +40,12 @@ const fakeData = [{
      "nickname": "Jenny",
      "username": "DefinitelyNotOZ",
      "email": "",
-     "password": "hashedPassword",
      "photo": "https://robohash.org/hicveldicta.png?size=50x50&set=set1",
      "isMod": false,
      "isAdmin": false,
      "zombieHumanOz": 2, // 0 = human, 1 = zombie, 2 = oz
      "tags": 0,
      "team": "Panda Team",
-     "isHuman": true,
      "coins": 0,
      "daysSurvived": 1
 }]

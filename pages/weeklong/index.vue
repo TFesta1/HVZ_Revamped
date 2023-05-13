@@ -10,9 +10,9 @@
     })
 
     const headers : string[] = ["Photo", "Name", "Team", "Tags", "Days Survived", "Mod"]
-    const data : string[][] = [["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"], 
-                                ["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"],
-                                ["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"]]
+    // const data : string[][] = [["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"], 
+    //                             ["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"],
+    //                             ["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"]]
 
     // const users: User[] = items as User[];
     // console.log(products.value)
@@ -25,14 +25,17 @@
         const items = response.data.data;
         // console.log(items);
 
-        users.value = items.map((item : User) => ({
-          photo: item.photo,
-          nickname: item.nickname,
-          team: item.team,
-          tags: item.tags,
-          daysSurvived: item.daysSurvived,
-          mod: item.isMod,
-        }));
+        users.value = items
+          .filter((item: User) => item.isInWeeklong)
+          .map((item : User) => ({
+            
+            photo: item.photo,
+            nickname: item.nickname,
+            team: item.team,
+            tags: item.tags,
+            daysSurvived: item.daysSurvived,
+            mod: item.isMod,
+          }));
 
         console.log(users.value);
         usersLoaded.value = true;

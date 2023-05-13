@@ -4,6 +4,7 @@ export interface User {
     email: string;
     photo: string;
     isMod: string;
+    isInWeeklong: boolean;
     isAdmin: string;
     zombieHumanOz: number;
     tags: number;

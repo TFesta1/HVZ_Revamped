@@ -16,6 +16,7 @@ const fakeData = [{
      "email": "",
      "photo": "https://robohash.org/hicveldicta.png?size=50x50&set=set1",
      "isMod": true,
+     "isInWeeklong": true,
      "isAdmin": false,
      "zombieHumanOz": 0, // 0 = human, 1 = zombie, 2 = oz
      "tags": 0,
@@ -29,6 +30,7 @@ const fakeData = [{
      "email": "",
      "photo": "https://robohash.org/hicveldicta.png?size=50x50&set=set1",
      "isMod": false,
+     "isInWeeklong": true,
      "isAdmin": true,
      "zombieHumanOz": 1, // 0 = human, 1 = zombie, 2 = oz
      "tags": 3,
@@ -42,6 +44,7 @@ const fakeData = [{
      "email": "",
      "photo": "https://robohash.org/hicveldicta.png?size=50x50&set=set1",
      "isMod": false,
+     "isInWeeklong": false,
      "isAdmin": false,
      "zombieHumanOz": 2, // 0 = human, 1 = zombie, 2 = oz
      "tags": 0,

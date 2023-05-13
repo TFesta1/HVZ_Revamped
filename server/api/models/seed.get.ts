@@ -55,6 +55,7 @@ export default defineEventHandler(async (event) => {
         email: exampleEmail,
         photo: "https://robohash.org/hicveldicta.png?size=50x50&set=set1",
         isMod: false,
+        isInWeeklong: false,
         isAdmin: false,
         zombieHumanOz: 1, // 0 = human, 1 = zombie, 2 = oz
         tags: 0,

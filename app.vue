@@ -1,12 +1,27 @@
 <script setup lang="ts">
   const client = useSupabaseAuthClient()
 
+  const userLoggedIn = ref(false);
+
   const logout = async () => {
     const { error } = await client.auth.signOut()
     if (!error) {
       navigateTo("/login")
+      userLoggedIn.value = false //Just instantly set it to false
     }
+    // useSupabaseUser().value = null
   }
+
+  // Works for logging in, and delayed refresh, but not instantly
+  watch( () => useSupabaseUser(),
+      (session) => {
+        userLoggedIn.value = session !== null;
+      }
+  );
+
+  // console.log(isLoggedIn().value)
+
+  
 
 
 
@@ -22,11 +37,19 @@
           <header>
             <ul class="navbar">
               <li>
-                <NuxtLink to="/">Home</NuxtLink>
-                <NuxtLink to="/events">Information</NuxtLink>
-                <NuxtLink to="/weeklong">Weeklong</NuxtLink>
-                <NuxtLink to="/weeklong/requestPlrsTable">Request Players Table (Displayed for Admin)</NuxtLink>
-                <button @click="logout">Logout</button>
+                <div v-if="userLoggedIn">
+                  <NuxtLink to="/">Home</NuxtLink>
+                  <NuxtLink to="/events">Information</NuxtLink>
+                  <NuxtLink to="/weeklong">Weeklong</NuxtLink>
+                  <NuxtLink to="/weeklong/requestPlrsTable">Request Players Table (Displayed for Admin)</NuxtLink>
+                  <button @click="logout">Logout</button>
+                </div>
+                <div v-else>
+                  <NuxtLink to="/login">Login</NuxtLink>
+                  <NuxtLink to="/signup">Sign Up</NuxtLink>
+                </div>
+                
+                
               </li>
             </ul>
             

@@ -8,7 +8,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
     const user = useSupabaseUser()
     if (!user.value) {
-
+        isLoggedIn().value = false
         console.log("user does not exist")
         // Make sure that there's no infinite loop
         if (to.path != "/login" && to.path != "/signup") {
@@ -19,6 +19,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
         console.log(to.path)
     }
     else {
+        isLoggedIn().value = true
         console.log("user exists")
         // Redirect them to the home page
         if (to.path == "/login" || to.path == "/signup") {

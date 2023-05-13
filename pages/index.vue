@@ -16,6 +16,22 @@
     const store = useCounterStore()
     store.increment()
 
+    onMounted(async () => {
+        const user = await useSupabaseUser()
+        if (!user) {
+            throw createError("You must be logged in to view this page")
+        }
+
+        console.log(user.value?.email)
+        // console.log(user.value?.user_metadata)
+        
+    }) 
+    
+
+
+
+
+
     // console.log(store.count)
 
     // definePageMeta({

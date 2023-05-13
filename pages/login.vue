@@ -3,6 +3,7 @@
 	const password = ref("") as Ref<string>
 	const isSignUp = ref(false) as Ref<boolean>
 	const client = useSupabaseAuthClient()
+	const router = useRouter();
 
 	// NOTE: Password should be at least 6 chars
 	// abcdef
@@ -31,14 +32,23 @@
 
 		if (!error) {
 			// isSignUp.value = false
+			router.push("/")
 		}
 		else {
 			console.log(error)
+			
 		}
-
-		
-
 	}
+
+	const user = useSupabaseUser()
+	onMounted(() => {
+		watchEffect(() => {
+			if (user.value) {
+				navigateTo("/")
+			}
+		})
+	})
+
 
 </script>
 

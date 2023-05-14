@@ -1,25 +1,12 @@
 <script setup lang="ts">
 	const email = ref("") as Ref<string>
 	const password = ref("") as Ref<string>
-	const isSignUp = ref(false) as Ref<boolean>
 	const client = useSupabaseAuthClient()
 	const router = useRouter();
 
 	// NOTE: Password should be at least 6 chars
 	// abcdef
-	const signUp = async () => {
-		const { error } = await client.auth.signUp({
-			email: email.value,
-			password: password.value
-		})
-
-		if (!error) {
-			isSignUp.value = false
-		}
-		else {
-			console.log(error)
-		}
-	}
+	
 
 	const login = async () => {
 
@@ -55,7 +42,7 @@
 <template>
     <div>
 			<form 
-				@submit.prevent="isSignUp ? signUp() : login()"
+				@submit.prevent="login()"
 				class ="flex flex-col gap-2"
 				>
 				<input 
@@ -76,7 +63,7 @@
 					class="p-2 bg-gray-600 rounded"
 
 				>
-					{{ isSignUp ? "Sign Up" : "Login" }}
+					{{ "Login" }}
 				</button>
 			</form>
 

@@ -22,7 +22,8 @@ const fakeData = [{
      "tags": 0,
      "team": "Screw the panda team",
      "coins": 0,
-     "daysSurvived": 2
+     "daysSurvived": 2,
+     "secretKey": "abc123"
 },
 {
      "nickname": "Kyle",
@@ -36,7 +37,8 @@ const fakeData = [{
      "tags": 3,
      "team": "Panda Team",
      "coins": 100,
-     "daysSurvived": 3
+     "daysSurvived": 3,
+     "secretKey": "45mad"
 },
 {
      "nickname": "Jenny",
@@ -50,7 +52,8 @@ const fakeData = [{
      "tags": 0,
      "team": "Panda Team",
      "coins": 0,
-     "daysSurvived": 1
+     "daysSurvived": 1,
+     "secretKey": ""
 }]
 
 

@@ -3,6 +3,7 @@
 	const password = ref("") as Ref<string>
 	const client = useSupabaseAuthClient()
 	const router = useRouter();
+	const signInErrorMsg = ref("")
 
 	// NOTE: Password should be at least 6 chars
 	// abcdef
@@ -23,6 +24,7 @@
 		}
 		else {
 			console.log(error)
+			signInErrorMsg.value = error.message
 			
 		}
 	}
@@ -66,6 +68,9 @@
 					{{ "Login" }}
 				</button>
 			</form>
+			<div>
+				{{ signInErrorMsg }}
+			</div>
 
     </div>
 </template>

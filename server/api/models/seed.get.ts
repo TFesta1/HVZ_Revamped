@@ -28,6 +28,10 @@ export default defineEventHandler(async (event) => {
 
   // Retrieve the additional parameters from the event object
   const { email } = getQuery(event);
+
+  console.log(email)
+  return;
+
   let exampleEmail = "localMotives@gmail.com"
 
   if (!exampleEmail) {

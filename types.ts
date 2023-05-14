@@ -11,4 +11,5 @@ export interface User {
     team: string;
     coins: number;
     daysSurvived: number;
+    secretKey: string;
 }

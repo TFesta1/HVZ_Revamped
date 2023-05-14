@@ -1,5 +1,6 @@
 import initializeNitroApp from '../../index';
 import { User } from '../../../types';
+import { ref } from 'vue';
 
 /*
 
@@ -21,20 +22,21 @@ import { User } from '../../../types';
 
 
 
+
 export default defineEventHandler(async (event) => {
+  
   const module = await initializeNitroApp();
   // Use the exported functions
   const { connect, ObjectId, DB_Name, collection } = module;
+  const givenEmail = ref("")
 
   // Retrieve the additional parameters from the event object
   const { email } = getQuery(event);
-
-  console.log(email)
-  return;
+  givenEmail.value = email?.toString() || ""
 
   let exampleEmail = "localMotives@gmail.com"
 
-  if (!exampleEmail) {
+  if (!givenEmail.value) {
     return {
         data: "No user added"
     }
@@ -51,12 +53,12 @@ export default defineEventHandler(async (event) => {
   const matchingUser = await col.findOne({ username: { $eq: exampleEmail } });
   if (matchingUser === null) {
     console.log("Will add user")
-    const firstPartOfEmail = exampleEmail.split("@")[0]
+    const firstPartOfEmail = givenEmail.value.split("@")[0]
     console.log(firstPartOfEmail)
     const newUser = {
         nickname: firstPartOfEmail,
         username: firstPartOfEmail,
-        email: exampleEmail,
+        email: givenEmail.value,
         photo: "https://robohash.org/hicveldicta.png?size=50x50&set=set1",
         isMod: false,
         isInWeeklong: false,
@@ -65,7 +67,8 @@ export default defineEventHandler(async (event) => {
         tags: 0,
         team: "",
         coins: 0,
-        daysSurvived: 0
+        daysSurvived: 0,
+        secretKey: ""
     }
     col.insertOne(newUser)
     return {

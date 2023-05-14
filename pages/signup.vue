@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    import { User } from "types"
+    import axios from 'axios';
 	const email = ref("") as Ref<string>
 	const password = ref("") as Ref<string>
 	const client = useSupabaseAuthClient()
@@ -17,6 +19,22 @@
             // isSignUp.value = false
             router.push("/")
             signInErrorMsg.value = ""
+
+            try {
+                const response = await axios.get('api/models/seed', {
+                    params: {
+                        email: email.value
+                    }
+                });
+                // const items = response.data.data;
+                // console.log(items);
+
+                
+            } catch (error) {
+                console.error(error);
+            }
+
+
         }
         else {
             console.log(error)
@@ -40,34 +58,34 @@
 
 <template>
     <div>
-			<form 
-				@submit.prevent="signUp()"
-				class ="flex flex-col gap-2"
-				>
-				<input 
-					type="email" 
-					v-model="email"
-					placeholder="Email"
-					class="p-2 bg-gray-600 rounded"
+        <form 
+            @submit.prevent="signUp()"
+            class ="flex flex-col gap-2"
+            >
+            <input 
+                type="email" 
+                v-model="email"
+                placeholder="Email"
+                class="p-2 bg-gray-600 rounded"
 
-				/>
-				<input 
-					type="password" 
-					v-model="password"
-					placeholder="Password"
-					class="p-2 bg-gray-600 rounded"
-				/>
-				<button 
-					type="submit"
-					class="p-2 bg-gray-600 rounded"
+            />
+            <input 
+                type="password" 
+                v-model="password"
+                placeholder="Password"
+                class="p-2 bg-gray-600 rounded"
+            />
+            <button 
+                type="submit"
+                class="p-2 bg-gray-600 rounded"
 
-				>
-					{{ "Sign Up" }}
-				</button>
-			</form>
-            <div>
-                {{ signInErrorMsg }}
-            </div>
+            >
+                {{ "Sign Up" }}
+            </button>
+        </form>
+        <div>
+            {{ signInErrorMsg }}
+        </div>
 
     </div>
 </template>

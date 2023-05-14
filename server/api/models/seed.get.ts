@@ -50,7 +50,7 @@ export default defineEventHandler(async (event) => {
   const col = await collection(process.env.USER_COLNAME!);
   const items = await col.find().toArray();
 
-  const matchingUser = await col.findOne({ username: { $eq: exampleEmail } });
+  const matchingUser = await col.findOne({ email: { $eq: givenEmail.value } });
   if (matchingUser === null) {
     console.log("Will add user")
     const firstPartOfEmail = givenEmail.value.split("@")[0]
@@ -68,7 +68,8 @@ export default defineEventHandler(async (event) => {
         team: "",
         coins: 0,
         daysSurvived: 0,
-        secretKey: ""
+        secretKey: "",
+        requestingWeeklong: false
     }
     col.insertOne(newUser)
     return {

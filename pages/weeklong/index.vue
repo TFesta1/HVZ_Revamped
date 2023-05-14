@@ -3,7 +3,14 @@
     import axios from 'axios';
 
     const users = ref<User[]>([]);
+    const isNotInWeeklong = ref<boolean>(false);
+    const nonWeeklongUsers = ref<User[]>([]);
+    const requestingList = ref<User[]>([]);
+    const isNotRequesting = ref(false);
     const usersLoaded = ref(false);
+
+    // console.log(useSupabaseUser().value?.email)
+
     
     useHead({
         title: "Weeklong",
@@ -37,58 +44,38 @@
             mod: item.isMod,
           }));
 
-        console.log(users.value);
+        nonWeeklongUsers.value = items.filter((item: User) => !item.isInWeeklong)
+        requestingList.value = items.filter((item: User) => item.requestingWeeklong)
+        console.log(nonWeeklongUsers.value, "nonWeeklongUsers")
+    
+        // If the user is not in the weeklong, record that
+        if(!nonWeeklongUsers.value.some((item: User) => item.email === useSupabaseUser().value?.email))
+          isNotInWeeklong.value = true;
+        else
+          isNotInWeeklong.value = false;
+
+        if(!requestingList.value.some((item: User) => item.email === useSupabaseUser().value?.email))
+          isNotRequesting.value = true;
+        else
+          isNotRequesting.value = false;
+          
+
+        console.log(isNotInWeeklong.value, "isInWeeklong")
+        console.log(isNotRequesting.value, "isNotRequesting")
+          
+        
+
+        // console.log(users.value);
         usersLoaded.value = true;
       } catch (error) {
         console.error(error);
       }
+
+
     });
 
-    //     // users.value = items.value?.data.map((item: any) => 
-    //     // ({
-    //     //     photo: item.photo,
-    //     //     nickname: item.nickname,
-    //     //     team: item.team,
-    //     //     tags: item.tags,
-    //     //     daysSurvived: item.daysSurvived,
-    //     //     mod: item.isMod
-    //     // }));
-    //     console.log(users.value)
-
-    // }
-
-    // onMounted(async () => {
-    //     const { data: items, pending } = await useLazyFetch('api/models/users',
-    //     {
-    //     // just get the data, and not the array infront of it.
-    //         transform: (_items) => _items.data, 
-    //     }).then((res) => {
-    //         console.log(res.data)
-    //         // console.log(items)
-    //         // productsShow.value = res
-    //         return res
-    //     })
-    //     // console.log(items.value)
-    // })
     
 
-    // const users: User[] = (items.value.data as unknown) as User[];
-    
-    // onBeforeMount(async () => {
-    //     const { data: items, pending } = await useLazyAsyncData("users", () => $fetch('api/models/users'))
-
-    //     if (items.value) {
-    //         users.value = await items.value.map((item: any) => ({
-    //         photo: item.photo,
-    //         nickname: item.nickname,
-    //         team: item.team,
-    //         tags: item.tags,
-    //         daysSurvived: item.daysSurvived,
-    //         mod: item.isMod
-    //         }));
-    //     }
-    //     await refreshNuxtData("users")
-    // });
     const refresh = () => refreshNuxtData("users")
 
     // console.log(users.value)
@@ -97,16 +84,52 @@
     
     // console.log(users[0].coins)
 
+    const requestedToPlay = async () => {
+      console.log("requested")
+      try {
+        const response = await axios.get('api/models/updateUser', {
+          params: {
+            email: await useSupabaseUser().value?.email,
+            parameterToUpdate: "requestingWeeklong",
+            newValue: true,
+            parameterType: "boolean"
+          },
+        });
+        // const item = response.data.data;
+        // user.value = item;
+        // console.log(items);
+        isNotRequesting.value = false;
+
+      } catch (error) {
+        console.error(error);
+      }
+      
+    }
+
 
 
 </script>
 
 <template>
     <div>
-        <Table v-if="usersLoaded" :headers="headers" :data="users" />
-        <div v-else class="bg-gray-200 h-4 w-1/2 animate-pulse rounded-lg"></div>
-        
+        <div v-if="usersLoaded">
+          <div v-if="isNotInWeeklong">
+            <Table :headers="headers" :data="users" />
+          </div>
+          <div v-else>
+            <div v-if="isNotRequesting">
+              <button @click="requestedToPlay()" class="genericButton">Request weeklong</button>
+            </div>
+            <div v-else>
+              <p>You have requested to play in the weeklong. Please wait for a mod to approve your request.</p>
+            </div>
+          </div>
+          
+          
 
+        </div>
+        <div v-else class="bg-gray-200 h-4 w-1/2 animate-pulse rounded-lg"></div> <!-- Loading bar -->
+        
     </div>
 </template>
 

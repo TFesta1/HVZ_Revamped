@@ -3,6 +3,54 @@
 @import 'tailwindcss/utilities';
 
 
+.genericButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    outline: none;
+}
+
+.genericButton:hover {
+    background-color: #3e8e41;
+}
+
+.genericButton:active {
+    background-color: #3e8e41;
+    /* transform: translateY(4px); */
+}
+
+.genericButton:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.genericButton:disabled:hover {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.genericButton:disabled:active {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.genericButton:disabled:focus {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+
+
+
 .navbar {
     display: flex;
     justify-content: space-between;

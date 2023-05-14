@@ -12,4 +12,5 @@ export interface User {
     coins: number;
     daysSurvived: number;
     secretKey: string;
+    requestingWeeklong: boolean;
 }

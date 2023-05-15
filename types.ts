@@ -5,6 +5,7 @@ export interface User {
     photo: string;
     isMod: string;
     isInWeeklong: boolean;
+    taggedBy: string;
     isAdmin: string;
     zombieHumanOz: number;
     tags: number;

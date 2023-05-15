@@ -17,6 +17,7 @@ const fakeData = [{
      "photo": "https://robohash.org/hicveldicta.png?size=50x50&set=set1",
      "isMod": true,
      "isInWeeklong": true,
+     "taggedBy": "Kyle",
      "isAdmin": false,
      "zombieHumanOz": 0, // 0 = human, 1 = zombie, 2 = oz
      "tags": 0,
@@ -33,6 +34,7 @@ const fakeData = [{
      "photo": "https://robohash.org/hicveldicta.png?size=50x50&set=set1",
      "isMod": false,
      "isInWeeklong": true,
+     "taggedBy": "Kenter",
      "isAdmin": true,
      "zombieHumanOz": 1, // 0 = human, 1 = zombie, 2 = oz
      "tags": 3,
@@ -49,6 +51,7 @@ const fakeData = [{
      "photo": "https://robohash.org/hicveldicta.png?size=50x50&set=set1",
      "isMod": false,
      "isInWeeklong": false,
+     "taggedBy": "",
      "isAdmin": false,
      "zombieHumanOz": 2, // 0 = human, 1 = zombie, 2 = oz
      "tags": 0,

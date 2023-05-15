@@ -13,11 +13,18 @@
   }
 
   // Works for logging in, and delayed refresh, but not instantly
-  watch( () => useSupabaseUser(),
+  watch( () => useSupabaseUser().value,
       (session) => {
         userLoggedIn.value = session !== null;
       }
   );
+
+  onMounted(async () => {
+    const session = useSupabaseUser().value
+    if (session) {
+      userLoggedIn.value = true
+    }
+  })
 
   // console.log(isLoggedIn().value)
 

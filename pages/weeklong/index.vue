@@ -16,7 +16,7 @@
         title: "Weeklong",
     })
 
-    const headers : string[] = ["Photo", "Name", "Team", "Tags", "Days Survived", "Mod"]
+    const headers : string[] = ["Photo", "Name", "Team", "Tagged By", "Tags", "Days Survived", "Mod"]
     // const data : string[][] = [["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"], 
     //                             ["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"],
     //                             ["John Doe", "25", "johndoe@example.com", "johndoe@example.com", "YES"]]
@@ -39,6 +39,7 @@
             photo: item.photo,
             nickname: item.nickname,
             team: item.team,
+            taggedBy: item.taggedBy,
             tags: item.tags,
             daysSurvived: item.daysSurvived,
             mod: item.isMod,

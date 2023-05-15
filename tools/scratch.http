@@ -12,4 +12,5 @@ GET http://localhost:3000/api/models/updateUser?email=tannerfesta@gmail.com&para
 # Notice we left out the last parameter since it's a string by default
 GET http://localhost:3000/api/models/updateUser?email=tannerfesta@gmail.com&parameterToUpdate=nickname&newValue=Hey%20There
 # %20 is a space
-
+###
+http://localhost:3000/api/models/updateUser?email=tannerfesta@gmail.com&parameterToUpdate=isInWeeklong&newValue=true&parameterType=boolean

@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+.buttonNoStyling {
+    cursor: pointer;
+}
+
 
 .genericButton {
     background-color: #4CAF50; /* Green */

@@ -49,6 +49,7 @@
                   <NuxtLink to="/events">Information</NuxtLink>
                   <NuxtLink to="/weeklong">Weeklong</NuxtLink>
                   <NuxtLink to="/weeklong/requestPlrsTable">Request Players Table (Displayed for Admin)</NuxtLink>
+                  <NuxtLink to="/settings">Settings</NuxtLink>
                   <button @click="logout">Logout</button>
                 </div>
                 <div v-else>

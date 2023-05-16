@@ -15,7 +15,8 @@ https://www.youtube.com/watch?v=EidO0c9L6b0
 Using SupaBase for auth
 https://www.youtube.com/watch?v=IcaL1RfnU44
 Auth and Project link: https://app.supabase.com/
-
+NOTE: SUPABASE_URL and SUPABASE_KEY are automatically used by supabase
+after you install the module
 
 
 

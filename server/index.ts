@@ -1,8 +1,10 @@
-import { Nitro } from 'nitropack';
+import { Nitro  } from 'nitropack';
 import { MongoClient, ObjectId } from 'mongodb';
+import cors from 'cors';
 // _nitroApp : Nitro
 export default async function initializeNitroApp() {
     console.log("Nitro")
+    
 
     const url = process.env.MONGO_URL ?? "";
     const DB_Name = process.env.MONGO_DB_NAME ?? 'hvz';    

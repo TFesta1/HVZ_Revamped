@@ -1,5 +1,6 @@
 <script setup lang="ts">
     import axios from 'axios';
+    
 
     const pfp = ref("") as any
     const team = ref("") as Ref<string>
@@ -25,6 +26,26 @@
         });
     };
 
+    const createBinaryFile = (file: File) => {
+        return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+
+                reader.onload = () => {
+                const arrayBuffer = reader.result;
+                resolve(arrayBuffer);
+            };
+
+            reader.onerror = (error) => {
+                reject(error);
+            };
+            const blob = new Blob([file]);
+            reader.readAsArrayBuffer(blob);
+        });
+    };
+
+
+
+
     
 
     const apply = async () => {
@@ -43,15 +64,21 @@
         // formData.append('key', process.env.IMGBB_API_KEY as string);
         // formData.append('image', pfp.value);
 
-        const payload = {
+        const payload : Object = {
             key: "2a8619cee5b2f532a6999df531266f22",
             image: pfp.value
         };
 
         console.log(payload, "payload")
+        // https://api.imgbb.com/1/upload
+        // api/models/upload
 
-        const response = await axios.post('https://api.imgbb.com/1/upload', payload);
-
+        const response = await axios.post('api/models/upload', payload, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        
         console.log(response.data.data.url, "response.data.data.url")
 
         // Handle the response here
@@ -67,27 +94,11 @@
         const file = e;
 
         const base64Data = await readFileAsBase64(file);
+        // const binFile = await createBinaryFile(file);
         // Assign the selected file to the `pfp` variable
         pfp.value = base64Data
 
-         // Create a new FileReader
-        // const reader = new FileReader();
-        // // Set up the onload event handler
-        // reader.onload = () => {
-        //     // Get the base64 data from the result
-        //     const base64Data = reader.result;
-            
-        //     // Assign the base64 data to the `pfp` variable
-        //     pfp.value = base64Data;
-        //     console.log(pfp.value, "pfp.value")
-        //     // console.log("hi")
-        // };
-        // console.log(pfp.value, "pfp.value")
         
-        // console.log(e.target.files[0], "e.target.files[0]")
-
-        // const reader = new FileReader();
-        // reader.readAsDataURL(file);
     }
 
     // handleFileChange(event) {

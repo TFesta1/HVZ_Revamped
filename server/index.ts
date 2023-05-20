@@ -10,8 +10,8 @@ export default async function initializeNitroApp() {
     const DB_Name = process.env.MONGO_DB_NAME ?? 'hvz'; 
 
 
-    console.log(url);
-    console.log(DB_Name);
+    // console.log(url);
+    // console.log(DB_Name);
 
     const client = new MongoClient(url);
 

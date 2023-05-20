@@ -26,6 +26,9 @@
     }
   })
 
+
+  // useSupabaseUser().value?.user_metadata.avatar_url = "https://avatars.dicebear.com/api/avataaars/1.svg"
+
   // console.log(isLoggedIn().value)
 
   
@@ -51,6 +54,8 @@
                   <NuxtLink to="/weeklong/requestPlrsTable">Request Players Table (Displayed for Admin)</NuxtLink>
                   <NuxtLink to="/settings">Settings</NuxtLink>
                   <button @click="logout">Logout</button>
+                  <img :src="navPfp().value" alt="pfp" class="profile-pictures" />
+
                 </div>
                 <div v-else>
                   <NuxtLink to="/login">Login</NuxtLink>

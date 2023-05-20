@@ -96,6 +96,16 @@
     50% {
       opacity: 1;
     }
-  }
+}
+
+.profile-pictures {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    width: 75px;
+    height: 75px;
+}
 
   

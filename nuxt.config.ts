@@ -26,6 +26,7 @@ export default defineNuxtConfig({
         '@nuxtjs/supabase',
     ],
 
+
     // https://tailwindcss.com/docs/guides/nuxtjs#3
     // npm install -D tailwindcss postcss autoprefixer
     // npx tailwindcss init

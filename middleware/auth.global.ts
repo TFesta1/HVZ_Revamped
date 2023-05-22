@@ -39,7 +39,8 @@ export default defineNuxtRouteMiddleware((to, from) => {
                     // console.log(response.data.data.photo, "response.data.data.photo")
                     
                     navPfp().value = response.data.data.photo
-                    console.log(navPfp().value, "response.data")
+                    stateAdmin().value = response.data.data.isAdmin
+                    // console.log(navPfp().value, "response.data")
                 }
                 ).catch((error) => {
                     // console.log(error)
@@ -49,6 +50,8 @@ export default defineNuxtRouteMiddleware((to, from) => {
                 
             }
         }
+
+
        
     }
 		

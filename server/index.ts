@@ -4,6 +4,7 @@ import cors from 'cors';
 // _nitroApp : Nitro
 export default async function initializeNitroApp() {
     console.log("Nitro")
+    // console.log(process.env.VITE_DEFAULT_PFP)
     
 
     const url = process.env.MONGO_URL ?? "";

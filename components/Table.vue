@@ -45,11 +45,14 @@
                     <td v-for="(data, index) in item" class="border px-4 py-2">
                         
                         <!-- {{ index }} -->
-                        <div v-if="index=='photo' && displayAdminTable && isAdmin" >
+                        <!--  && displayAdminTable && isAdmin" -->
+                        <div v-if="index == 'photo'">
                             <img :src="data" class="profile-pictures" />
+                            <!-- {{ index }} -->
                         </div>
                         <div v-else>
                             {{ data }}
+                            <!-- {{ index }} -->
                         </div>
                     
                     </td>

@@ -3,6 +3,8 @@
 
   const userLoggedIn = ref(false);
 
+  const stateAdminWatcher = ref(false);
+
   const logout = async () => {
     const { error } = await client.auth.signOut()
     if (!error) {
@@ -24,7 +26,17 @@
     if (session) {
       userLoggedIn.value = true
     }
+
+
+
+    console.log(stateAdmin().value, "stateAdmin")
   })
+
+  watch( () => stateAdmin().value,
+      (session) => {
+        stateAdminWatcher.value = session;
+      }
+  );
 
 
   // useSupabaseUser().value?.user_metadata.avatar_url = "https://avatars.dicebear.com/api/avataaars/1.svg"
@@ -51,7 +63,7 @@
                   <NuxtLink to="/">Home</NuxtLink>
                   <NuxtLink to="/events">Information</NuxtLink>
                   <NuxtLink to="/weeklong">Weeklong</NuxtLink>
-                  <NuxtLink to="/weeklong/requestPlrsTable">Request Players Table (Displayed for Admin)</NuxtLink>
+                  <NuxtLink v-if="stateAdminWatcher" to="/weeklong/requestPlrsTable">Request Players Table (Displayed for Admin)</NuxtLink>
                   <NuxtLink to="/settings">Settings</NuxtLink>
                   <button @click="logout">Logout</button>
                   <img :src="navPfp().value" alt="pfp" class="profile-pictures" />

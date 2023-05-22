@@ -6,7 +6,7 @@ export interface User {
     isMod: string;
     isInWeeklong: boolean;
     taggedBy: string;
-    isAdmin: string;
+    isAdmin: boolean;
     zombieHumanOz: number;
     tags: number;
     team: string;

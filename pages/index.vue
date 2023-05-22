@@ -7,8 +7,8 @@
     // console.log(resp)
     // useFetch freezes program until it recieves data
     // useLazyFetch displays a loader, will need to use async
-    const { data: products, pending } = await useLazyAsyncData("products", () => $fetch('api/products'))
-    const refresh = () => refreshNuxtData("products")
+    // const { data: products, pending } = await useLazyAsyncData("products", () => $fetch('api/products'))
+    // const refresh = () => refreshNuxtData("products")
     
 
     // console.log(toRaw(products.value))
@@ -53,9 +53,9 @@
         <IconsBell/>
         <!-- <ContentDoc/> -->
         <Counter/>
-        {{ pending ? "Loading" : products }}
+        <!-- {{ pending ? "Loading" : products }}
 
-        <button @click="refresh">Refresh</button>
+        <button @click="refresh">Refresh</button> -->
     </div>
 </template>
 

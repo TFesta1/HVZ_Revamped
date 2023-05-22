@@ -12,7 +12,13 @@ GET http://localhost:3000/api/models/updateUser
 # Update tannerfesta@gmail's tags to be 1
 GET http://localhost:3000/api/models/updateUser?email=moralekhan10@gmail.com&parameterToUpdate=requestingWeeklong&newValue=false&parameterType=boolean
 ###
-GET /weeklong/api/models/updateUser?email=zoombie@gmail.com&parameterToUpdate=requestingWeeklong&newValue=false&parameterType=boolean
+GET http://localhost:3000/api/models/updateUser?email=zoombie@gmail.com&parameterToUpdate=requestingWeeklong&newValue=true&parameterType=boolean
+###
+GET http://localhost:3000/api/models/updateUser?email=zoombie@gmail.com&parameterToUpdate=isInWeeklong&newValue=false&parameterType=boolean
+###
+GET http://localhost:3000/api/models/updateUser?email=jennydabest@gmail.com&parameterToUpdate=requestingWeeklong&newValue=true&parameterType=boolean
+###
+GET http://localhost:3000/api/models/updateUser?email=jennydabest@gmail.com&parameterToUpdate=isInWeeklong&newValue=false&parameterType=boolean
 ###
 # Notice we left out the last parameter since it's a string by default
 # Updates tannerfesta@gmail.com nickname

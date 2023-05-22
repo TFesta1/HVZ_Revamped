@@ -33,11 +33,29 @@
             email: await useSupabaseUser().value?.email,
           },
         });
-        const items = response.data.data;
-        console.log(items);
+        const foundUser = response.data.data;
+        console.log(foundUser);
 
-        isNotInWeeklong.value = items.isInWeeklong
-        isNotRequesting.value = !items.requestingWeeklong
+        isNotInWeeklong.value = foundUser.isInWeeklong
+        isNotRequesting.value = !foundUser.requestingWeeklong
+
+
+        const responseUsers = await axios.get('api/models/users');
+        const items = responseUsers.data.data;
+        // console.log(items);
+
+        users.value = items
+          .filter((item: User) => item.isInWeeklong)
+          .map((item : User) => ({
+            
+            photo: item.photo,
+            nickname: item.nickname,
+            team: item.team,
+            taggedBy: item.taggedBy,
+            tags: item.tags,
+            daysSurvived: item.daysSurvived,
+            mod: item.isMod,
+        }));
 
         // users.value = items
         //   .filter((item: User) => item.isInWeeklong)

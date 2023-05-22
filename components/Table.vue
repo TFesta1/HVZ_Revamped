@@ -23,6 +23,7 @@
     });
     // Destructure the props to access them
     const { headers, data, displayAdminTable, isAdmin } = props;
+    const dataVal = ref(data)
 
     if (displayAdminTable && isAdmin)
     {
@@ -32,9 +33,14 @@
     // refreshNuxtData("users")
     // console.log(headers)
 
-    async function allow(data: RequestingUser) {
-        const email = data.email
+    async function allow(d: RequestingUser) {
+        const email = d.email
         console.log("allow data ", email)
+        // console.log(data, " before")
+        // console.log(data, " after")
+        dataVal.value = dataVal.value.filter((item: any) => item.email != email)
+
+        // return 
         try {
             const responseWeeklong = await axios.get('../api/models/updateUser', {
                 params: {
@@ -54,34 +60,42 @@
                 },
             });
 
-            // console.log(responseWeeklong.data)
-            // console.log(responseReq.data)
+        } catch (error) {
+            console.error(error);
+            dataVal.value = data
+        }
+    }
+
+    async function deny(d: RequestingUser) {
+        const email = d.email
+        console.log("deny data ", email)
+        dataVal.value = dataVal.value.filter((item: any) => item.email != email)
+
+        
+        try {
+            const responseWeeklong = await axios.get('../api/models/updateUser', {
+                params: {
+                    email: email,
+                    parameterToUpdate: "isInWeeklong",
+                    newValue: false,
+                    parameterType: "boolean"
+                },
+            });
+
+            const responseReq = await axios.get('../api/models/updateUser', {
+                params: {
+                    email: email,
+                    parameterToUpdate: "requestingWeeklong",
+                    newValue: false,
+                    parameterType: "boolean"
+                },
+            });
 
 
         } catch (error) {
             console.error(error);
+            dataVal.value = data
         }
-    }
-
-    async function deny(data: RequestingUser) {
-        console.log("deny data ", data.email)
-        // try {
-        //     const response = await axios.get('api/models/updateUser', {
-        //         params: {
-        //             email: await useSupabaseUser().value?.email,
-        //             parameterToUpdate: "inWeeklong",
-        //             newValue: true,
-        //             parameterType: "boolean"
-        //         },
-        //     });
-        //     const item = response.data;
-        //     // user.value = item;
-        //     console.log(item);
-        //     // isNotRequesting.value = false;
-
-        // } catch (error) {
-        //     console.error(error);
-        // }
     }
 
 </script>
@@ -95,7 +109,7 @@
             </tr>
             </thead>
             <tbody>
-                <tr v-for="item in data">
+                <tr v-for="item in dataVal">
                     <td v-for="(data, index) in item" class="border px-4 py-2">
                         
                         <!-- {{ index }} -->

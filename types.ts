@@ -15,3 +15,10 @@ export interface User {
     secretKey: string;
     requestingWeeklong: boolean;
 }
+
+export interface RequestingUser {
+    photo: string;
+    nickname: string;
+    mod: string;
+    email: string;
+}

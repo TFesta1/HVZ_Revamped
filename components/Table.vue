@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    import axios from 'axios'
+    import { RequestingUser } from '../types'
     const props = defineProps({
         headers: {
             type: Array,
@@ -30,6 +32,58 @@
     // refreshNuxtData("users")
     // console.log(headers)
 
+    async function allow(data: RequestingUser) {
+        const email = data.email
+        console.log("allow data ", email)
+        try {
+            const responseWeeklong = await axios.get('../api/models/updateUser', {
+                params: {
+                    email: email,
+                    parameterToUpdate: "isInWeeklong",
+                    newValue: true,
+                    parameterType: "boolean"
+                },
+            });
+
+            const responseReq = await axios.get('../api/models/updateUser', {
+                params: {
+                    email: email,
+                    parameterToUpdate: "requestingWeeklong",
+                    newValue: false,
+                    parameterType: "boolean"
+                },
+            });
+
+            // console.log(responseWeeklong.data)
+            // console.log(responseReq.data)
+
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    async function deny(data: RequestingUser) {
+        console.log("deny data ", data.email)
+        // try {
+        //     const response = await axios.get('api/models/updateUser', {
+        //         params: {
+        //             email: await useSupabaseUser().value?.email,
+        //             parameterToUpdate: "inWeeklong",
+        //             newValue: true,
+        //             parameterType: "boolean"
+        //         },
+        //     });
+        //     const item = response.data;
+        //     // user.value = item;
+        //     console.log(item);
+        //     // isNotRequesting.value = false;
+
+        // } catch (error) {
+        //     console.error(error);
+        // }
+    }
+
 </script>
 
 <template>
@@ -56,14 +110,10 @@
                         </div>
                     
                     </td>
-                    <td v-if="displayAdminTable && isAdmin" class="border px-4 py-2 buttonNoStyling" style="background-color:green" >
-                           
-                           
-                    </td>
-                    <td v-if="displayAdminTable && isAdmin" class="border px-4 py-2 buttonNoStyling" style="background-color:rgb(117, 39, 39)" >
-                           
-                           
-                    </td>
+
+                    <!-- Appends two extra data cols for displayAdminTable -->
+                    <td v-if="displayAdminTable && isAdmin" class="border px-4 py-2 buttonNoStyling" style="background-color:green" @click="allow(item as RequestingUser)"></td>
+                    <td v-if="displayAdminTable && isAdmin" class="border px-4 py-2 buttonNoStyling" style="background-color:rgb(117, 39, 39)" @click="deny(item as RequestingUser)"></td>
                     
                 </tr>
                 

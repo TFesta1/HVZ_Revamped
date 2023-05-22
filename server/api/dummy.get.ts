@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000;
 const fakeData = [{
      "nickname": "Kenter",
      "username": "Reyna",
-     "email": "",
+     "email": "kenterrey@gmail.com",
      "photo": defaultPfp,
      "isMod": true,
      "isInWeeklong": true,
@@ -29,9 +29,26 @@ const fakeData = [{
      "requestingWeeklong": false
 },
 {
+  "nickname": "zoombie",
+  "username": "zoombie",
+  "email": "zoombie@gmail.com",
+  "photo": defaultPfp,
+  "isMod": false,
+  "isInWeeklong": false,
+  "taggedBy": "",
+  "isAdmin": false,
+  "zombieHumanOz": 1, // 0 = human, 1 = zombie, 2 = oz
+  "tags": 0,
+  "team": "Panda Team",
+  "coins": 0,
+  "daysSurvived": 1,
+  "secretKey": "",
+  "requestingWeeklong": true
+},
+{
      "nickname": "Jenny",
      "username": "DefinitelyNotOZ",
-     "email": "",
+     "email": "jennydabest@gmail.com",
      "photo": defaultPfp,
      "isMod": false,
      "isInWeeklong": false,
@@ -43,7 +60,7 @@ const fakeData = [{
      "coins": 0,
      "daysSurvived": 1,
      "secretKey": "",
-     "requestingWeeklong": false
+     "requestingWeeklong": true
 }]
 // console.log(defaultPfp)
 

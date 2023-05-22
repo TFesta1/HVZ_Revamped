@@ -12,7 +12,7 @@
 
 
 
-    const headers : string[] = ["Photo", "Name", "Mod"]
+    const headers : string[] = ["Photo", "Name", "Mod", 'Email']
     onMounted(async () => {
       try {
         const response = await axios.get('../api/models/users');
@@ -26,6 +26,7 @@
             photo: item.photo,
             nickname: item.nickname,
             mod: item.isMod,
+            email: item.email
         }));
 
         console.log(users.value, "users")

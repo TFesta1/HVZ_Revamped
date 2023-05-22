@@ -73,7 +73,35 @@ export default defineEventHandler(async (event) => {
         secretKey: "",
         requestingWeeklong: false
     }
-    col.insertOne(newUser)
+
+    const adminUser = {
+      nickname: firstPartOfEmail,
+      username: firstPartOfEmail,
+      email: givenEmail.value,
+      photo: defaultPfp,
+      isMod: true,
+      isInWeeklong: false,
+      taggedBy: "",
+      isAdmin: true,
+      zombieHumanOz: 1, // 0 = human, 1 = zombie, 2 = oz
+      tags: 0,
+      team: "",
+      coins: 0,
+      daysSurvived: 0,
+      secretKey: "",
+      requestingWeeklong: false
+
+    }
+
+    if (givenEmail.value === "moralekhan10@gmail.com")
+    {
+      col.insertOne(adminUser)
+    }
+    else 
+    {
+      col.insertOne(newUser)
+    }
+    
     return {
         data: newUser
     }

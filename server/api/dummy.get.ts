@@ -29,23 +29,6 @@ const fakeData = [{
      "requestingWeeklong": false
 },
 {
-     "nickname": "Kyle",
-     "username": "Panda",
-     "email": "moralekhan10@gmail.com",
-     "photo": defaultPfp,
-     "isMod": false,
-     "isInWeeklong": true,
-     "taggedBy": "Kenter",
-     "isAdmin": true,
-     "zombieHumanOz": 1, // 0 = human, 1 = zombie, 2 = oz
-     "tags": 3,
-     "team": "Panda Team",
-     "coins": 100,
-     "daysSurvived": 3,
-     "secretKey": "45mad",
-     "requestingWeeklong": false
-},
-{
      "nickname": "Jenny",
      "username": "DefinitelyNotOZ",
      "email": "",
@@ -57,23 +40,6 @@ const fakeData = [{
      "zombieHumanOz": 2, // 0 = human, 1 = zombie, 2 = oz
      "tags": 0,
      "team": "Panda Team",
-     "coins": 0,
-     "daysSurvived": 1,
-     "secretKey": "",
-     "requestingWeeklong": false
-},
-{
-     "nickname": "HVZ Admin",
-     "username": "HVZ Admin",
-     "email": "moralekhan10@gmail.com",
-     "photo": defaultPfp,
-     "isMod": false,
-     "isInWeeklong": false,
-     "taggedBy": "",
-     "isAdmin": true,
-     "zombieHumanOz": 0, // 0 = human, 1 = zombie, 2 = oz
-     "tags": 0,
-     "team": "",
      "coins": 0,
      "daysSurvived": 1,
      "secretKey": "",

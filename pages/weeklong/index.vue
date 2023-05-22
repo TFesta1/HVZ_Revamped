@@ -28,37 +28,40 @@
     // async function getUserValue(){
     onMounted(async () => {
       try {
-        const response = await axios.get('api/models/users');
+        const response = await axios.get('api/models/user');
         const items = response.data.data;
         // console.log(items);
 
-        users.value = items
-          .filter((item: User) => item.isInWeeklong)
-          .map((item : User) => ({
+        isNotInWeeklong.value = !items.isInWeeklong
+        isNotRequesting.value = !items.requestingWeeklong
+
+        // users.value = items
+        //   .filter((item: User) => item.isInWeeklong)
+        //   .map((item : User) => ({
             
-            photo: item.photo,
-            nickname: item.nickname,
-            team: item.team,
-            taggedBy: item.taggedBy,
-            tags: item.tags,
-            daysSurvived: item.daysSurvived,
-            mod: item.isMod,
-          }));
+        //     photo: item.photo,
+        //     nickname: item.nickname,
+        //     team: item.team,
+        //     taggedBy: item.taggedBy,
+        //     tags: item.tags,
+        //     daysSurvived: item.daysSurvived,
+        //     mod: item.isMod,
+        //   }));
 
-        nonWeeklongUsers.value = items.filter((item: User) => !item.isInWeeklong)
-        requestingList.value = items.filter((item: User) => item.requestingWeeklong)
-        console.log(nonWeeklongUsers.value, "nonWeeklongUsers")
+        // nonWeeklongUsers.value = items.filter((item: User) => !item.isInWeeklong)
+        // requestingList.value = items.filter((item: User) => item.requestingWeeklong)
+        // console.log(nonWeeklongUsers.value, "nonWeeklongUsers")
     
-        // If the user is not in the weeklong, record that
-        if(!nonWeeklongUsers.value.some((item: User) => item.email === useSupabaseUser().value?.email))
-          isNotInWeeklong.value = true;
-        else
-          isNotInWeeklong.value = false;
+        // // If the user is not in the weeklong, record that
+        // if(!nonWeeklongUsers.value.some((item: User) => item.email === useSupabaseUser().value?.email))
+        //   isNotInWeeklong.value = true;
+        // else
+        //   isNotInWeeklong.value = false;
 
-        if(!requestingList.value.some((item: User) => item.email === useSupabaseUser().value?.email))
-          isNotRequesting.value = true;
-        else
-          isNotRequesting.value = false;
+        // if(!requestingList.value.some((item: User) => item.email === useSupabaseUser().value?.email))
+        //   isNotRequesting.value = true;
+        // else
+        //   isNotRequesting.value = false;
           
 
         console.log(isNotInWeeklong.value, "isInWeeklong")
@@ -96,9 +99,9 @@
             parameterType: "boolean"
           },
         });
-        // const item = response.data.data;
+        const item = response.data;
         // user.value = item;
-        // console.log(items);
+        console.log(item);
         isNotRequesting.value = false;
 
       } catch (error) {

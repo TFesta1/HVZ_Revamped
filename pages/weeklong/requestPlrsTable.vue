@@ -20,13 +20,15 @@
         // console.log(items);
 
         users.value = items
-          .filter((item: User) => !item.isInWeeklong && item.requestingWeeklong)
+          .filter((item: User) => item.requestingWeeklong)
           .map((item : User) => ({
             
             photo: item.photo,
             nickname: item.nickname,
             mod: item.isMod,
         }));
+
+        console.log(users.value, "users")
 
         isAdmin.value = items.filter((item: User) => item.isAdmin && item.email === useSupabaseUser().value?.email).length > 0;
         console.log(isAdmin.value, "isAdmin")

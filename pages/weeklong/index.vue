@@ -28,11 +28,15 @@
     // async function getUserValue(){
     onMounted(async () => {
       try {
-        const response = await axios.get('api/models/user');
+        const response = await axios.get('api/models/user', {
+          params: {
+            email: await useSupabaseUser().value?.email,
+          },
+        });
         const items = response.data.data;
-        // console.log(items);
+        console.log(items);
 
-        isNotInWeeklong.value = !items.isInWeeklong
+        isNotInWeeklong.value = items.isInWeeklong
         isNotRequesting.value = !items.requestingWeeklong
 
         // users.value = items

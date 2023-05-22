@@ -35,6 +35,7 @@ export default defineEventHandler(async (event) => {
     // Connect to the database
     const db = await connect();
     const col = await collection(process.env.USER_COLNAME!);
+    const items = await col.find().toArray();
   
     // Find the user with the specified email
     // const user = await col.findOne({ givenEmail });
@@ -52,11 +53,10 @@ export default defineEventHandler(async (event) => {
 
   
     // Update the specified parameter of the user
-    const result = await col.updateOne(
+    const result = await col.updateMany( //From one to many, maybe because of a duplicate add glitch with dummy accounts?
         { email: givenEmail.value },
         { $set: { [param.value]: newV.value } }
     );
-      
 
     if (result.modifiedCount === 1) {
         // User updated successfully
@@ -64,10 +64,15 @@ export default defineEventHandler(async (event) => {
         return {
             data: updatedUser,
         };
-    } 
+    }
+    else {
+        return {
+            data: result.upsertedId//`result.modifiedCount ${result.modifiedCount} givenEmail.value ${givenEmail.value} param.value ${param.value} newV.value ${newV.value} didnt modify`, // or an appropriate response if the user was not found
+        };
+    }
   
-    return {
-      data: null, // or an appropriate response if the user was not found
-    };
+    // return {
+    //   data: null, // or an appropriate response if the user was not found
+    // };
   });
   

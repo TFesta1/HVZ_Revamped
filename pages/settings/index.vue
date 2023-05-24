@@ -5,12 +5,14 @@
     const pfp = ref("") as any
     const team = ref("") as Ref<string>
     const nickname = ref("") as Ref<string>
+    const discord = ref("") as Ref<string>
     const userEmail = useSupabaseUser().value?.email as string
     const updatedText = ref("") as Ref<string>
     const displayPfp = ref("") as Ref<string>
 
     const curTeam = ref("") as Ref<string>
     const curNickname = ref("") as Ref<string>
+    const curDiscord = ref("") as Ref<string>
     const curPfp = ref("") as Ref<string>
     
 
@@ -26,6 +28,7 @@
         curTeam.value = foundUser.team
         curNickname.value = foundUser.nickname
         curPfp.value = foundUser.photo
+        curDiscord.value = foundUser.discordUser
         displayPfp.value = foundUser.photo
     })
 
@@ -155,6 +158,22 @@
                 console.error(error);
             }
         }
+        if(discord.value != '')
+        {
+            try {
+                await axios.get('api/models/updateUser', {
+                    params: {
+                        email: await useSupabaseUser().value?.email,
+                        parameterToUpdate: "discordUser",
+                        newValue: discord.value,
+                        parameterType: "string"
+                    },
+                });
+                curDiscord.value = discord.value
+            } catch (error) {
+                console.error(error);
+            }
+        }
             
         updatedText.value = "Updated"
         pfp.value = ""
@@ -208,6 +227,12 @@
                 placeholder="Nickname"
                 class="p-2 bg-gray-600 rounded"
             />
+            <input
+                type="text"
+                v-model="discord"
+                placeholder="Discord"
+                class="p-2 bg-gray-600 rounded"
+            />
             <button 
                 type="submit"
                 class="p-2 bg-gray-600 rounded"
@@ -225,6 +250,11 @@
                 <span class="mr-2 text-orange-600">Nickname:</span>
                 <span class="text-white">{{ curNickname }}</span>
             </div>
+            <div class="flex items-center mb-2">
+                <span class="mr-2 text-orange-600">Discord:</span>
+                <span class="text-white">{{ curDiscord }}</span>
+            </div>
+            
 
         </div>
 

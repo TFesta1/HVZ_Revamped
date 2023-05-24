@@ -108,4 +108,16 @@
     height: 75px;
 }
 
+.green-background {
+    background-color: rgb(17, 58, 17);
+}
+
+.red-background {
+    background-color: rgb(59, 22, 22);
+}
+
+.pink-background {
+    background-color: rgb(113, 38, 93);
+}
+
   

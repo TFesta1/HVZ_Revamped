@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  const { $setupUser } = useNuxtApp()
+  $setupUser()  
   const client = useSupabaseAuthClient()
 
   const userLoggedIn = ref(false);

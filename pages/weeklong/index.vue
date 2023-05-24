@@ -8,6 +8,7 @@
     const requestingList = ref<User[]>([]);
     const isNotRequesting = ref(false);
     const usersLoaded = ref(false);
+    const plrAdmin = ref(false);
 
     // console.log(useSupabaseUser().value?.email)
 
@@ -38,6 +39,7 @@
 
         isNotInWeeklong.value = foundUser.isInWeeklong
         isNotRequesting.value = !foundUser.requestingWeeklong
+        plrAdmin.value = foundUser.isAdmin
 
 
         const responseUsers = await axios.get('api/models/users');
@@ -55,7 +57,10 @@
             tags: item.tags,
             daysSurvived: item.daysSurvived,
             mod: item.isMod,
+            zombieHumanOz: item.zombieHumanOz
         }));
+
+        console.log(users.value, "users")
 
         // users.value = items
         //   .filter((item: User) => item.isInWeeklong)
@@ -140,7 +145,7 @@
     <div>
         <div v-if="usersLoaded">
           <div v-if="isNotInWeeklong">
-            <Table :headers="headers" :data="users" />
+            <Table :headers="headers" :data="users" :isAdmin="plrAdmin" />
           </div>
           <div v-else>
             <div v-if="isNotRequesting">

@@ -26,30 +26,8 @@ export default defineNuxtRouteMiddleware((to, from) => {
             router.push("/")
         }
 
-        if (!navPfp().value)
-        {
-            console.log(navPfp().value, "navPfp().value")
-            const user = useSupabaseUser()
-            if (user.value) {
-                const response = axios.get('api/models/user', {
-                    params: {
-                        email: user.value.email,
-                    }
-                }).then((response) => {
-                    // console.log(response.data.data.photo, "response.data.data.photo")
-                    
-                    navPfp().value = response.data.data.photo
-                    stateAdmin().value = response.data.data.isAdmin
-                    // console.log(navPfp().value, "response.data")
-                }
-                ).catch((error) => {
-                    // console.log(error)
-                })
-
-
-                
-            }
-        }
+        const { $setupUser } = useNuxtApp()
+        $setupUser()  
 
 
        

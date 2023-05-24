@@ -1,6 +1,6 @@
 <script setup lang="ts">
     import axios from 'axios'
-    import { RequestingUser } from '../types'
+    import { RequestingUser, User } from '../types'
     const props = defineProps({
         headers: {
             type: Array,
@@ -24,6 +24,32 @@
     // Destructure the props to access them
     const { headers, data, displayAdminTable, isAdmin } = props;
     const dataVal = ref(data)
+    const zombieHumanOzSave = ref([] as number[])
+
+    // If zombieHumanOz exists, save it and remove it from the data
+    // if ((dataVal.value[0] as User).zombieHumanOz != undefined)
+    // {
+    //     zombieHumanOzSave.value = (dataVal.value[0] as User).zombieHumanOz
+    //     dataVal.value = dataVal.value.map((item: any) => {
+    //         delete item.zombieHumanOz
+    //         return item  
+    //     })
+    // }
+    
+    // Save the zombieHumanOz values and remove them from the data
+    zombieHumanOzSave.value = dataVal.value.map((item: any) => {
+        return item.zombieHumanOz
+    })
+    dataVal.value = dataVal.value.map((item: any) => {
+        delete item.zombieHumanOz
+        return item  
+    })
+
+    // console.log(dataVal.value, "dataVal")
+    // console.log(zombieHumanOzSave.value, "zombieHumanOzSave")
+
+
+
 
     if (displayAdminTable && isAdmin)
     {
@@ -109,10 +135,10 @@
             </tr>
             </thead>
             <tbody>
-                <tr v-for="item in dataVal">
-                    <td v-for="(data, index) in item" class="border px-4 py-2">
+                <tr v-for="(item, itemIndex) in dataVal">
+                    <td v-for="(data, index) in item" class="border px-4 py-2" :class="{'green-background': !displayAdminTable && zombieHumanOzSave[itemIndex] === 0, 'red-background': !displayAdminTable && (zombieHumanOzSave[itemIndex] === 1 || (zombieHumanOzSave[itemIndex] === 2 && !isAdmin)), 'pink-background': !displayAdminTable && isAdmin && zombieHumanOzSave[itemIndex] === 2}">
                         
-                        <!-- {{ index }} -->
+                        <!-- {{ itemIndex }} -->
                         <!--  && displayAdminTable && isAdmin" -->
                         <div v-if="index == 'photo'">
                             <img :src="data" class="profile-pictures" />

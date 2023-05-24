@@ -9,6 +9,26 @@
     const updatedText = ref("") as Ref<string>
     const displayPfp = ref("") as Ref<string>
 
+    const curTeam = ref("") as Ref<string>
+    const curNickname = ref("") as Ref<string>
+    const curPfp = ref("") as Ref<string>
+    
+
+    onMounted(async () => {
+        const response = await axios.get('api/models/user', {
+            params: {
+                email: userEmail,
+            },
+        });
+        const foundUser = response.data.data;
+        console.log(foundUser);
+
+        curTeam.value = foundUser.team
+        curNickname.value = foundUser.nickname
+        curPfp.value = foundUser.photo
+        displayPfp.value = foundUser.photo
+    })
+
     // const storage = multer.diskStorage({
     //     destination: function (req, file, cb) {
     //         cb(null, './assets/images');
@@ -67,25 +87,27 @@
         // formData.append('image', pfp.value);
 
         // const updatePfp = async () => {
-        const payload : Object = {
-            email: await useSupabaseUser().value?.email,
-            parameterToUpdate: "photo",
-            newValue: pfpVal
-        }
-        console.log("updating pfp")
-        try {
-            const response = await axios.post('api/models/updatePfp', payload);
-            // const item = response.data.data;
-            // user.value = item;
-            console.log(response);
-            navPfp().value = pfpVal
-            // isNotRequesting.value = false;
+        if (pfp.value != '')
+        {
+            const payload : Object = {
+                email: await useSupabaseUser().value?.email,
+                parameterToUpdate: "photo",
+                newValue: pfpVal
+            }
+            console.log("updating pfp")
+            try {
+                const response = await axios.post('api/models/updatePfp', payload);
+                // const item = response.data.data;
+                // user.value = item;
+                console.log(response);
+                navPfp().value = pfpVal
+                // isNotRequesting.value = false;
 
-        } catch (error) {
-            console.error(error);
-        }
+            } catch (error) {
+                console.error(error);
+            }
             
-        // }
+        }
         
 
         // console.log(payload, "payload")
@@ -98,6 +120,41 @@
 
         // Handle the response here
         // console.log(response.data);
+
+        
+        if(team.value != '')
+        {
+
+            try {
+                await axios.get('api/models/updateUser', {
+                    params: {
+                        email: await useSupabaseUser().value?.email,
+                        parameterToUpdate: "team",
+                        newValue: team.value,
+                        parameterType: "string"
+                    },
+                });
+                curTeam.value = team.value
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        if(nickname.value != '')
+        {
+            try {
+                await axios.get('api/models/updateUser', {
+                    params: {
+                        email: await useSupabaseUser().value?.email,
+                        parameterToUpdate: "nickname",
+                        newValue: nickname.value,
+                        parameterType: "string"
+                    },
+                });
+                curNickname.value = nickname.value
+            } catch (error) {
+                console.error(error);
+            }
+        }
             
         updatedText.value = "Updated"
         pfp.value = ""
@@ -154,11 +211,23 @@
             <button 
                 type="submit"
                 class="p-2 bg-gray-600 rounded"
-
             >
                 {{ "Apply" }}
             </button>
         </form>
+        <div class="mt-8">
+            <h3 class="text-lg font-semibold mb-2">Current Settings:</h3>
+            <div class="flex items-center mb-2">
+                <span class="mr-2 text-orange-600">Team:</span>
+                <span class="text-white">{{ curTeam }}</span>
+            </div>
+            <div class="flex items-center mb-2">
+                <span class="mr-2 text-orange-600">Nickname:</span>
+                <span class="text-white">{{ curNickname }}</span>
+            </div>
+
+        </div>
+
         {{ updatedText }}
     </div>
 </template>

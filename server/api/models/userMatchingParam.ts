@@ -70,7 +70,8 @@ export default defineEventHandler(async (event) => {
 
     // Secret key logic
     if (param.value === "secretKey") {
-        if (userWithParamValue.isInWeeklong == true) {
+        // The user is in the weeklong and person requesting is a human
+        if (userWithParamValue.isInWeeklong == true && (userWithEmail.zombieHumanOz == 1 || userWithEmail.zombieHumanOz == 2) && userWithParamValue.zombieHumanOz == 0) {
             const query = { [param.value]: paramV.value, zombieHumanOz: 0 };
             const update = { $set: { zombieHumanOz: 1 } };
             const result = await col.findOneAndUpdate(query, update, { returnDocument: 'after' });
@@ -83,32 +84,52 @@ export default defineEventHandler(async (event) => {
 
             if (result && result.value) 
             {
-                const updatedUser = await col.findOneAndUpdate(
+                const tagCount = (userWithEmail.tagCount as number) + 1
+
+                // Updated tags
+                await col.findOneAndUpdate(
                     { email: givenEmail.value },
-                    { $set: { tagCount: userWithEmail.tagCount+1 } },
+                    { $set: { tags: tagCount } },
                     { returnDocument: 'after' }
                 );
+                let nicknameTaggedBy = "OZ" // Default value for if the tagger is an OZ
+                // Update taggedBy for the person tagged only IF the TAGGER isn't an OZ
+                if (userWithEmail.zombieHumanOz == 1)
+                {
+                    nicknameTaggedBy = userWithEmail.nickname
+                }
+
+                    
+                await col.findOneAndUpdate(
+                    { secretKey: paramV.value },
+                    { $set: { taggedBy: nicknameTaggedBy } },
+                    { returnDocument: 'after' }
+                );
+
+
                 
                 // The update was successful and the updated document is available in `result.value`
-                console.log('Made zombie:', result.value);
+                console.log('Made zombie & updated tagCount');
 
-                if (updatedUser && updatedUser.value)
-                {
-                    console.log('Updated tagCount:', updatedUser.value);
-                    return {
-                        data: "verified"
-                    }
+                
+                console.log('Updated tagCount');
+                return {
+                    data: "verified"
                 }
-                else
-                {
-                    console.log('Update failed or document not found (user)');
-                }
+                
+                
             } 
         }
         
         else 
         {
-            console.log('User not in weeklong');
+            if (userWithParamValue.isInWeeklong == false)
+                console.log('Requested user is not in weeklong');
+            if (userWithEmail.zombieHumanOz == 0)
+                console.log('This User is a human')
+            if (userWithParamValue.zombieHumanOz != 0)
+                console.log('Requested user is not a human')
+            
         }
 
     }

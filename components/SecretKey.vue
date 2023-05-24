@@ -7,7 +7,7 @@
     const errorMessage = ref(''); // Error message
 
     const handleSubmit = async () => {
-        
+        console.log(secretKey.value, "secretKey")
         try {
             await axios.get('api/models/userMatchingParam', {
                 params: {

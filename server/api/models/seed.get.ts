@@ -88,7 +88,7 @@ export default defineEventHandler(async (event) => {
       team: "",
       coins: 0,
       daysSurvived: 0,
-      secretKey: "",
+      secretKey: "adminSecretKey",
       requestingWeeklong: false
 
     }

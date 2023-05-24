@@ -42,7 +42,7 @@ const fakeData = [{
   "team": "Panda Team",
   "coins": 0,
   "daysSurvived": 1,
-  "secretKey": "",
+  "secretKey": "sakdnasdjksak",
   "requestingWeeklong": true
 },
 {
@@ -59,7 +59,7 @@ const fakeData = [{
      "team": "Panda Team",
      "coins": 0,
      "daysSurvived": 1,
-     "secretKey": "",
+     "secretKey": "sandasdnn",
      "requestingWeeklong": true
 }]
 // console.log(defaultPfp)

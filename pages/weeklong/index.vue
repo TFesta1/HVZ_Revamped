@@ -26,9 +26,9 @@
     // console.log(products.value)
     // console.log(items.value.data)
 
-    // async function getUserValue(){
-    onMounted(async () => {
+    const loadTable = async () => {
       try {
+        usersLoaded.value = false
         const response = await axios.get('api/models/user', {
           params: {
             email: await useSupabaseUser().value?.email,
@@ -61,49 +61,25 @@
         }));
 
         console.log(users.value, "users")
-
-        // users.value = items
-        //   .filter((item: User) => item.isInWeeklong)
-        //   .map((item : User) => ({
-            
-        //     photo: item.photo,
-        //     nickname: item.nickname,
-        //     team: item.team,
-        //     taggedBy: item.taggedBy,
-        //     tags: item.tags,
-        //     daysSurvived: item.daysSurvived,
-        //     mod: item.isMod,
-        //   }));
-
-        // nonWeeklongUsers.value = items.filter((item: User) => !item.isInWeeklong)
-        // requestingList.value = items.filter((item: User) => item.requestingWeeklong)
-        // console.log(nonWeeklongUsers.value, "nonWeeklongUsers")
-    
-        // // If the user is not in the weeklong, record that
-        // if(!nonWeeklongUsers.value.some((item: User) => item.email === useSupabaseUser().value?.email))
-        //   isNotInWeeklong.value = true;
-        // else
-        //   isNotInWeeklong.value = false;
-
-        // if(!requestingList.value.some((item: User) => item.email === useSupabaseUser().value?.email))
-        //   isNotRequesting.value = true;
-        // else
-        //   isNotRequesting.value = false;
-          
-
         console.log(isNotInWeeklong.value, "isInWeeklong")
         console.log(isNotRequesting.value, "isNotRequesting")
           
-        
 
         // console.log(users.value);
         usersLoaded.value = true;
       } catch (error) {
         console.error(error);
       }
-
-
+    }
+    // async function getUserValue(){
+    onMounted(async () => {
+      await loadTable()
     });
+
+    watch (reloadTable(), async () => {
+      await loadTable()
+      reloadTable().value = false
+    })
 
     
 

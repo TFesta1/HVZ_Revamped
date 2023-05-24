@@ -9,7 +9,7 @@
     const handleSubmit = async () => {
         console.log(secretKey.value, "secretKey")
         try {
-            await axios.get('api/models/userMatchingParam', {
+            const response = await axios.get('api/models/userMatchingParam', {
                 params: {
                     email: await useSupabaseUser().value?.email,
                     parameterToFind: "secretKey",
@@ -17,6 +17,13 @@
                     parameterType: "string"
                 },
             });
+            const item = response.data.data;
+            // console.log(item, "item")
+            if (item == 'verified')
+            {
+
+                reloadTable().value = true
+            }
             } catch (error) {
                 console.error(error);
             }

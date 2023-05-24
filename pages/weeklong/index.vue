@@ -145,6 +145,7 @@
     <div>
         <div v-if="usersLoaded">
           <div v-if="isNotInWeeklong">
+            <SecretKey />
             <Table :headers="headers" :data="users" :isAdmin="plrAdmin" />
           </div>
           <div v-else>

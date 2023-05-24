@@ -144,6 +144,14 @@
                             <img :src="data" class="profile-pictures" />
                             <!-- {{ index }} -->
                         </div>
+                        <div v-else-if="index == 'tags'">
+                            <!-- hello -->
+                            <!-- If they're a human or an OZ, tags are 0 always -->
+                            <div v-if="zombieHumanOzSave[itemIndex] === 0 || zombieHumanOzSave[itemIndex] === 2">0</div>
+                            <div v-else>{{ data }}</div>
+                            <!-- Otherwise show their actual tags -->
+
+                        </div>
                         <div v-else>
                             {{ data }}
                             <!-- {{ index }} -->

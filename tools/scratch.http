@@ -12,6 +12,8 @@ GET http://localhost:3000/api/models/updateUser
 # Update tannerfesta@gmail's tags to be 1
 GET http://localhost:3000/api/models/updateUser?email=kenterrey@gmail.com&parameterToUpdate=zombieHumanOz&newValue=0&parameterType=number
 ###
+GET http://localhost:3000/api/models/updateUser?email=moralekhan10@gmail.com&parameterToUpdate=zombieHumanOz&newValue=2&parameterType=number
+###
 GET http://localhost:3000/api/models/updateUser?email=zoombie@gmail.com&parameterToUpdate=requestingWeeklong&newValue=true&parameterType=boolean
 ###
 GET http://localhost:3000/api/models/updateUser?email=zoombie@gmail.com&parameterToUpdate=isInWeeklong&newValue=false&parameterType=boolean

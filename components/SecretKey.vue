@@ -21,7 +21,6 @@
             // console.log(item, "item")
             if (item == 'verified')
             {
-
                 reloadTable().value = true
             }
             } catch (error) {

@@ -12,7 +12,7 @@
             await axios.get('api/models/userMatchingParam', {
                 params: {
                     email: await useSupabaseUser().value?.email,
-                    parameterToUpdate: "secretKey",
+                    parameterToFind: "secretKey",
                     paramValue: secretKey.value,
                     parameterType: "string"
                 },

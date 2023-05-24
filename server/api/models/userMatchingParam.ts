@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
     const { email, parameterToFind, paramValue, parameterType } = getQuery(event);
     const givenEmail = ref("")
     const pType = ref("")
-    const param = ref() 
+    const param = ref("") 
     const paramV = ref()
 
     param.value = parameterToFind?.toString() || ""
@@ -36,6 +36,7 @@ export default defineEventHandler(async (event) => {
         paramV.value = paramValue?.toString() || ""
     }
 
+    console.log(param.value, "param.value")
     console.log(givenEmail.value, "givenEmail.value")
     console.log(paramV.value, "paramV.value")
   

@@ -12,21 +12,22 @@ const port = process.env.PORT || 3000;
 
 // NOTE, double check that a username isn't already in the DB before inserting
 const fakeData = [{
-     "nickname": "Kenter",
-     "username": "Reyna",
-     "email": "kenterrey@gmail.com",
-     "photo": defaultPfp,
-     "isMod": true,
-     "isInWeeklong": true,
-     "taggedBy": "Kyle",
-     "isAdmin": false,
-     "zombieHumanOz": 0, // 0 = human, 1 = zombie, 2 = oz
-     "tags": 0,
-     "team": "Screw the panda team",
-     "coins": 0,
-     "daysSurvived": 2,
-     "secretKey": "abc123",
-     "requestingWeeklong": false
+  "nickname": "Kenter",
+  "username": "Reyna",
+  "email": "kenterrey@gmail.com",
+  "photo": defaultPfp,
+  "isMod": true,
+  "isInWeeklong": true,
+  "taggedBy": "Kyle",
+  "isAdmin": false,
+  "zombieHumanOz": 0, // 0 = human, 1 = zombie, 2 = oz
+  "tags": 0,
+  "team": "Screw the panda team",
+  "coins": 0,
+  "daysSurvived": 2,
+  "secretKey": "abc123",
+  "requestingWeeklong": false,
+  "discordUser": "Kenter#0001"
 },
 {
   "nickname": "zoombie",
@@ -43,24 +44,26 @@ const fakeData = [{
   "coins": 0,
   "daysSurvived": 1,
   "secretKey": "sakdnasdjksak",
-  "requestingWeeklong": true
+  "requestingWeeklong": true,
+  "discordUser": "zoombie#0001"
 },
 {
-     "nickname": "Jenny",
-     "username": "DefinitelyNotOZ",
-     "email": "jennydabest@gmail.com",
-     "photo": defaultPfp,
-     "isMod": false,
-     "isInWeeklong": false,
-     "taggedBy": "",
-     "isAdmin": false,
-     "zombieHumanOz": 2, // 0 = human, 1 = zombie, 2 = oz
-     "tags": 0,
-     "team": "Panda Team",
-     "coins": 0,
-     "daysSurvived": 1,
-     "secretKey": "sandasdnn",
-     "requestingWeeklong": true
+  "nickname": "Jenny",
+  "username": "DefinitelyNotOZ",
+  "email": "jennydabest@gmail.com",
+  "photo": defaultPfp,
+  "isMod": false,
+  "isInWeeklong": false,
+  "taggedBy": "",
+  "isAdmin": false,
+  "zombieHumanOz": 2, // 0 = human, 1 = zombie, 2 = oz
+  "tags": 0,
+  "team": "Panda Team",
+  "coins": 0,
+  "daysSurvived": 1,
+  "secretKey": "sandasdnn",
+  "requestingWeeklong": true,
+  "discordUser": "Jenny#0001"
 }]
 // console.log(defaultPfp)
 

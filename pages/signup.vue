@@ -3,6 +3,7 @@
     import axios from 'axios';
 	const email = ref("") as Ref<string>
 	const password = ref("") as Ref<string>
+    const discordUsername = ref("") as Ref<string>
 	const client = useSupabaseAuthClient()
 	const router = useRouter();
     const signInErrorMsg = ref("")
@@ -10,6 +11,11 @@
 	// NOTE: Password should be at least 6 chars
 	// abcdef
 	const signUp = async () => {
+        if (discordUsername.value == "") {
+            signInErrorMsg.value = "Discord Username is Required"
+            return
+        }
+
 		const { error } = await client.auth.signUp({
 			email: email.value,
 			password: password.value
@@ -23,7 +29,8 @@
             try {
                 const response = await axios.get('api/models/seed', {
                     params: {
-                        email: email.value
+                        email: email.value,
+                        discUser: discordUsername.value
                     }
                 });
                 // const items = response.data.data;
@@ -73,6 +80,12 @@
                 type="password" 
                 v-model="password"
                 placeholder="Password"
+                class="p-2 bg-gray-600 rounded"
+            />
+            <input 
+                type="text" 
+                v-model="discordUsername"
+                placeholder="Discord (Example: name#1000) Must be in the Server"
                 class="p-2 bg-gray-600 rounded"
             />
             <button 

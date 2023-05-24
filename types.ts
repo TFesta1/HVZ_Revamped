@@ -14,6 +14,7 @@ export interface User {
     daysSurvived: number;
     secretKey: string;
     requestingWeeklong: boolean;
+    discordUser: string;
 }
 
 export interface RequestingUser {

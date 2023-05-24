@@ -49,7 +49,29 @@ export default defineEventHandler(async (event) => {
   const db = await connect();
 
   const col = await collection(process.env.USER_COLNAME!);
+
   const items = await col.find().toArray();
+  const secretKeys = items.map(item => item.secretKey);
+
+  
+  // Function to generate a random string
+  function generateRandomString(length: number) {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * chars.length);
+      result += chars.charAt(randomIndex);
+    }
+    return result;
+  }
+
+  let newKey;
+  do 
+  {
+    newKey = generateRandomString(8);
+  } while (secretKeys.includes(newKey));
+
+  console.log(newKey);
 
   const matchingUser = await col.findOne({ email: { $eq: givenEmail.value } });
   if (matchingUser === null) {
@@ -70,7 +92,7 @@ export default defineEventHandler(async (event) => {
         team: "",
         coins: 0,
         daysSurvived: 0,
-        secretKey: "",
+        secretKey: newKey,
         requestingWeeklong: false
     }
 
@@ -88,7 +110,7 @@ export default defineEventHandler(async (event) => {
       team: "",
       coins: 0,
       daysSurvived: 0,
-      secretKey: "adminSecretKey",
+      secretKey: newKey,
       requestingWeeklong: false
 
     }

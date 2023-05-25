@@ -53,6 +53,7 @@
 
     async function addSubTags(email : string, dir : boolean)
     {
+        // Here we either add or subtract a tag depending on dir (direction)
         let tags = 0
         if(dir) {
             tags = 1
@@ -68,7 +69,31 @@
                 return item;
             }
         });
+
+        // dataVal.value[coorespondingInd] contains one User, so we access tags
+        // Then we add a tag to it
         (dataVal.value[coorespondingInd] as User).tags = ((dataVal.value[coorespondingInd] as User).tags as number) + tags
+
+        // Below is actually updating it in the DB
+        const responseWeeklong = await axios.get('../api/models/user', {
+            params: {
+                email: (email as any).email //Weird... but it works. I thought email was of string type and not an object??
+            },
+        });
+
+        const foundUserTags = (responseWeeklong.data.data as User).tags + tags;
+
+        await axios.get('../api/models/updateUser', {
+            params: {
+                email: (email as any).email,
+                parameterToUpdate: "tags",
+                newValue: foundUserTags,
+                parameterType: "number"
+            },
+        });
+
+
+
 
     }
 
@@ -89,11 +114,26 @@
                 return item;
             }
         });
+        // dataVal.value[coorespondingInd] contains one User, so we access daysSurvived
+        // Then we add a day to it
         (dataVal.value[coorespondingInd] as User).daysSurvived = ((dataVal.value[coorespondingInd] as User).daysSurvived as number) + days
+        const responseWeeklong = await axios.get('../api/models/user', {
+            params: {
+                email: (email as any).email //Weird... but it works. I thought email was of string type and not an object??
+            },
+        });
 
+        const foundUserDays = (responseWeeklong.data.data as User).daysSurvived + days;
 
-        
-
+        await axios.get('../api/models/updateUser', {
+            params: {
+                email: (email as any).email,
+                parameterToUpdate: "daysSurvived",
+                newValue: foundUserDays,
+                parameterType: "number"
+            },
+        });
+    
     }
     
     // Destructure the props to access them
@@ -101,16 +141,6 @@
     const dataVal = ref(data)
     const coorespondingEmailsV = ref(coorespondingEmails as string[])
     const zombieHumanOzSave = ref([] as number[])
-
-    // If zombieHumanOz exists, save it and remove it from the data
-    // if ((dataVal.value[0] as User).zombieHumanOz != undefined)
-    // {
-    //     zombieHumanOzSave.value = (dataVal.value[0] as User).zombieHumanOz
-    //     dataVal.value = dataVal.value.map((item: any) => {
-    //         delete item.zombieHumanOz
-    //         return item  
-    //     })
-    // }
     
     // Save the zombieHumanOz values and remove them from the data
     zombieHumanOzSave.value = dataVal.value.map((item: any) => {

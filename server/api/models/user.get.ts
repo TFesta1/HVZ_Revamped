@@ -12,6 +12,8 @@ export default defineEventHandler(async (event) => {
     const givenEmail = ref("")
 
     givenEmail.value = email?.toString() || ""
+
+    console.log(givenEmail.value, "givenEmail.value")
   
     // Connect to the database
     const db = await connect();

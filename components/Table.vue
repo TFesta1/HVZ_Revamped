@@ -135,6 +135,36 @@
         });
     
     }
+
+    async function humanZombieOz(email: string, teamSpec: number) {
+        let coorespondingInd: number = 0;
+        coorespondingEmailsV.value.forEach((item, index) => {
+            if (item === email) {
+                coorespondingInd = index;
+                return item;
+            }
+        });
+
+        // dataVal.value[coorespondingInd] contains one User, so we access zombieHumanOz
+        // 0 = human, 1 = zombie, 2 = oz
+        zombieHumanOzSave.value[coorespondingInd] = teamSpec
+
+    }
+
+    async function modAndDemod(email: string, modOrDemod: boolean) {
+        let coorespondingInd: number = 0;
+        coorespondingEmailsV.value.forEach((item, index) => {
+            if (item === email) {
+                coorespondingInd = index;
+                return item;
+            }
+        });
+
+        // dataVal.value[coorespondingInd] contains one User, so we access isMod
+
+        (dataVal.value[coorespondingInd] as User).isMod = modOrDemod
+
+    }
     
     // Destructure the props to access them
     const { headers, data, coorespondingEmails, displayAdminTable, isAdmin } = props;
@@ -255,7 +285,10 @@
                                 <button class="sleakAdminButton bg-blue-500 text-white" @click="addSubTags(coorespondingEmailsV[itemIndex], false)">Tags--</button>
                                 <button class="sleakAdminButton bg-green-500 text-white" @click="addSubDays(coorespondingEmailsV[itemIndex], true)">Days++</button>
                                 <button class="sleakAdminButton bg-green-500 text-white" @click="addSubDays(coorespondingEmailsV[itemIndex], false)">Days--</button>
-
+                                <button class="sleakAdminButton bg-orange-500 text-white" @click="humanZombieOz(coorespondingEmailsV[itemIndex], 0)">Human</button>
+                                <button class="sleakAdminButton bg-orange-500 text-white" @click="humanZombieOz(coorespondingEmailsV[itemIndex], 1)">Zombie</button>
+                                <button class="sleakAdminButton bg-orange-500 text-white" @click="humanZombieOz(coorespondingEmailsV[itemIndex], 2)">Oz</button>
+                                
                             </div>
                             <!-- {{ index }} -->
                         </div>

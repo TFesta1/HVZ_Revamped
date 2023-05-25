@@ -3,7 +3,7 @@ export interface User {
     username: string;
     email: string;
     photo: string;
-    isMod: string;
+    isMod: boolean;
     isInWeeklong: boolean;
     taggedBy: string;
     isAdmin: boolean;

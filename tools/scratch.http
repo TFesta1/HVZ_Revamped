@@ -14,6 +14,8 @@ GET http://localhost:3000/api/models/updateUser?email=kenterrey@gmail.com&parame
 ###
 GET http://localhost:3000/api/models/updateUser?email=moralekhan10@gmail.com&parameterToUpdate=isInWeeklong&newValue=false&parameterType=boolean
 ###
+GET http://localhost:3000/api/models/updateUser?email=moralekhan10@gmail.com&parameterToUpdate=requestingWeeklong&newValue=false&parameterType=boolean
+###
 GET http://localhost:3000/api/models/updateUser?email=zoombie@gmail.com&parameterToUpdate=requestingWeeklong&newValue=true&parameterType=boolean
 ###
 GET http://localhost:3000/api/models/updateUser?email=zoombie@gmail.com&parameterToUpdate=isInWeeklong&newValue=false&parameterType=boolean

@@ -53,6 +53,9 @@
 
       if (giCode.value == adminUser.GICode) {
         giCode.value = ""
+        giErrorMsg.value = 'GI Code Verified'
+        // isNotInWeeklong.value = true
+        // isNotRequesting.value = true
         // giCodeUsable.value = false
         try {
           const responseWeeklong = await axios.get('../api/models/updateUser', {
@@ -210,14 +213,27 @@
 
         <div v-if="!isNotInWeeklong">
           <!-- Input box and "Enter" button for GICode -->
-          <div class="w-full md:w-1/7 p-4 mt-4" v-if="giCodeUsable">
+          <!-- v-if="giCodeUsable" -->
+          <div class="w-full md:w-1/7 p-4 mt-4">
             <input v-model="giCode" type="text" class="form-input mr-2 text-black" placeholder="Enter GICode" />
             <button @click="submitGICode" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enter</button>
-            <p class="text-red-500">{{ giErrorMsg }}</p>
+            <p class="text-red-500">
+              <span :class="{'text-red-500': giErrorMsg !== 'GI Code Verified', 'text-green-500': giErrorMsg === 'GI Code Verified'}">
+                {{ giErrorMsg }}
+              </span>
+              
+            </p>
           </div>
-          <div v-else  class="w-full md:w-1/7 p-4 mt-4">
+          <!-- <div v-else  class="w-full md:w-1/7 p-4 mt-4">
             <p>No GI Code Available</p>
-          </div>
+          </div> -->
+
+          <p class="mb-4">
+                Code Usable: 
+                <span :class="{'text-red-500': giCodeUsable === false, 'text-green-500': giCodeUsable === true}">
+                    {{ giCodeUsable ? "Yes" : 'No' }}
+                </span>
+          </p>
 
         </div>
         

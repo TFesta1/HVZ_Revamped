@@ -208,15 +208,19 @@
           </div>
         </div>
 
-        <!-- Input box and "Enter" button for GICode -->
-        <div class="w-full md:w-1/7 p-4 mt-4" v-if="giCodeUsable">
-          <input v-model="giCode" type="text" class="form-input mr-2 text-black" placeholder="Enter GICode" />
-          <button @click="submitGICode" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enter</button>
-          <p class="text-red-500">{{ giErrorMsg }}</p>
+        <div v-if="!isNotInWeeklong">
+          <!-- Input box and "Enter" button for GICode -->
+          <div class="w-full md:w-1/7 p-4 mt-4" v-if="giCodeUsable">
+            <input v-model="giCode" type="text" class="form-input mr-2 text-black" placeholder="Enter GICode" />
+            <button @click="submitGICode" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enter</button>
+            <p class="text-red-500">{{ giErrorMsg }}</p>
+          </div>
+          <div v-else  class="w-full md:w-1/7 p-4 mt-4">
+            <p>No GI Code Available</p>
+          </div>
+
         </div>
-        <div v-else class="w-full md:w-1/7 p-4 mt-4">
-          <p>No GI Code Available</p>
-        </div>
+        
       </div>
     <div v-else class="bg-gray-200 h-4 w-1/2 animate-pulse rounded-lg"></div> <!-- Loading bar -->
   </div>

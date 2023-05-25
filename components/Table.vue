@@ -29,8 +29,8 @@
 
     async function deletePerson(email : string)
     {
-        console.log(email, "email")
-        console.log(coorespondingEmailsV.value, "emails")
+        // console.log(email, "email")
+        // console.log(coorespondingEmailsV.value, "emails")
         const removedIndexes = [] as number[];
         coorespondingEmailsV.value = coorespondingEmailsV.value.filter((item, index) => {
         if (item === email) {
@@ -47,8 +47,8 @@
         zombieHumanOzSave.value = zombieHumanOzSave.value.filter((item, index) => {
             return !removedIndexes.includes(index);
         });
-        
-        console.log(coorespondingEmailsV.value, "emails After")
+
+        // console.log(coorespondingEmailsV.value, "emails After")
     }
 
     async function addSubTags(email : string, dir : boolean)
@@ -61,6 +61,15 @@
             tags = -1
         }
 
+        let coorespondingInd: number = 0;
+        coorespondingEmailsV.value.forEach((item, index) => {
+            if (item === email) {
+                coorespondingInd = index;
+                return item;
+            }
+        });
+        (dataVal.value[coorespondingInd] as User).tags = ((dataVal.value[coorespondingInd] as User).tags as number) + tags
+
     }
 
     async function addSubDays(email : string, dir : boolean)
@@ -72,6 +81,18 @@
         else {
             days = -1
         }
+
+        let coorespondingInd: number = 0;
+        coorespondingEmailsV.value.forEach((item, index) => {
+            if (item === email) {
+                coorespondingInd = index;
+                return item;
+            }
+        });
+        (dataVal.value[coorespondingInd] as User).daysSurvived = ((dataVal.value[coorespondingInd] as User).daysSurvived as number) + days
+
+
+        
 
     }
     
@@ -200,10 +221,10 @@
                             <img :src="data" class="profile-pictures" />
                             <div v-if="!displayAdminTable && stateAdmin()">
                                 <button class="sleakAdminButton bg-red-500 text-white" @click="deletePerson(coorespondingEmailsV[itemIndex])">Delete</button>
-                                <button class="sleakAdminButton bg-blue-500 text-white">Tags++</button>
-                                <button class="sleakAdminButton bg-blue-500 text-white">Tags--</button>
-                                <button class="sleakAdminButton bg-green-500 text-white">Days++</button>
-                                <button class="sleakAdminButton bg-green-500 text-white">Days--</button>
+                                <button class="sleakAdminButton bg-blue-500 text-white" @click="addSubTags(coorespondingEmailsV[itemIndex], true)">Tags++</button>
+                                <button class="sleakAdminButton bg-blue-500 text-white" @click="addSubTags(coorespondingEmailsV[itemIndex], false)">Tags--</button>
+                                <button class="sleakAdminButton bg-green-500 text-white" @click="addSubDays(coorespondingEmailsV[itemIndex], true)">Days++</button>
+                                <button class="sleakAdminButton bg-green-500 text-white" @click="addSubDays(coorespondingEmailsV[itemIndex], false)">Days--</button>
 
                             </div>
                             <!-- {{ index }} -->

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    const { $setupUser } = useNuxtApp()
+    $setupUser()  
 
     useHead({
         title: "event page",

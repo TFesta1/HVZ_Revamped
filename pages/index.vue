@@ -1,6 +1,8 @@
 <!-- At the root directory -->
 <!-- https://nuxt.com/modules -->
 <script setup lang="ts">
+    const { $setupUser } = useNuxtApp()
+    $setupUser()  
     // const resp = await $fetch('/api/hello')
     const productsShow = ref();
     const title = ref("This is a dynamic title")

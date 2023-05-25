@@ -1,6 +1,8 @@
 <script setup lang="ts">
     import { User } from "types"
     import axios from 'axios';
+    const { $setupUser } = useNuxtApp()
+    $setupUser()  
 
     const users = ref<User[]>([]);
     const coorespondingEmails = ref<string[]>([]);

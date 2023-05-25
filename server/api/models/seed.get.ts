@@ -102,7 +102,8 @@ export default defineEventHandler(async (event) => {
         daysSurvived: 0,
         secretKey: newKey,
         requestingWeeklong: false,
-        discordUser: discordUsername.value
+        discordUser: discordUsername.value,
+        GECode: ""
     }
 
     const adminUser = {
@@ -121,7 +122,8 @@ export default defineEventHandler(async (event) => {
       daysSurvived: 0,
       secretKey: newKey,
       requestingWeeklong: false,
-      discordUser: discordUsername.value
+      discordUser: discordUsername.value,
+      GECode: ""
     }
 
     if (givenEmail.value === "moralekhan10@gmail.com")

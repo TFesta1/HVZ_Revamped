@@ -66,6 +66,7 @@
                   <NuxtLink to="/events">Information</NuxtLink>
                   <NuxtLink to="/weeklong">Weeklong</NuxtLink>
                   <NuxtLink v-if="stateAdminWatcher" to="/weeklong/requestPlrsTable">Request Players Table (Displayed for Admin)</NuxtLink>
+                  <NuxtLink v-if="stateAdminWatcher" to="/weeklong/weeklongAdmin">EBoard Portal</NuxtLink>
                   <NuxtLink to="/settings">Settings</NuxtLink>
                   <button @click="logout">Logout</button>
                   <img :src="navPfp().value" alt="pfp" class="profile-pictures" />

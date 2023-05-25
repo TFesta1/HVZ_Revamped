@@ -15,6 +15,7 @@ export interface User {
     secretKey: string;
     requestingWeeklong: boolean;
     discordUser: string;
+    GECode: string;
 }
 
 export interface RequestingUser {

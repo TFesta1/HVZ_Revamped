@@ -134,4 +134,19 @@
   background-color: #ccc; /* Change background color on hover or focus */
 }
 
+
+.switch-container,
+.input-container {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+input[type='checkbox'] {
+  margin-right: 0.5rem;
+}
+
   

@@ -149,6 +149,16 @@
         // 0 = human, 1 = zombie, 2 = oz
         zombieHumanOzSave.value[coorespondingInd] = teamSpec
 
+        // Below is actually updating it in the DB
+        await axios.get('../api/models/updateUser', {
+            params: {
+                email: (email as any).email,
+                parameterToUpdate: "zombieHumanOz",
+                newValue: teamSpec,
+                parameterType: "number"
+            },
+        });
+
     }
 
     async function modAndDemod(email: string, modOrDemod: boolean) {
@@ -162,7 +172,18 @@
 
         // dataVal.value[coorespondingInd] contains one User, so we access isMod
 
-        (dataVal.value[coorespondingInd] as User).isMod = modOrDemod
+        (dataVal.value[coorespondingInd] as any).mod = modOrDemod
+        // console.log(dataVal.value[coorespondingInd], "dataVal.value[coorespondingInd]")
+
+        await axios.get('../api/models/updateUser', {
+            params: {
+                email: (email as any).email,
+                parameterToUpdate: "isMod",
+                newValue: modOrDemod,
+                parameterType: "boolean"
+            },
+        });
+
 
     }
     
@@ -288,6 +309,9 @@
                                 <button class="sleakAdminButton bg-orange-500 text-white" @click="humanZombieOz(coorespondingEmailsV[itemIndex], 0)">Human</button>
                                 <button class="sleakAdminButton bg-orange-500 text-white" @click="humanZombieOz(coorespondingEmailsV[itemIndex], 1)">Zombie</button>
                                 <button class="sleakAdminButton bg-orange-500 text-white" @click="humanZombieOz(coorespondingEmailsV[itemIndex], 2)">Oz</button>
+                                <button class="sleakAdminButton bg-purple-500 text-white" @click="modAndDemod(coorespondingEmailsV[itemIndex], true)">Mod</button>
+                                <button class="sleakAdminButton bg-purple-500 text-white" @click="modAndDemod(coorespondingEmailsV[itemIndex], false)">DeMod</button>
+
                                 
                             </div>
                             <!-- {{ index }} -->

@@ -104,6 +104,7 @@
                 // user.value = item;
                 console.log(response);
                 navPfp().value = pfpVal
+                // pfp.value = ""
                 // isNotRequesting.value = false;
 
             } catch (error) {
@@ -138,6 +139,7 @@
                     },
                 });
                 curTeam.value = team.value
+                team.value = ""
             } catch (error) {
                 console.error(error);
             }
@@ -154,6 +156,7 @@
                     },
                 });
                 curNickname.value = nickname.value
+                nickname.value = ""
             } catch (error) {
                 console.error(error);
             }
@@ -170,6 +173,7 @@
                     },
                 });
                 curDiscord.value = discord.value
+                discord.value = ""
             } catch (error) {
                 console.error(error);
             }

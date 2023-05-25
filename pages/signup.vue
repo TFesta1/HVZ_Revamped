@@ -3,6 +3,7 @@
     import axios from 'axios';
 	const email = ref("") as Ref<string>
 	const password = ref("") as Ref<string>
+    const reEnterPassword = ref("") as Ref<string>
     const discordUsername = ref("") as Ref<string>
 	const client = useSupabaseAuthClient()
 	const router = useRouter();
@@ -15,6 +16,29 @@
             signInErrorMsg.value = "Discord Username is Required"
             return
         }
+
+        if (password.value != reEnterPassword.value) {
+            signInErrorMsg.value = "Passwords do not match"
+            return
+        }
+
+        if(email.value != "moralekhan10@gmail.com")
+        {
+            if (!email.value.includes("newpaltz.edu")) 
+            {
+                signInErrorMsg.value = "Must use New Paltz Email"
+                return
+            }
+
+        }
+        
+
+        if(password.value.length < 6 || reEnterPassword.value.length < 6) {
+            signInErrorMsg.value = "Password must be at least 6 characters"
+            return
+        }
+
+
 
 		const { error } = await client.auth.signUp({
 			email: email.value,
@@ -72,9 +96,15 @@
             <input 
                 type="email" 
                 v-model="email"
-                placeholder="Email"
+                placeholder="New Paltz Email"
                 class="p-2 bg-gray-600 rounded"
 
+            />
+            <input 
+                type="text" 
+                v-model="discordUsername"
+                placeholder="Discord (Example: name#1000) Must be in the Server"
+                class="p-2 bg-gray-600 rounded"
             />
             <input 
                 type="password" 
@@ -83,9 +113,9 @@
                 class="p-2 bg-gray-600 rounded"
             />
             <input 
-                type="text" 
-                v-model="discordUsername"
-                placeholder="Discord (Example: name#1000) Must be in the Server"
+                type="password" 
+                v-model="reEnterPassword"
+                placeholder="Re-enter Password"
                 class="p-2 bg-gray-600 rounded"
             />
             <button 

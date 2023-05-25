@@ -1,15 +1,65 @@
 <script setup lang="ts">
+    import axios from 'axios'
+    import { User } from "types"
+    const { $setupUser } = useNuxtApp()
+    $setupUser()  
     // Data
     const toggleSwitch = ref(false);
     const inputValue = ref('');
     const giCode = ref('')
     const giCodeUsable = ref(true)
 
-    async function applySettings()
+    onMounted(async () => {
+        const response = await axios.get('../api/models/user', {
+            params: {
+                email: adminEmail().value
+            }
+        });
+        const items: User = response.data.data;
+        giCode.value = items.GICode
+        giCodeUsable.value = items.GICodeUsable
+        // console.log(items, "items")
+
+        // giCode.value = items[0].giCode
+        // giCodeUsable.value = items[0].giCodeUsable
+
+
+    });
+
+    async function applyGISettings()
     {
         console.log("applySettings")
         console.log(toggleSwitch.value)
         console.log(inputValue.value)
+
+        giCode.value = inputValue.value 
+        giCodeUsable.value = toggleSwitch.value
+
+        try {
+            await axios.get('../api/models/updateUser', {
+                params: {
+                    email: adminEmail().value,
+                    parameterToUpdate: "GICode",
+                    newValue: giCode.value,
+                    parameterType: "string"
+                },
+            });
+
+            await axios.get('../api/models/updateUser', {
+                params: {
+                    email: adminEmail().value,
+                    parameterToUpdate: "GICodeUsable",
+                    newValue: giCodeUsable.value,
+                    parameterType: "boolean"
+                },
+            });
+
+        } catch (error) {
+            console.error(error);
+        }
+
+
+
     }
 
 </script>
@@ -25,7 +75,7 @@
             </div>
             <div class="input-container mb-4">
                 <label for="input-field" class="mr-2">Input Code:</label>
-                <input id="input-field" type="text" v-model="inputValue" class="form-input text-black" />
+                <input id="input-field" type="text" v-model="inputValue" class="form-input text-black w-full md:w-auto" />
             </div>
             <div></div>
             <p class="mb-4">
@@ -40,7 +90,7 @@
                     {{ giCodeUsable ? "Yes" : 'No' }}
                 </span>
             </p>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="applySettings">Apply</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="applyGISettings">Apply</button>
 
 
         </div>

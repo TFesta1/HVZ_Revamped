@@ -9,11 +9,13 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   const setupUser = async () => {
     if (!navPfp().value) {
+      
       console.log(navPfp().value, "navPfp().value")
       const user = useSupabaseUser()
       if (user.value) {
         try {
-            const response = await axios.get('api/models/user', {
+          // / infront makes it relative to the root
+            const response = await axios.get('/api/models/user', {
                 params: {
                 email: user.value.email,
                 }

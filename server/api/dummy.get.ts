@@ -27,7 +27,9 @@ const fakeData = [{
   "daysSurvived": 2,
   "secretKey": "abc123",
   "requestingWeeklong": false,
-  "discordUser": "Kenter#0001"
+  "discordUser": "Kenter#0001",
+  "GICode": "",
+  "GICodeUsable": false
 },
 {
   "nickname": "zoombie",
@@ -45,7 +47,9 @@ const fakeData = [{
   "daysSurvived": 1,
   "secretKey": "sakdnasdjksak",
   "requestingWeeklong": true,
-  "discordUser": "zoombie#0001"
+  "discordUser": "zoombie#0001",
+  "GICode": "",
+  "GICodeUsable": false
 },
 {
   "nickname": "Jenny",
@@ -63,7 +67,9 @@ const fakeData = [{
   "daysSurvived": 1,
   "secretKey": "sandasdnn",
   "requestingWeeklong": true,
-  "discordUser": "Jenny#0001"
+  "discordUser": "Jenny#0001",
+  "GICode": "",
+  "GICodeUsable": false
 }]
 // console.log(defaultPfp)
 

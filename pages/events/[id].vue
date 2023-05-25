@@ -1,7 +1,7 @@
 <script setup lang="ts">
     const nuxt = useNuxtApp()
 
-    console.log(nuxt)
+    console.log(nuxt, 'nuxtAPp')
 
 </script>
 

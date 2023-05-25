@@ -2,6 +2,7 @@
   const { $setupUser } = useNuxtApp()
   $setupUser()  
   const client = useSupabaseAuthClient()
+  adminEmail().value = "moralekhan10@gmail.com"
 
   const userLoggedIn = ref(false);
 

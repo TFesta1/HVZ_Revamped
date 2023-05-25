@@ -18,6 +18,8 @@
         const items: User = response.data.data;
         giCode.value = items.GICode
         giCodeUsable.value = items.GICodeUsable
+        toggleSwitch.value = items.GICodeUsable
+        inputValue.value = items.GICode
         // console.log(items, "items")
 
         // giCode.value = items[0].giCode

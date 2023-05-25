@@ -12,6 +12,9 @@
     const isNotRequesting = ref(false);
     const usersLoaded = ref(false);
     const plrAdmin = ref(false);
+    const giCode = ref("")
+    const giCodeUsable = ref(true)
+    const giErrorMsg = ref("")
 
     // console.log(useSupabaseUser().value?.email)
 
@@ -28,6 +31,61 @@
     // const users: User[] = items as User[];
     // console.log(products.value)
     // console.log(items.value.data)
+
+    const submitGICode = async () => {
+
+      console.log(giCode.value)
+      if (giCode.value == "")
+      {
+        giErrorMsg.value = "GI Code Empty"
+        return
+      }
+      const response = await axios.get('api/models/user', {
+          params: {
+            email: adminEmail().value,
+          },
+      });
+      const adminUser: User = response.data.data;
+      if (!adminUser.GICodeUsable) {
+        giErrorMsg.value = "GI Not In Session"
+        return;
+      }
+
+      if (giCode.value == adminUser.GICode) {
+        giCode.value = ""
+        // giCodeUsable.value = false
+        try {
+          const responseWeeklong = await axios.get('../api/models/updateUser', {
+                params: {
+                    email: useSupabaseUser().value?.email,
+                    parameterToUpdate: "isInWeeklong",
+                    newValue: true,
+                    parameterType: "boolean"
+                },
+            });
+
+            const responseReq = await axios.get('../api/models/updateUser', {
+                params: {
+                    email: useSupabaseUser().value?.email,
+                    parameterToUpdate: "requestingWeeklong",
+                    newValue: false,
+                    parameterType: "boolean"
+                },
+          });
+          reloadTable().value = true
+          
+        } catch (error) {
+          console.error(error);
+        }
+      } else {
+        giErrorMsg.value = "GI Code Incorrect"
+      }
+
+
+
+
+
+    }
 
     const loadTable = async () => {
       try {
@@ -82,6 +140,13 @@
     }
     // async function getUserValue(){
     onMounted(async () => {
+      const response = await axios.get('api/models/user', {
+          params: {
+            email: adminEmail().value,
+          },
+      });
+      const adminUser: User = response.data.data;
+      giCodeUsable.value = adminUser.GICodeUsable
       await loadTable()
     });
 
@@ -127,27 +192,35 @@
 </script>
 
 <template>
-    <div>
-        <div v-if="usersLoaded">
-          <div v-if="isNotInWeeklong">
-            <SecretKey />
-            <Table :headers="headers" :coorespondingEmails="coorespondingEmails" :data="users" :isAdmin="plrAdmin" />
+    <div class="flex flex-wrap">
+      <div v-if="usersLoaded">
+        <div v-if="isNotInWeeklong">
+          <SecretKey />
+          <Table :headers="headers" :coorespondingEmails="coorespondingEmails" :data="users" :isAdmin="plrAdmin" />
+        </div>
+        <div v-else class="w-full md:w-1/2 p-4">
+          <!--  -->
+          <div v-if="isNotRequesting">
+            <button @click="requestedToPlay()" class="genericButton">Request weeklong</button>
           </div>
           <div v-else>
-            <div v-if="isNotRequesting">
-              <button @click="requestedToPlay()" class="genericButton">Request weeklong</button>
-            </div>
-            <div v-else>
-              <p>You have requested to play in the weeklong. Please wait for a mod to approve your request.</p>
-            </div>
+            <p>You have requested to play in the weeklong. Please wait for a mod to approve your request.</p>
           </div>
-          
-          
-
         </div>
-        <div v-else class="bg-gray-200 h-4 w-1/2 animate-pulse rounded-lg"></div> <!-- Loading bar -->
-        
-    </div>
+
+        <!-- Input box and "Enter" button for GICode -->
+        <div class="w-full md:w-1/7 p-4 mt-4" v-if="giCodeUsable">
+          <input v-model="giCode" type="text" class="form-input mr-2 text-black" placeholder="Enter GICode" />
+          <button @click="submitGICode" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enter</button>
+          <p class="text-red-500">{{ giErrorMsg }}</p>
+        </div>
+        <div v-else class="w-full md:w-1/7 p-4 mt-4">
+          <p>No GI Code Available</p>
+        </div>
+      </div>
+    <div v-else class="bg-gray-200 h-4 w-1/2 animate-pulse rounded-lg"></div> <!-- Loading bar -->
+  </div>
+
 </template>
 
 

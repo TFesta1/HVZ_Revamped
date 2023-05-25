@@ -10,6 +10,11 @@
             type: Array,
             required: true,
         },
+        coorespondingEmails : {
+            type: Array,
+            required: false,
+            default: [],
+        },
         displayAdminTable: {
             type: Boolean,
             required: false,
@@ -21,9 +26,59 @@
             default: false,
         }
     });
+
+    async function deletePerson(email : string)
+    {
+        console.log(email, "email")
+        console.log(coorespondingEmailsV.value, "emails")
+        const removedIndexes = [] as number[];
+        coorespondingEmailsV.value = coorespondingEmailsV.value.filter((item, index) => {
+        if (item === email) {
+                removedIndexes.push(index);
+                return false;
+            }
+            return true;
+        });
+
+        dataVal.value = dataVal.value.filter((item, index) => {
+            return !removedIndexes.includes(index);
+        });
+
+        zombieHumanOzSave.value = zombieHumanOzSave.value.filter((item, index) => {
+            return !removedIndexes.includes(index);
+        });
+        
+        console.log(coorespondingEmailsV.value, "emails After")
+    }
+
+    async function addSubTags(email : string, dir : boolean)
+    {
+        let tags = 0
+        if(dir) {
+            tags = 1
+        }
+        else {
+            tags = -1
+        }
+
+    }
+
+    async function addSubDays(email : string, dir : boolean)
+    {
+        let days = 0
+        if (dir) {
+            days = 1
+        }
+        else {
+            days = -1
+        }
+
+    }
+    
     // Destructure the props to access them
-    const { headers, data, displayAdminTable, isAdmin } = props;
+    const { headers, data, coorespondingEmails, displayAdminTable, isAdmin } = props;
     const dataVal = ref(data)
+    const coorespondingEmailsV = ref(coorespondingEmails as string[])
     const zombieHumanOzSave = ref([] as number[])
 
     // If zombieHumanOz exists, save it and remove it from the data
@@ -44,6 +99,7 @@
         delete item.zombieHumanOz
         return item  
     })
+
 
     // console.log(dataVal.value, "dataVal")
     // console.log(zombieHumanOzSave.value, "zombieHumanOzSave")
@@ -142,6 +198,14 @@
                         <!--  && displayAdminTable && isAdmin" -->
                         <div v-if="index == 'photo'">
                             <img :src="data" class="profile-pictures" />
+                            <div v-if="!displayAdminTable && stateAdmin()">
+                                <button class="sleakAdminButton bg-red-500 text-white" @click="deletePerson(coorespondingEmailsV[itemIndex])">Delete</button>
+                                <button class="sleakAdminButton bg-blue-500 text-white">Tags++</button>
+                                <button class="sleakAdminButton bg-blue-500 text-white">Tags--</button>
+                                <button class="sleakAdminButton bg-green-500 text-white">Days++</button>
+                                <button class="sleakAdminButton bg-green-500 text-white">Days--</button>
+
+                            </div>
                             <!-- {{ index }} -->
                         </div>
                         <div v-else-if="index == 'tags'">

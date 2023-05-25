@@ -3,6 +3,7 @@
     import axios from 'axios';
 
     const users = ref<User[]>([]);
+    const coorespondingEmails = ref<string[]>([]);
     const isNotInWeeklong = ref<boolean>(false);
     const nonWeeklongUsers = ref<User[]>([]);
     const requestingList = ref<User[]>([]);
@@ -58,6 +59,12 @@
             daysSurvived: item.daysSurvived,
             mod: item.isMod,
             zombieHumanOz: item.zombieHumanOz
+        }));
+
+        coorespondingEmails.value = items
+          .filter((item: User) => item.isInWeeklong)
+          .map((item : User) => ({
+            email: item.email
         }));
 
         console.log(users.value, "users")
@@ -122,7 +129,7 @@
         <div v-if="usersLoaded">
           <div v-if="isNotInWeeklong">
             <SecretKey />
-            <Table :headers="headers" :data="users" :isAdmin="plrAdmin" />
+            <Table :headers="headers" :coorespondingEmails="coorespondingEmails" :data="users" :isAdmin="plrAdmin" />
           </div>
           <div v-else>
             <div v-if="isNotRequesting">

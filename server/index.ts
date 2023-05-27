@@ -15,11 +15,12 @@ export default async function initializeNitroApp() {
     // console.log(DB_Name);
 
     const client = new MongoClient(url);
-
+    // console.log(client)
     async function connect() {
         const db = await client.connect();
         return db.db(DB_Name);
     }
+    // console.log(connect())
     
     async function collection(COLLECTION_NAME : string) {
         const db = await connect();

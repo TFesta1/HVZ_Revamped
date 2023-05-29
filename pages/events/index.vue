@@ -31,8 +31,20 @@
 
     async function onSubmit() 
     {
+        dataLoaded.value = false
         clickedAddEvent.value = false;
         console.log(form.header, form.content)
+
+        const response = await axios.get('../api/models/updateInfoEvent', {
+            params: {
+                email: adminEmail().value,
+                header: form.header,
+                content: form.content,
+                operation: "add"
+            }
+        });
+
+        await loadInfoEvents()
         console.log("Submitted")
     }
 
@@ -49,9 +61,8 @@
     //         isShown: false,
     //     }
     // ]) as Ref<{header: string, content: string, isShown: boolean}[]>
-
-    const infoEvents = ref([] as InfoEvent[]) 
-    onMounted(async () => {
+    async function loadInfoEvents() {
+        dataLoaded.value = false
         const response = await axios.get('../api/models/user', {
             params: {
                 email: adminEmail().value
@@ -61,6 +72,10 @@
         infoEvents.value = items
         // console.log(items, "items")
         dataLoaded.value = true
+    }
+    const infoEvents = ref([] as InfoEvent[]) 
+    onMounted(async () => {
+        await loadInfoEvents()
     })
 
     
@@ -74,17 +89,17 @@
     <div v-if="stateAdmin()">
         <!-- For admins to add a new event -->
         <h3 class="i-name">
-            <button class="addEvent bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded" @click="addEvent" :style="{ display: clickedAddEvent ? 'none' : 'flex' }">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded" @click="addEvent" :style="{ display: clickedAddEvent ? 'none' : 'flex' }">
                 {{ adminAddEventTitle }}
             </button>
         </h3>
         <div class="modal-container" :style="{ display: clickedAddEvent ? 'flex' : 'none' }">
             <div class="modal">
-                <h2 class="addEvent">{{ adminAddEventTitle }}</h2>
+                <h2>{{ adminAddEventTitle }}</h2>
                 <form @submit.prevent="onSubmit">
                     <label class="text-black">
                         Title:
-                        <textarea v-model="form.content" name="description" class="description-box text-black"></textarea>
+                        <textarea v-model="form.header" name="description" class="description-box text-black"></textarea>
                     </label>
                     <label class="text-black">
                         Content:

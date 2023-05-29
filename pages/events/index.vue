@@ -91,6 +91,7 @@
     }
     const infoEvents = ref([] as InfoEvent[]) 
     onMounted(async () => {
+        console.log(stateAdmin().value)
         await loadInfoEvents()
     })
 
@@ -102,7 +103,7 @@
 <template>
     <div class="grid grid-cols-1 gap-4">
     
-    <div v-if="stateAdmin()">
+    <div v-if="stateAdmin().value == true">
         <!-- For admins to add a new event -->
         <h3 class="i-name">
             <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded" @click="addEvent" :style="{ display: clickedAddEvent ? 'none' : 'flex' }">
@@ -141,7 +142,7 @@
                     <IconsArrowUp class="svgImage text-black" @click="infoEvents[index].isShown = false"/>
                 </div>
                 </div>
-                <div v-if="stateAdmin()">
+                <div v-if="stateAdmin().value == true">
                     <IconsTrash class="svgImage text-red-500" @click="deleteInfoEvent(event)"/>
                 </div>
             </div>

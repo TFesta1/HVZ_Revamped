@@ -6,6 +6,7 @@
         title: "event page",
         
     })
+    
 
 </script>
 
@@ -15,6 +16,7 @@
         <!-- <Alert/>
         <Profile/> -->
         <ProfileHeaderAvatar/>
-        <!-- <img :src='require("")' /> -->
+        <!-- <img src="~/assets/images/down-arrow.png" alt="Down Arrow" /> -->
+        <IconsArrowDown/>
     </div>
 </template>

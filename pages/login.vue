@@ -68,6 +68,7 @@
 					{{ "Login" }}
 				</button>
 			</form>
+			<a href="/passwordReset">Forgot Password?</a>
 			<div>
 				{{ signInErrorMsg }}
 			</div>

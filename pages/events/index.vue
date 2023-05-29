@@ -15,5 +15,6 @@
         <!-- <Alert/>
         <Profile/> -->
         <ProfileHeaderAvatar/>
+        <!-- <img :src='require("")' /> -->
     </div>
 </template>

@@ -9,6 +9,33 @@
         
     })
 
+    const adminAddEventTitle = ref("Add Description Box") as Ref<string>
+
+    const form = reactive({
+        header: '',
+        content: '',
+    })
+
+    const clickedAddEvent = ref(false)
+
+    async function addEvent() 
+    {
+        clickedAddEvent.value = true;
+        console.log("CLicked")
+    }
+
+    async function closeModal()
+    {
+        clickedAddEvent.value = false;
+    }
+
+    async function onSubmit() 
+    {
+        clickedAddEvent.value = false;
+        console.log(form.header, form.content)
+        console.log("Submitted")
+    }
+
     const dataLoaded = ref(false)
     // const infoEvents = ref([
     //     {
@@ -43,9 +70,34 @@
 
 <template>
     <div class="grid grid-cols-1 gap-4">
-    <!-- <Alert/>
-    <Profile/> -->
-    <!-- <ProfileHeaderAvatar/> -->
+    
+    <div v-if="stateAdmin()">
+        <!-- For admins to add a new event -->
+        <h3 class="i-name">
+            <button class="addEvent bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded" @click="addEvent" :style="{ display: clickedAddEvent ? 'none' : 'flex' }">
+                {{ adminAddEventTitle }}
+            </button>
+        </h3>
+        <div class="modal-container" :style="{ display: clickedAddEvent ? 'flex' : 'none' }">
+            <div class="modal">
+                <h2 class="addEvent">{{ adminAddEventTitle }}</h2>
+                <form @submit.prevent="onSubmit">
+                    <label class="text-black">
+                        Title:
+                        <textarea v-model="form.content" name="description" class="description-box text-black"></textarea>
+                    </label>
+                    <label class="text-black">
+                        Content:
+                        <textarea v-model="form.content" name="description" class="description-box text-black"></textarea>
+                    </label>
+                    <button type="submit" class="submit-modal text-black modal-button" style="background-color:rgb(140, 188, 67)" @click="addEvent">Submit</button>
+                </form>
+                <button class="modal-button" style="background-color:#4c51bf" @click="closeModal">Close</button>
+            </div>
+            <div class="modal-background"></div>
+        </div>
+    </div>
+    
     <div v-if="dataLoaded">
         <div v-for="(event, index) in infoEvents" :key="index" class="bg-white p-4 rounded-md shadow">
             <div class="flex items-center justify-center mb-2">

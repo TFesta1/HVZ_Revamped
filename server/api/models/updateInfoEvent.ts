@@ -60,10 +60,10 @@ export default defineEventHandler(async (event) => {
     if (op.value === "add") {
         curInfos.push(infoEvent)
     }
-    // else if (op.value === "remove") {
-    //     const index = curInfos.findIndex((info) => info.id === newV.value.id)
-    //     curInfos.splice(index, 1)
-    // }
+    else if (op.value === "remove") {
+        const index = curInfos.findIndex((info) => info.content === infoEvent.content && info.header === infoEvent.header)
+        curInfos.splice(index, 1)
+    }
     // else if (op.value === "update") {
     //     const index = curInfos.findIndex((info) => info.id === newV.value.id)
     //     curInfos[index] = newV.value

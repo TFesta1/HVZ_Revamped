@@ -17,6 +17,13 @@ export interface User {
     discordUser: string;
     GICode: string;
     GICodeUsable: boolean;
+    infoEvents: InfoEvent[];
+}
+
+export interface InfoEvent {
+    header: string;
+    content: string;
+    isShown: boolean;
 }
 
 export interface RequestingUser {

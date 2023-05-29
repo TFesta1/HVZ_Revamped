@@ -29,7 +29,8 @@ const fakeData = [{
   "requestingWeeklong": false,
   "discordUser": "Kenter#0001",
   "GICode": "",
-  "GICodeUsable": false
+  "GICodeUsable": false,
+  "infoEvents": []
 },
 {
   "nickname": "zoombie",
@@ -49,7 +50,8 @@ const fakeData = [{
   "requestingWeeklong": true,
   "discordUser": "zoombie#0001",
   "GICode": "",
-  "GICodeUsable": false
+  "GICodeUsable": false,
+  "infoEvents": []
 },
 {
   "nickname": "Jenny",
@@ -69,7 +71,8 @@ const fakeData = [{
   "requestingWeeklong": true,
   "discordUser": "Jenny#0001",
   "GICode": "",
-  "GICodeUsable": false
+  "GICodeUsable": false,
+  "infoEvents": []
 }]
 // console.log(defaultPfp)
 

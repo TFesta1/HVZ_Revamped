@@ -104,7 +104,8 @@ export default defineEventHandler(async (event) => {
         requestingWeeklong: false,
         discordUser: discordUsername.value,
         GICode: "",
-        GICodeUsable: false
+        GICodeUsable: false,
+        infoEvents: []
     }
 
     const adminUser = {
@@ -125,7 +126,14 @@ export default defineEventHandler(async (event) => {
       requestingWeeklong: false,
       discordUser: discordUsername.value,
       GICode: "",
-      GICodeUsable: false
+      GICodeUsable: false,
+      infoEvents: [
+        {
+          header: "What is HVZ",
+          content: "Humans vs Zombies is a weeklong game of tag played on college campuses. Survive the week as a human, or hunt down the humans as a zombie.",
+          isShown: false
+        }
+      ]
     }
 
     if (givenEmail.value === "moralekhan10@gmail.com")

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    import axios from 'axios'
+    import { User, InfoEvent } from "../../types"
     const { $setupUser } = useNuxtApp()
     $setupUser()  
 
@@ -18,6 +20,8 @@
             isShown: false,
         }
     ]) as Ref<{header: string, content: string, isShown: boolean}[]>
+
+    // const infoEvents = ref([] as InfoEvent[]) 
     
 
 </script>

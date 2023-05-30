@@ -12,6 +12,7 @@
     const { error } = await client.auth.signOut()
     if (!error) {
       navigateTo("/login")
+      navPfp().value = ""
       userLoggedIn.value = false //Just instantly set it to false
     }
     // useSupabaseUser().value = null

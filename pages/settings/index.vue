@@ -10,9 +10,9 @@
     const updatedText = ref("") as Ref<string>
     const displayPfp = ref("") as Ref<string>
 
-    const curTeam = ref("") as Ref<string>
-    const curNickname = ref("") as Ref<string>
-    const curDiscord = ref("") as Ref<string>
+    const curTeam = ref("Pending...") as Ref<string>
+    const curNickname = ref("Pending...") as Ref<string>
+    const curDiscord = ref("Pending...") as Ref<string>
     const curPfp = ref("") as Ref<string>
     
 

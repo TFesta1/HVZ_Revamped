@@ -29,6 +29,14 @@ export default defineNuxtRouteMiddleware((to, from) => {
         const { $setupUser } = useNuxtApp()
         $setupUser()  
 
+        if (!stateAdmin().value)
+        {
+            // Kick noobs out or admin pages
+            if(to.path == "/weeklong/weeklongAdmin" || to.path == "/weeklong/requestPlrsTable") {
+                router.push("/")
+            }
+        }
+
 
        
     }

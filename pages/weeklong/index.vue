@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import { User } from "types"
     import axios from 'axios';
-    const { $setupUser } = useNuxtApp()
+    const { $setupUser } = useNuxtApp() as any
     $setupUser()  
 
     const users = ref<User[]>([]);

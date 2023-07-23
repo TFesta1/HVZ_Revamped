@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import axios from 'axios'
     import { User, InfoEvent } from "../../types"
-    const { $setupUser } = useNuxtApp()
+    const { $setupUser } = useNuxtApp() as any
     $setupUser()  
 
     useHead({

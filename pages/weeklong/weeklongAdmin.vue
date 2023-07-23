@@ -1,8 +1,8 @@
 <script setup lang="ts">
     import axios from 'axios'
     import { User } from "types"
-    const { $setupUser } = useNuxtApp()
-    $setupUser()  
+    const { $setupUser } = useNuxtApp() as any
+    $setupUser() 
     // Data
     const toggleSwitch = ref(false);
     const inputValue = ref('');

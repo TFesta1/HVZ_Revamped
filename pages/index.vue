@@ -1,7 +1,7 @@
 <!-- At the root directory -->
 <!-- https://nuxt.com/modules -->
 <script setup lang="ts">
-    const { $setupUser } = useNuxtApp()
+    const { $setupUser } = useNuxtApp() as any
     $setupUser()  
     // const resp = await $fetch('/api/hello')
     const productsShow = ref();

@@ -5,6 +5,7 @@
     $setupUser() 
     // Data
     const toggleSwitch = ref(false);
+    const toggleMidnight = ref(false)
     const inputValue = ref('');
     const giCode = ref('')
     const giCodeUsable = ref(true)
@@ -96,6 +97,16 @@
 
 
         </div>
+
+        <!-- <div class="w-full md:w-1/6 border rounded p-4">
+            <h1 class="text-3xl font-bold mb-4">GI Admin Controls</h1>
+            <div class="switch-container flex items-center mb-4">
+                <label for="toggle-switch" class="mr-2">Toggle Midnight Increment Days</label>
+                <input id="toggle-switch" type="checkbox" v-model="toggleMidnight" class="form-checkbox" />
+            </div>
+            <button class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="">Reset Days</button>
+            
+        </div> -->
 
         <!-- <div class="w-full md:w-1/6">
             <h1 class="text-3xl font-bold mb-4">Settings Hub</h1>

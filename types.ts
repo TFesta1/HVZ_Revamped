@@ -7,7 +7,7 @@ export interface User {
     isInWeeklong: boolean;
     taggedBy: string;
     isAdmin: boolean;
-    zombieHumanOz: number;
+    zombieHumanOz: number; // 0 = human, 1 = zombie, 2 = OZ
     tags: number;
     team: string;
     coins: number;

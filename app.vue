@@ -1,6 +1,6 @@
 <script setup lang="ts">
   const { $setupUser } = useNuxtApp()
-  $setupUser()  
+  // $setupUser()  
   const client = useSupabaseAuthClient()
   adminEmail().value = "moralekhan10@gmail.com"
 

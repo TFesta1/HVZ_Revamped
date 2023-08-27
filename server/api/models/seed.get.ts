@@ -95,7 +95,7 @@ export default defineEventHandler(async (event) => {
         isInWeeklong: false,
         taggedBy: "",
         isAdmin: false,
-        zombieHumanOz: 1, // 0 = human, 1 = zombie, 2 = oz
+        zombieHumanOz: 0, // 0 = human, 1 = zombie, 2 = oz
         tags: 0,
         team: "",
         coins: 0,
@@ -117,7 +117,7 @@ export default defineEventHandler(async (event) => {
       isInWeeklong: true,
       taggedBy: "",
       isAdmin: true,
-      zombieHumanOz: 1, // 0 = human, 1 = zombie, 2 = oz
+      zombieHumanOz: 0, // 0 = human, 1 = zombie, 2 = oz
       tags: 0,
       team: "",
       coins: 0,

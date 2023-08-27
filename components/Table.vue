@@ -29,15 +29,17 @@
 
     async function deletePerson(email : string)
     {
-        // console.log(email, "email")
+        console.log(email, "email")
         // console.log(coorespondingEmailsV.value, "emails")
+        // console.log("hi")
+        // return
         const removedIndexes = [] as number[];
         coorespondingEmailsV.value = coorespondingEmailsV.value.filter((item, index) => {
-        if (item === email) {
-                removedIndexes.push(index);
-                return false;
-            }
-            return true;
+            if (item === email) {
+                    removedIndexes.push(index);
+                    return false;
+                }
+                return true;
         });
 
         dataVal.value = dataVal.value.filter((item, index) => {
@@ -48,7 +50,21 @@
             return !removedIndexes.includes(index);
         });
 
-        // console.log(coorespondingEmailsV.value, "emails After")
+        console.log(coorespondingEmailsV.value, "emails After")
+
+
+        // const foundUserTags = (responseWeeklong.data.data as User).tags + tags;
+
+        const response = await axios.get('../api/models/updateUser', {
+            params: {
+                email: (email as any).email,
+                parameterToUpdate: "isInWeeklong",
+                newValue: false,
+                parameterType: "boolean"
+            },
+        });
+
+        // console.log(response, "response")
     }
 
     async function addSubTags(email : string, dir : boolean)

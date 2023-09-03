@@ -1,0 +1,103 @@
+@import "bulma/bulma.sass";
+
+$navbar-burger-color: #f1f1f1;
+$navbar-background-color: #f7f7f7;
+$navbar-item-hover-background-color: #ffffff;
+$navbar-item-hover-color: $white;
+$navbar-item-color: #f1f1f1;
+.navbar-item {
+    color:$navbar-item-color;
+}
+$navbar-dropdown-arrow: #f1f1f1;
+$navbar-tab-active-color: #f1f1f1;
+$navbar-tab-active-background-color: #ffffff;
+$navbar-dropdown-background-color: $primary;
+
+$box-background-color:green;
+
+#box1{
+    position: relative;
+    top: 145px;
+    left: 830px;
+    color:#f1f1f1;
+    background-color: #db6300;
+    width: 500px;
+    height: 400px;
+}
+
+#box2{
+    position: relative;
+    bottom: 290px;
+    left: 820px;
+    color:#000000;
+    background-color: #fafafa;
+    width: 500px;
+    height: 400px;
+}
+
+#Imbox1{
+    position: relative;
+    bottom: 760px;
+    right: 340px;
+    color:#f1f1f1;
+    background-color: #db6300;
+    width: 1000px;
+    height: 500px;
+}
+
+#Imbox2{
+    position: relative;
+    bottom: 1300px;
+    right: 350px;
+    color:#000000;
+    background-color: #fafafa;
+    width: 1000px;
+    height: 500px;
+}
+
+
+#Card1{
+    position: relative;
+    bottom: 1200px;
+    right: 0px;
+    color:#000000;
+    background-color: #fafafa;
+    width: 1000px;
+    height: 1000px;
+}
+
+#box3{
+    position: relative;
+    bottom: 1000px;
+    right:300px;
+    color:#000000;
+    background-color: #fafafa;
+    width: 400px;
+    height: 600px;
+}
+
+#box4{
+    position: relative;
+    bottom: 1625px;
+    left: 300px;
+    color:#000000;
+    background-color: #fafafa;
+    width: 400px;
+    height: 600px;
+}
+
+#box5{
+    position: relative;
+    bottom: 2250px;
+    left: 900px;
+    color:#000000;
+    background-color: #fafafa;
+    width: 400px;
+    height: 600px;
+}
+
+
+#footer1{
+    color:#9e9e9e;
+    background-color: #00000000;
+}

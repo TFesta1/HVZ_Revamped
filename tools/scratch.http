@@ -7,6 +7,8 @@ GET http://localhost:3000/api/models/midnightIncDays
 ###
 GET http://localhost:3000/api/dummy
 ###
+GET http://localhost:3000/api/models/testDiscord
+###
 GET http://localhost:3000/api/models/deleteDBs
 ###
 GET http://localhost:3000/api/models/updateUser

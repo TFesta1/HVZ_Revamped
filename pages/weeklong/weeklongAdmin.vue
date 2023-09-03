@@ -31,6 +31,10 @@
 
     async function applyGISettings()
     {
+        if(!stateAdmin().value)
+        {
+            return //Non-admin noob blocker
+        }
         console.log("applySettings")
         console.log(toggleSwitch.value)
         console.log(inputValue.value)

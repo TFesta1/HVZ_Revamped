@@ -76,20 +76,28 @@ export default defineEventHandler(async (event) => {
             const update = { $set: { zombieHumanOz: 1 } };
             const result = await col.findOneAndUpdate(query, update, { returnDocument: 'after' });
 
-            const updatedUser = await col.findOneAndUpdate(
-                { email: givenEmail.value },
-                { $set: { tagCount: userWithEmail.tagCount+1 } },
-                { returnDocument: 'after' }
-            );
+            // const updatedUser = await col.findOneAndUpdate(
+            //     { email: givenEmail.value },
+            //     { $set: { tagCount: userWithEmail.tagCount+1 } },
+            //     { returnDocument: 'after' }
+            // );
 
-            if (result && result.value) 
+            if (true) 
             {
-                const tagCount = (userWithEmail.tagCount as number) + 1
+                let tagCount = (userWithEmail.tags as number)
+                if (isNaN(tagCount)) 
+                {
+                    tagCount = 0
+                }
+
+
+
+                console.log(tagCount, "tagCount------------------")
 
                 // Updated tags
                 await col.findOneAndUpdate(
                     { email: givenEmail.value },
-                    { $set: { tags: tagCount } },
+                    { $set: { tags: tagCount+1 } },
                     { returnDocument: 'after' }
                 );
                 let nicknameTaggedBy = "OZ" // Default value for if the tagger is an OZ
@@ -101,10 +109,11 @@ export default defineEventHandler(async (event) => {
 
                     
                 await col.findOneAndUpdate(
-                    { secretKey: paramV.value },
+                    { [param.value]: paramV.value },
                     { $set: { taggedBy: nicknameTaggedBy } },
                     { returnDocument: 'after' }
                 );
+
 
 
                 
@@ -124,18 +133,35 @@ export default defineEventHandler(async (event) => {
         else 
         {
             if (userWithParamValue.isInWeeklong == false)
+            {
                 console.log('Requested user is not in weeklong');
+                return {
+                    data: "Requested user is not in weeklong"
+                };
+            }
+
             if (userWithEmail.zombieHumanOz == 0)
+            {
                 console.log('This User is a human')
+                return {
+                    data: "This User is a human"
+                };
+            }
+                
             if (userWithParamValue.zombieHumanOz != 0)
+            {
                 console.log('Requested user is not a human')
+                return {
+                    data: "Requested user is not a human"
+                };
+            }
             
         }
 
     }
     
     return {
-        data: "null"//`result.modifiedCount ${result.modifiedCount} givenEmail.value ${givenEmail.value} param.value ${param.value} paramV.value ${paramV.value} didnt modify`, // or an appropriate response if the user was not found
+        data: "Failed"//`result.modifiedCount ${result.modifiedCount} givenEmail.value ${givenEmail.value} param.value ${param.value} paramV.value ${paramV.value} didnt modify`, // or an appropriate response if the user was not found
     };
   });
   

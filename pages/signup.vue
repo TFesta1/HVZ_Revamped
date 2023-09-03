@@ -12,6 +12,8 @@
 	// NOTE: Password should be at least 6 chars
 	// abcdef
 	const signUp = async () => {
+        signInErrorMsg.value = "Pending..."
+
         // if (discordUsername.value == "") {
         //     signInErrorMsg.value = "Discord Username is Required"
         //     return
@@ -46,10 +48,32 @@
 		})
 
         if (!error) {
+            const emails = ref<User[]>([]);
+
+            const responseUsers = await axios.get('api/models/users');
+            const items = responseUsers.data.data;
+
+            emails.value = items
+                .filter((item: User) => item.email == email.value)
+                .map((item : User) => ({
+                    email: item.email
+            }));
+            const emailsLength: number = emails.value.length
+            console.log(emails.value.length, "emails.length")
+            if(emailsLength >= 1)
+            {
+                signInErrorMsg.value = "Email already registered"
+                displayPasswordSent().value = ""
+                return
+            }
+
             // isSignUp.value = false
             router.push("/")
             signInErrorMsg.value = ""
+
+            //On a successful login, this gets set to nothing
             displayPasswordSent().value = "Password sent from HVZRelations. Check spam if not in inbox"
+            
 
             try {
                 const response = await axios.get('api/models/seed', {

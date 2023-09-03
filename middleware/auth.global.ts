@@ -1,4 +1,14 @@
 import axios from 'axios'
+const setAdmin = async () => {
+    const response = await axios.get('api/models/user', {
+        params: {
+        email: await useSupabaseUser().value?.email,
+        },
+    });
+    const foundUser = response.data.data;
+    stateAdmin().value = foundUser.isAdmin
+}
+
 export default defineNuxtRouteMiddleware((to, from) => {
     console.log("middlweware called")
     
@@ -22,6 +32,8 @@ export default defineNuxtRouteMiddleware((to, from) => {
     else {
         isLoggedIn().value = true
         displayPasswordSent().value = ""
+        // setAdmin()
+
         console.log("user exists")
         // Redirect them to the home page
         if (to.path == "/login" || to.path == "/signup") {

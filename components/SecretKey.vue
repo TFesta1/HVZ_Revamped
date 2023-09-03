@@ -5,9 +5,11 @@
     const yourSecretKey = ref(''); // Const
     const secretKey = ref(''); // Input value
     const errorMessage = ref(''); // Error message
+    const statusMessage = ref('');
 
     const handleSubmit = async () => {
         console.log(secretKey.value, "secretKey")
+        statusMessage.value = "Pending..."
         try {
             const response = await axios.get('api/models/userMatchingParam', {
                 params: {
@@ -21,11 +23,20 @@
             // console.log(item, "item")
             if (item == 'verified')
             {
-                reloadTable().value = true
+                // reloadTable().value = true
+                statusMessage.value = "Success, reload to see"
             }
-            } catch (error) {
-                console.error(error);
+            else {
+                statusMessage.value = item
             }
+            
+        
+        } 
+        catch (error) 
+        {
+            console.error(error);
+            statusMessage.value = "Failed"
+        }
 
       
 
@@ -62,6 +73,7 @@
                 v-model="secretKey"
             >
             <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded" @click="handleSubmit">Submit</button>
+            <p>{{ statusMessage }}</p>
             <div v-if="errorMessage">
                 <div class="bg-red-200 bg-opacity-75 text-red-800 p-1 rounded-lg">{{ errorMessage }}
             </div>

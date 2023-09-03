@@ -310,13 +310,13 @@
             </thead>
             <tbody>
                 <tr v-for="(item, itemIndex) in dataVal">
-                    <td v-for="(data, index) in item" class="border px-4 py-2" :class="{'green-background': !displayAdminTable && (zombieHumanOzSave[itemIndex] === 0) || (zombieHumanOzSave[itemIndex] === 2 && !isAdmin), 'red-background': !displayAdminTable && zombieHumanOzSave[itemIndex] === 1, 'pink-background': !displayAdminTable && isAdmin && zombieHumanOzSave[itemIndex] === 2}">
+                    <td v-for="(data, index) in item" class="border px-4 py-2" :class="{'green-background': !displayAdminTable && (zombieHumanOzSave[itemIndex] === 0) || (zombieHumanOzSave[itemIndex] === 2 && !stateAdmin().value), 'red-background': !displayAdminTable && zombieHumanOzSave[itemIndex] === 1, 'pink-background': !displayAdminTable && stateAdmin().value && zombieHumanOzSave[itemIndex] === 2}">
                         
                         <!-- {{ itemIndex }} -->
                         <!--  && displayAdminTable && isAdmin" -->
                         <div v-if="index == 'photo'">
                             <img :src="data" class="profile-pictures" />
-                            <div v-if="!displayAdminTable && stateAdmin()">
+                            <div v-if="!displayAdminTable && stateAdmin().value">
                                 <button class="sleakAdminButton bg-red-500 text-white" @click="deletePerson(coorespondingEmailsV[itemIndex])">Delete</button>
                                 <button class="sleakAdminButton bg-blue-500 text-white" @click="addSubTags(coorespondingEmailsV[itemIndex], true)">Tags++</button>
                                 <button class="sleakAdminButton bg-blue-500 text-white" @click="addSubTags(coorespondingEmailsV[itemIndex], false)">Tags--</button>
@@ -330,9 +330,20 @@
 
                                 
                             </div>
+                            <div>
+                                <div>
+                                    <span v-for="index in 40" :key="index">&nbsp;</span>
+                                </div>
+                            </div>
                             <!-- {{ index }} -->
                         </div>
+                        
                         <div v-else-if="index == 'tags'">
+                            <div v-if="!stateAdmin().value">
+                                <div>
+                                    <span v-for="index in 40" :key="index">&nbsp;</span>
+                                </div>
+                            </div>
                             <!-- hello -->
                             <!-- If they're a human or an OZ, tags are 0 always -->
                             <div v-if="zombieHumanOzSave[itemIndex] === 0 || zombieHumanOzSave[itemIndex] === 2">0</div>
@@ -343,13 +354,18 @@
                         <div v-else>
                             {{ data }}
                             <!-- {{ index }} -->
+                            <div v-if="!stateAdmin().value">
+                                <div>
+                                    <span v-for="index in 40" :key="index">&nbsp;</span>
+                                </div>
+                            </div>
                         </div>
                     
                     </td>
 
                     <!-- Appends two extra data cols for displayAdminTable -->
-                    <td v-if="displayAdminTable && isAdmin" class="border px-4 py-2 buttonNoStyling" style="background-color:green" @click="allow(item as RequestingUser)"></td>
-                    <td v-if="displayAdminTable && isAdmin" class="border px-4 py-2 buttonNoStyling" style="background-color:rgb(117, 39, 39)" @click="deny(item as RequestingUser)"></td>
+                    <td v-if="displayAdminTable && stateAdmin().value" class="border px-4 py-2 buttonNoStyling" style="background-color:green" @click="allow(item as RequestingUser)"></td>
+                    <td v-if="displayAdminTable && stateAdmin().value" class="border px-4 py-2 buttonNoStyling" style="background-color:rgb(117, 39, 39)" @click="deny(item as RequestingUser)"></td>
                     
                 </tr>
                 

@@ -16,7 +16,8 @@ export default defineEventHandler(async (event, page = 1, pageSize = 30) => {
     const userEmail = items[i].email as string
     const survivedDays = (items[i].daysSurvived as number) + 1
     const isInWeeklong = (items[i].isInWeeklong as boolean)
-    const isHuman : boolean = (items[i].zombieHumanOz as number) == 0
+    //Include OZs since they're undercover
+    const isHuman : boolean = (items[i].zombieHumanOz as number) == 0 || (items[i].zombieHumanOz as number) == 2
     console.log(userEmail, "userEmail")
     console.log(survivedDays, "survivedDays")
     console.log(isInWeeklong, "isInWeeklong")

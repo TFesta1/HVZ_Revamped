@@ -47,14 +47,17 @@
 <template>
     <div>
         <Head>
-            <Title>This is my title</Title>
+            <Title>HVZ</Title>
             <Meta name="description" :content="title" />
         </Head>
+        <div class="box" id="box2">
+            <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </strong>
+        </div>
 
         <!-- <img src="~/assets/1.jpg" alt="" /> -->
-        <IconsBell/>
+        <!-- <IconsBell/> -->
         <!-- <ContentDoc/> -->
-        <Counter/>
+        <!-- <Counter/> -->
         <!-- {{ pending ? "Loading" : products }}
 
         <button @click="refresh">Refresh</button> -->

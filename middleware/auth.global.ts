@@ -27,7 +27,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
         }
 
         const { $setupUser } = useNuxtApp()
-        $setupUser()  
+        // $setupUser()  
 
         if (!stateAdmin().value)
         {

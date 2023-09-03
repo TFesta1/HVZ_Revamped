@@ -63,6 +63,21 @@
     background-color: black;
     
 }
+.navbar > * {
+    margin: 0 30px; /* Adjust margin as needed for spacing between elements */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 1px;
+    padding: 4px;
+}
+
+.navbar img {
+    margin-right: 10px; /* Adjust margin as needed to separate the image from links */
+}
 
 .navbar li {
     margin-bottom: 1rem;

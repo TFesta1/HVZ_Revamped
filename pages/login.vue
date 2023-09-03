@@ -43,7 +43,7 @@
 
 <template>
     <div>
-			<form 
+			<form
 				@submit.prevent="login()"
 				class ="flex flex-col gap-2"
 				>
@@ -60,7 +60,7 @@
 					placeholder="Password"
 					class="p-2 bg-gray-600 rounded"
 				/>
-				<button 
+				<button  
 					type="submit"
 					class="p-2 bg-gray-600 rounded"
 

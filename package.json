@@ -30,6 +30,7 @@
   "dependencies": {
     "@pinia/nuxt": "^0.4.9",
     "axios": "^1.4.0",
+    "bulma": "^0.9.4",
     "cors": "^2.8.5",
     "discord.js": "^14.13.0",
     "dotenv": "^16.0.3",

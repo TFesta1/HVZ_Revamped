@@ -1,11 +1,35 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import 'bulma/css/bulma.css';
 
 .buttonNoStyling {
     cursor: pointer;
 }
 
+.whiteBold {
+    color: white;
+    font-weight: bold;
+}
+
+.orangeBold 
+{
+    color: darkorange;
+    font-weight: bold;
+}
+
+.greenBold {
+    color: greenyellow;
+    font-weight: bold;
+}
+
+
+
+.top-right {
+    position: absolute;
+    top: calc(0% + 5px);
+    right: calc(0% + 5px);
+}
 
 .genericButton {
     background-color: #4CAF50; /* Green */
@@ -66,6 +90,8 @@
 .navbar > * {
     margin: 0 30px; /* Adjust margin as needed for spacing between elements */
 }
+
+
 
 .logo-container {
     display: flex;

@@ -211,6 +211,7 @@
 
 <template>
     <div>
+        <img :src="navPfp().value" alt="pfp" class="profile-pictures" />
         <form @submit.prevent="apply()" class ="flex flex-col gap-2">
             <input
                 type="file"

@@ -69,22 +69,24 @@
                   <!-- </div> -->
 
                   <div class="nav-links">
-                    <NuxtLink to="/">Home</NuxtLink>
-                    <NuxtLink to="/events">Information</NuxtLink>
-                    <NuxtLink to="/weeklong">Weeklong</NuxtLink>
-                    <NuxtLink v-if="stateAdminWatcher" to="/weeklong/requestPlrsTable">Request Players Table (Displayed for Admin)</NuxtLink>
-                    <NuxtLink v-if="stateAdminWatcher" to="/weeklong/weeklongAdmin">EBoard Portal</NuxtLink>
-                    <NuxtLink to="/settings">Settings</NuxtLink>
+                    <NuxtLink to="/" class="whiteBold">Home</NuxtLink>
+                    <NuxtLink to="/events" class="whiteBold">Invitational</NuxtLink>
+                    <NuxtLink to="/weeklong" class="whiteBold">Weeklong</NuxtLink>
+                    <a href="https://www.instagram.com/nphvz" class="whiteBold">Instagram</a>
+                    <a href="https://discord.gg/fMAfykJtgJ" class="whiteBold">Discord</a>
+                    <NuxtLink to="/settings" class="whiteBold">Settings</NuxtLink>
+                    <NuxtLink class="orangeBold" v-if="stateAdminWatcher" to="/weeklong/requestPlrsTable">[Request Players Table]</NuxtLink>
+                    <NuxtLink class="greenBold" v-if="stateAdminWatcher" to="/weeklong/weeklongAdmin">[EBoard Portal]</NuxtLink>
                   </div>
                   
                   
-                  <button @click="logout">Logout</button>
-                  <img :src="navPfp().value" alt="pfp" class="profile-pictures" />
+                  <button @click="logout" class="button is-transparent top-right">Logout</button>
+                  <!-- <img :src="navPfp().value" alt="pfp" class="profile-pictures" /> -->
 
                 </div>
-                <div v-else>
-                  <NuxtLink to="/login">Login</NuxtLink>
-                  <NuxtLink to="/signup">Sign Up</NuxtLink>
+                <div v-else class="buttons is-pulled-left">
+                  <NuxtLink class="button is-transparent m1-4" to="/login">Login</NuxtLink>
+                  <NuxtLink class="button is-transparent" to="/signup">Sign Up</NuxtLink>
                 </div>
                 
                 

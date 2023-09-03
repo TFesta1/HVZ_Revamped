@@ -305,7 +305,7 @@
         <table class="table-auto w-full">
             <thead>
             <tr>
-                <th class="px-4 py-2" v-for="header in headers">{{ header }}</th>
+                <th class="px-4 py-2 whiteBold" v-for="header in headers">{{ header }}</th>
             </tr>
             </thead>
             <tbody>

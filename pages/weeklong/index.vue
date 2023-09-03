@@ -197,8 +197,10 @@
 <template>
     <div class="flex flex-wrap">
       <div v-if="usersLoaded">
-        <div v-if="isNotInWeeklong">
-          <SecretKey />
+        <div v-if="isNotInWeeklong || stateAdmin().value">
+          <div v-if="!stateAdmin().value">
+            <SecretKey />
+          </div>
           <Table :headers="headers" :coorespondingEmails="coorespondingEmails" :data="users" :isAdmin="plrAdmin" />
         </div>
         <div v-else class="w-full md:w-1/2 p-4">
@@ -211,7 +213,7 @@
           </div>
         </div>
 
-        <div v-if="!isNotInWeeklong">
+        <div v-if="!isNotInWeeklong && !stateAdmin().value">
           <!-- Input box and "Enter" button for GICode -->
           <!-- v-if="giCodeUsable" -->
           <div class="w-full md:w-1/7 p-4 mt-4">

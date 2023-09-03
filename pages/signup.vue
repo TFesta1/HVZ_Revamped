@@ -12,10 +12,10 @@
 	// NOTE: Password should be at least 6 chars
 	// abcdef
 	const signUp = async () => {
-        if (discordUsername.value == "") {
-            signInErrorMsg.value = "Discord Username is Required"
-            return
-        }
+        // if (discordUsername.value == "") {
+        //     signInErrorMsg.value = "Discord Username is Required"
+        //     return
+        // }
 
         if (password.value != reEnterPassword.value) {
             signInErrorMsg.value = "Passwords do not match"
@@ -49,6 +49,7 @@
             // isSignUp.value = false
             router.push("/")
             signInErrorMsg.value = ""
+            displayPasswordSent().value = "Password sent from HVZRelations. Check spam if not in inbox"
 
             try {
                 const response = await axios.get('api/models/seed', {
@@ -100,12 +101,12 @@
                 class="p-2 bg-gray-600 rounded"
 
             />
-            <input 
+            <!-- <input 
                 type="text" 
                 v-model="discordUsername"
                 placeholder="Discord (Example: name#1000) Must be in the Server"
                 class="p-2 bg-gray-600 rounded"
-            />
+            /> -->
             <input 
                 type="password" 
                 v-model="password"

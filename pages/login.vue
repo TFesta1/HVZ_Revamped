@@ -72,6 +72,9 @@
 			<div>
 				{{ signInErrorMsg }}
 			</div>
+			<div>
+				<p style="color: green;">{{ displayPasswordSent().value }}</p>
+			</div>
 
     </div>
 </template>

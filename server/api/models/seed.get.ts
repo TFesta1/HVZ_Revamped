@@ -114,7 +114,7 @@ export default defineEventHandler(async (event) => {
       email: givenEmail.value,
       photo: defaultPfp,
       isMod: true,
-      isInWeeklong: true,
+      isInWeeklong: false,
       taggedBy: "",
       isAdmin: true,
       zombieHumanOz: 0, // 0 = human, 1 = zombie, 2 = oz

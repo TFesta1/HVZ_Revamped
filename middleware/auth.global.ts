@@ -1,6 +1,7 @@
 import axios from 'axios'
 export default defineNuxtRouteMiddleware((to, from) => {
     console.log("middlweware called")
+    
     const router = useRouter();
 
     
@@ -20,6 +21,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
     }
     else {
         isLoggedIn().value = true
+        displayPasswordSent().value = ""
         console.log("user exists")
         // Redirect them to the home page
         if (to.path == "/login" || to.path == "/signup") {

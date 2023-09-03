@@ -310,7 +310,7 @@
             </thead>
             <tbody>
                 <tr v-for="(item, itemIndex) in dataVal">
-                    <td v-for="(data, index) in item" class="border px-4 py-2" :class="{'green-background': !displayAdminTable && zombieHumanOzSave[itemIndex] === 0, 'red-background': !displayAdminTable && (zombieHumanOzSave[itemIndex] === 1 || (zombieHumanOzSave[itemIndex] === 2 && !isAdmin)), 'pink-background': !displayAdminTable && isAdmin && zombieHumanOzSave[itemIndex] === 2}">
+                    <td v-for="(data, index) in item" class="border px-4 py-2" :class="{'green-background': !displayAdminTable && (zombieHumanOzSave[itemIndex] === 0) || (zombieHumanOzSave[itemIndex] === 2 && !isAdmin), 'red-background': !displayAdminTable && zombieHumanOzSave[itemIndex] === 1, 'pink-background': !displayAdminTable && isAdmin && zombieHumanOzSave[itemIndex] === 2}">
                         
                         <!-- {{ itemIndex }} -->
                         <!--  && displayAdminTable && isAdmin" -->

@@ -232,12 +232,12 @@
                 placeholder="Nickname"
                 class="p-2 bg-gray-600 rounded"
             />
-            <input
+            <!-- <input
                 type="text"
                 v-model="discord"
                 placeholder="Discord"
                 class="p-2 bg-gray-600 rounded"
-            />
+            /> -->
             <button 
                 type="submit"
                 class="p-2 bg-gray-600 rounded"
@@ -255,10 +255,10 @@
                 <span class="mr-2 text-orange-600">Nickname:</span>
                 <span class="text-white">{{ curNickname }}</span>
             </div>
-            <div class="flex items-center mb-2">
+            <!-- <div class="flex items-center mb-2">
                 <span class="mr-2 text-orange-600">Discord:</span>
                 <span class="text-white">{{ curDiscord }}</span>
-            </div>
+            </div> -->
             
 
         </div>

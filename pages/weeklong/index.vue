@@ -16,7 +16,39 @@
     const giCodeUsable = ref(true)
     const giErrorMsg = ref("")
 
+    const totalZombies = ref(0)
+    const totalHumans = ref(0)
+
     // console.log(useSupabaseUser().value?.email)
+
+
+    const getHumanZombieCount = async () => {
+      const responseUsers = await axios.get('api/models/users');
+      const items = responseUsers.data.data;
+      // console.log(items);
+
+      const users = items
+        .filter((item: User) => item.isInWeeklong)
+        .map((item : User) => ({
+          zombieHumanOz: item.zombieHumanOz
+      }));
+
+      // console.log(users)
+
+
+      for (let i = 0; i < users.length; i++) {
+        if (users[i].zombieHumanOz == 1) {
+          totalZombies.value++
+        }
+        else   {
+          totalHumans.value++
+        }
+      }
+
+      // console.log(totalZombies, totalHumans)
+      
+    }
+    getHumanZombieCount()
 
     
     useHead({
@@ -201,6 +233,12 @@
           <div v-if="!stateAdmin().value">
             <SecretKey />
           </div>
+
+
+          <p style="font-weight: bold; font-size:15px; padding-left: 5px;">Total Players: {{ totalHumans + totalZombies }}</p>
+          <p style="color:green; font-weight: bold; font-size:15px; padding-left: 5px;">Humans: {{ totalHumans }}</p>
+          <p style="color:red; font-weight: bold; font-size:15px; padding-left: 5px;">Zombies: {{ totalZombies }}</p>
+
           <Table :headers="headers" :coorespondingEmails="coorespondingEmails" :data="users" :isAdmin="plrAdmin" />
         </div>
         <div v-else class="w-full md:w-1/2 p-4">

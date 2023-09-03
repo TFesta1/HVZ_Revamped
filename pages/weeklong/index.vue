@@ -234,10 +234,11 @@
             <SecretKey />
           </div>
 
-
-          <p style="font-weight: bold; font-size:15px; padding-left: 5px;">Total Players: {{ totalHumans + totalZombies }}</p>
-          <p style="color:green; font-weight: bold; font-size:15px; padding-left: 5px;">Humans: {{ totalHumans }}</p>
-          <p style="color:red; font-weight: bold; font-size:15px; padding-left: 5px;">Zombies: {{ totalZombies }}</p>
+          <div class="center-text">
+            <p style="font-weight: bold; font-size:20px; padding-left: 5px;">Total Players: {{ totalHumans + totalZombies }}</p>
+            <p style="color:green; font-weight: bold; font-size:20px; padding-left: 5px;">Humans: {{ totalHumans }}</p>
+            <p style="color:red; font-weight: bold; font-size:20px; padding-left: 5px;">Zombies: {{ totalZombies }}</p>
+          </div>
 
           <Table :headers="headers" :coorespondingEmails="coorespondingEmails" :data="users" :isAdmin="plrAdmin" />
         </div>

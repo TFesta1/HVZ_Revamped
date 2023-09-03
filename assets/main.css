@@ -15,6 +15,16 @@
     box-sizing: border-box;
 }
 
+.center-text
+{
+  text-align: center; /* Center horizontally */
+  /* height: 100vh; Set a fixed height for vertical centering */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center vertically */
+
+}
+
 .tableContainer {
     display: grid;
     place-items: center;

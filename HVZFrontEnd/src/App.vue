@@ -5,16 +5,20 @@ import NavBar from './components/NavBar.vue'
 <template>
   <header> <NavBar> </NavBar> </header>
 
+ <div class="container" id="con1">
   <div class="box" id="box1"></div>
   <div class="box" id="box2">
     <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </strong>
   </div>
+  </div>
 
+  <div class="container" id="con2">
   <div class="box" id="Imbox1"></div>
   <div class="box" id="Imbox2"> 
     <figure class="image is-128x128">
      <img src="https://bulma.io/images/placeholders/128x128.png">
      </figure>
+  </div>
   </div>
 
   <div class="card" id="Card1">
@@ -23,8 +27,9 @@ import NavBar from './components/NavBar.vue'
       <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
     </figure>
   </div>
-
-    <div class="content">
+  </div> 
+  <!--
+  <div class="content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Phasellus nec iaculis mauris.
     </div>
@@ -40,13 +45,13 @@ import NavBar from './components/NavBar.vue'
 
   <div class="box" id="box5">
     <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </strong>
-  </div>
+  </div>  -->
 
   <footer class="footer" id="footer1">
   <div class="content has-text-centered">
     <p>Developed by Taheemuddin Ahmed & Tanner Festa
     </p>
-  </div>
+  </div> 
 </footer>
 
 

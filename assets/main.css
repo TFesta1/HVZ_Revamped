@@ -3,18 +3,6 @@
 @import 'tailwindcss/utilities';
 @import 'bulma/css/bulma.css';
 
-
-#box2 { /* Main box */
-    position: absolute;
-    top: calc(10%);
-    left: calc(60%);
-    color: #000000;
-    background-color: #fafafa;
-    width: 500px;
-    height: 400px;
-    box-sizing: border-box;
-}
-
 .center-text
 {
   text-align: center; /* Center horizontally */
@@ -35,56 +23,10 @@
     max-width: 100%;
   }
 
-#box1 { /* Shadow Box */
-    position: absolute;
-    top: calc(11%);
-    left: calc(61%);
-    color: #000000;
-    background-color: #db6300;
-    width: 500px;
-    height: 400px;
-    box-sizing: border-box;
-}
-
-#box3 { /* Shadow Box */
-    position: absolute;
-    top: calc(11%);
-    left: calc(34%);
-    color: #000000;
-    background-color: #db6300;
-    width: 500px;
-    height: 400px;
-    box-sizing: border-box;
-}
 
 .card {
     padding: 2em;
 }
-
-#Card1{
-    position: absolute;
-    bottom: calc(-80%);
-    right: calc(0%);
-    color:#000000;
-    background-color: #fafafa;
-    width: 100%;
-    height: 700px;
-}
-
-#box4 { /* Main box */
-    position: absolute;
-    top: calc(10%);
-    left: calc(33%);
-    color: #000000;
-    background-color: #fafafa;
-    width: 500px;
-    height: 400px;
-    box-sizing: border-box;
-}
-
-
-
-
 
 .buttonNoStyling {
     cursor: pointer;
@@ -105,8 +47,6 @@
     color: greenyellow;
     font-weight: bold;
 }
-
-
 
 .top-right {
     position: absolute;
@@ -159,29 +99,159 @@
     cursor: not-allowed;
 }
 
+#con1 {
+    position: relative;
+    top: 15vh;
+    left: 42.5%;
+}
+
+#box1{
+    padding: 10px;
+    border-radius: 2px;
+    width: 50%;
+    height: 300px;
+    color:#f1f1f1;
+    background-color: #db6300;
+}
+
+#box2{
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+    padding: 10px;
+    border-radius: 2px;
+    width: 50%;
+    height: 300px;
+    color:#000000;
+    background-color: #fafafa;
+}
 
 
+#con2 {
+    position: relative;
+    bottom: 22vh;
+    left: -7.5%;
+}
+
+#Imbox1{
+    padding: 10px;
+    border-radius: 2px;
+    color:#f1f1f1;
+    background-color: #db6300;
+    width: 60%;
+    height: 400px;
+    
+}
+
+#Imbox2{
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+    padding: 10px;
+    border-radius: 2px;
+
+    color:#000000;
+    background-color: #fafafa;
+    width: 60%;
+    height: 400px;
+}
+
+#Card1{
+    position: relative;
+    bottom: 10vh;
+    margin:auto;
+    color:#000000;
+    background-color: #fafafa;
+    width: 750px;
+    height: 800px;
+}
+
+#con3 {
+    position: relative;
+    margin-left: 2cm;
+    height: 90vh;
+}
+
+#col1 {
+    position: absolute;
+
+    width: 30%;
+    height: 60vh;
+    padding: 10px;
+    border-radius: 2px;
+    color:#000000;
+    background-color: #fafafa;
+}
+
+#col2 {
+    position: absolute;
+    margin-left: 50%;
+    
+    padding: 10px;
+    border-radius: 2px;
+    width: 30%;
+    height: 60vh;
+    color:#000000;
+    background-color: #fafafa;
+}
+
+#col3 {
+    position: absolute;
+    margin-left: 100%;
+
+    padding: 10px;
+    border-radius: 2px;
+    width: 30%;
+    height: 60vh;
+    color:#000000;
+    background-color: #fafafa;
+}
+
+#con4 {
+    position: relative;
+    bottom: 20vh;
+}
+
+#box3{
+    margin-left:-1%;
+    padding: 10px;
+    border-radius: 2px;
+    width: 102%;
+    height: 620px;
+    color:#f1f1f1;
+    background-color: #db6300;
+}
+
+#box4{
+    position: absolute;
+    top: 10px;
+    padding: 10px;
+    border-radius: 2px;
+    width: 100%;
+    height: 600px;
+    color:#000000;
+    background-color: #fafafa;
+}
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     
 }
+
 .navbar > * {
     margin: 0 30px; /* Adjust margin as needed for spacing between elements */
 }
-
 
 
 .logo-container {
     display: flex;
     align-items: center;
     position: absolute;
-    left: 1px;
-    padding: 4px;
+    left: 5px;
 }
 
 .navbar img {
@@ -259,6 +329,14 @@
 }
 
 
+::-webkit-scrollbar {
+    background-color: rgb(31, 31, 32);
+  }
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(59, 59, 61);
+}
+
 .switch-container,
 .input-container {
   margin-bottom: 1rem;
@@ -323,6 +401,4 @@ input[type='checkbox'] {
     border-radius: 0.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-  
-
   

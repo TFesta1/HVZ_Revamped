@@ -1,14 +1,14 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config e
+// https://nuxt.com/docs/api/configuration/nuxt-config
 import { resolve } from 'path'
 export default defineNuxtConfig({
     app: {
         head: {
-            title: 'Nuxt Typescript Tailwind Starter',
+            title: 'New Paltz HvZ',
             meta: [
                 {
                     // Creates <meta name="Description" content="Repo for Nuxt3">
-                    name: "Description",
-                    content: "Repo for Nuxt3"
+                    name: "Founded in 2009, SUNY New Paltz presents the Humans Vs Zombies website! Here you can find details about the club, rules, events and if your a current student login to play weeklong!",
+                    content: "Website for the Humans Vs Zombies club"
                 }
             ]
         }

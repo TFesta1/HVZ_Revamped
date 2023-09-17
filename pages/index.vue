@@ -28,11 +28,6 @@
         // console.log(user.value?.user_metadata)
         // console.log(user.value?.id)
     }) 
-    
-
-
-
-
 
     // console.log(store.count)
 
@@ -45,47 +40,76 @@
 </script>
 
 <template>
-    <div>
-        <Head>
-            <Title>HVZ</Title>
-            <Meta name="description" :content="title" />
-        </Head>
-        <!-- <div class="box" id="box1"></div>
+<div>
+ <div class="container" id="con1">
+  <div class="box" id="box1"></div>
+  <div class="box" id="box2">
+    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </strong>
+  </div>
+  </div>
 
-        <div class="box" id="box2">
-            <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </strong>
-        </div> -->
+  <div class="container" id="con2">
+  <div class="box" id="Imbox1"></div>
+  <div class="box" id="Imbox2"> 
+    <figure class="image is-128x128">
+     <img src="https://bulma.io/images/placeholders/128x128.png">
+     </figure>
+  </div>
+  </div>
 
-        <div class="box" id="box3"></div>
-        
-        <div class="box" id="box4">
-            <strong>SUNY New Paltz has an active Humans vs. Zombies (HvZ) club on campus. HvZ is a moderated, modified game of tag played outdoors on the New Paltz campus. Each semester, the club holds campus-wide, weeklong games between two teams: the Humans and the Zombies.
+  <div class="card" id="Card1">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+    </figure>
+  </div>
+  </div> 
 
-            The zombie team players chase their opponents, and a two-handed touch turns a Human player into a Zombie. Human players use nerf and other foam projectiles such as socks to “stun” their zombie pursuers. During these weeklong events, or “weeklongs,” players are in-game twenty-four hours a day, for five days straight1.
+  <div class="container" id="con3">
+  <div class="box" id="col1"> </div>
+  <div class="box" id="col2"> </div>
+  <div class="box" id="col3"> </div>
+  </div>
 
-            If you are interested in joining the SUNY New Paltz HvZ club or learning more about how to play, follow any of the social media platforms above and ask how to get started!</strong>
-        </div>
+  <div class="container" id="con4">
+  <div class="box" id="box3"></div>
+  <div class="box" id="box4">
+    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </strong>
+  </div>
+  </div>
 
-        <div class="card" id="Card1">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="../assets/images/Rules.png" alt="Placeholder image">
-                </figure>
-            </div>
-
-            <div class="content flex items-center justify-center" style="align-content: center; font-weight: bold;">
-                Have fun!
-            </div>
-        </div>
-
-        <!-- <img src="~/assets/1.jpg" alt="" /> -->
-        <!-- <IconsBell/> -->
-        <!-- <ContentDoc/> -->
-        <!-- <Counter/> -->
-        <!-- {{ pending ? "Loading" : products }}
-
-        <button @click="refresh">Refresh</button> -->
+<footer>
+  <div class="content has-text-centered">
+    <p>Developed by Taheemuddin Ahmed & Tanner Festa
+    </p>
+  </div> 
+</footer>
     </div>
 </template>
 
+<style scoped>
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: overlay;
+}
+
+#app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #00000000;
+  text-align: center;
+}
+
+</style>
 

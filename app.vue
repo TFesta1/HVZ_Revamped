@@ -65,7 +65,7 @@
               <li>
                 <div v-if="userLoggedIn">
                   <!-- <div class="logo-container"> -->
-                  <img src="./assets/Primary Icon-cutout.png" width="28" height="28" alt="Logo" class="logo-container">
+                  <!-- <img src="./assets/Primary Icon-cutout.png" width="28" height="28" alt="Logo" class="logo-container"> -->
                   <!-- </div> -->
 
                   <div class="nav-links">

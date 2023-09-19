@@ -85,6 +85,10 @@
 
                 </div>
                 <div v-else class="buttons is-pulled-left">
+                  <NuxtLink to="/" class="whiteBold">Home</NuxtLink>
+                  <NuxtLink to="/events" class="whiteBold">Invitational</NuxtLink>
+                  <a href="https://www.instagram.com/nphvz" class="whiteBold">Instagram</a>
+                  <a href="https://discord.gg/fMAfykJtgJ" class="whiteBold">Discord</a>
                   <NuxtLink class="button is-transparent m1-4" to="/login">Login</NuxtLink>
                   <NuxtLink class="button is-transparent" to="/signup">Sign Up</NuxtLink>
                 </div>

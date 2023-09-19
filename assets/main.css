@@ -13,6 +13,11 @@
 
 }
 
+body, html {
+    background-color: #1A202C; /* bg-gray-900 */
+}
+
+
 .tableContainer {
     display: grid;
     place-items: center;

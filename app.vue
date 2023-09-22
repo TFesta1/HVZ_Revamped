@@ -63,9 +63,10 @@
           <header>
             <ul class="navbar">
               <li>
+                <img src="~/assets/images/Primary-Icon-cutout.png" width="28" height="28" alt="Logo" class="logo-container">
+
                 <div v-if="userLoggedIn">
                   <!-- <div class="logo-container"> -->
-                  <img src="~/assets/images/Primary-Icon-cutout.png" width="28" height="28" alt="Logo" class="logo-container">
                   <!-- <IconsHVZIconImage/> -->
                   <!-- </div> -->
 

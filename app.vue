@@ -65,7 +65,7 @@
               <li>
                 <div v-if="userLoggedIn">
                   <!-- <div class="logo-container"> -->
-                  <img src="./assets/Primary Icon-cutout.png" width="28" height="28" alt="Logo" class="logo-container">
+                  <!-- <img src="./assets/Primary Icon-cutout.png" width="28" height="28" alt="Logo" class="logo-container"> -->
                   <!-- </div> -->
 
                   <div class="nav-links">
@@ -80,7 +80,7 @@
                   </div>
                   
                   
-                  <button @click="logout" class="button is-transparent top-right">Logout</button>
+                  <button @click="logout" class="button is-transparent top-right"><b>Logout</b></button>
                   <!-- <img :src="navPfp().value" alt="pfp" class="profile-pictures" /> -->
 
                 </div>

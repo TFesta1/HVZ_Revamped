@@ -42,26 +42,29 @@
 <template>
 <div>
  <div class="container" id="con1">
-  <div class="box" id="box1"></div>
+  <div class="box" id="box1">
   <div class="box" id="box2">
     <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </strong>
   </div>
+ </div>
   </div>
 
   <div class="container" id="con2">
-  <div class="box" id="Imbox1"></div>
+  <div class="box" id="Imbox1">
   <div class="box" id="Imbox2"> 
     <figure class="image is-128x128">
      <img src="https://bulma.io/images/placeholders/128x128.png">
      </figure>
+    </div>
   </div>
   </div>
 
   <div class="card" id="Card1">
   <div class="card-image">
-    <figure class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+    <figure class="image is-3by4">
+      <img src="~assets/images/Fall_2023_Day.png" style="width:100%; height:100%" alt="Invitational Poster">
     </figure>
+    
   </div>
   </div> 
 
@@ -72,9 +75,10 @@
   </div>
 
   <div class="container" id="con4">
-  <div class="box" id="box3"></div>
+  <div class="box" id="box3">
   <div class="box" id="box4">
     <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </strong>
+  </div>
   </div>
   </div>
 

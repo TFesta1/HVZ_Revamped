@@ -43,6 +43,8 @@
 
 <template>
     <div>
+		<div class="container" id="LoginC">
+  			<div class="box" id="LoginB">
 			<form
 				@submit.prevent="login()"
 				class ="flex flex-col gap-2"
@@ -51,18 +53,18 @@
 					type="email" 
 					v-model="email"
 					placeholder="Email"
-					class="p-2 bg-gray-600 rounded"
+					class="p-4 bg-gray-600 rounded"
 
 				/>
 				<input 
 					type="password" 
 					v-model="password"
 					placeholder="Password"
-					class="p-2 bg-gray-600 rounded"
+					class="p-4 bg-gray-600 rounded"
 				/>
 				<button  
 					type="submit"
-					class="p-2 bg-gray-600 rounded"
+					class="p-5 bg-gray-500 rounded"
 
 				>
 					{{ "Login" }}
@@ -75,10 +77,50 @@
 			<div>
 				<p style="color: green;">{{ displayPasswordSent().value }}</p>
 			</div>
-
+			</div>
+			</div>
     </div>
+
+	<footer>
+  <div class="content has-text-centered">
+    <p>Developed by Taheemuddin Ahmed & Tanner Festa
+    </p>
+  </div> 
+</footer>
 </template>
 
 <style scoped>
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: overlay;
+}
+
+#app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#LoginB {
+	margin: auto;
+    padding: 10px;
+    border-radius: 2px;
+    width: 50dvw;
+    height: 30dvh;
+    color:#f3f3f3;
+    background-color: #161820;
+}
+
+footer {
+  position: relative;
+  right: 0;
+  bottom: -20px;
+  left: 0;
+  padding: 1rem;
+  background-color: #00000000;
+  text-align: center;
+}
 
 </style>

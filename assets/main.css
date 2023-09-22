@@ -108,6 +108,13 @@ html,body
     cursor: not-allowed;
 }
 
+
+@media (min-width:320px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+
+
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+ }
+
 #con1 {
     position: relative;
     top: 15vh;
@@ -407,4 +414,4 @@ input[type='checkbox'] {
     border-radius: 0.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-  
+

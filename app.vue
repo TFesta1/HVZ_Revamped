@@ -66,14 +66,6 @@
                 <img src="~/assets/images/Primary-Icon-cutout.png" width="28" height="28" alt="Logo" class="logo-container">
 
                 <div v-if="userLoggedIn">
-                  <!-- <div class="logo-container"> -->
-<<<<<<< HEAD
-                  <!-- <img src="./assets/Primary Icon-cutout.png" width="28" height="28" alt="Logo" class="logo-container"> -->
-=======
-                  <!-- <IconsHVZIconImage/> -->
->>>>>>> eb86e5d624ab630fc972bfb7a175366804fb14e6
-                  <!-- </div> -->
-
                   <div class="nav-links" style="display: flex; justify-content: center;">
                     <NuxtLink to="/" class="whiteBold">Home</NuxtLink>
                     <NuxtLink to="/events" class="whiteBold">Invitational</NuxtLink>

@@ -77,10 +77,10 @@
 			<div>
 				<p style="color: green;">{{ displayPasswordSent().value }}</p>
 			</div>
-			<NuxtLink class="button is-transparent" to="/signup">Sign Up</NuxtLink>
-
+			<NuxtLink class="button is-medium is-fullwidth is-dark" to="/signup">Sign Up</NuxtLink>
 			</div>
-			</div>
+			</div> 
+			<!-- We need the sign up centered and half the length of the other buttons while being the same color please -->
     </div>
 
 	<footer>

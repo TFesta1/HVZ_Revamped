@@ -63,8 +63,6 @@
           <header>
             <ul class="navbar">
               <li>
-                <img src="~/assets/images/Primary-Icon-cutout.png" width="28" height="28" alt="Logo" class="logo-container">
-
                 <div v-if="userLoggedIn">
                   <div class="nav-links" style="display: flex; justify-content: center;">
                     <NuxtLink to="/" class="whiteBold">Home</NuxtLink>
@@ -78,7 +76,7 @@
                   </div>
                   
                   
-                  <button @click="logout" class="button is-transparent top-right"><b>Logout</b></button>
+                  <button @click="logout" class="button is-transparent top-right"><strong>Logout</strong></button>
                   <!-- <img :src="navPfp().value" alt="pfp" class="profile-pictures" /> -->
 
                 </div>
@@ -87,9 +85,9 @@
                   <NuxtLink to="/events" class="whiteBold">Invitational</NuxtLink>
                   <a href="https://www.instagram.com/nphvz" class="whiteBold">Instagram</a>
                   <a href="https://discord.gg/fMAfykJtgJ" class="whiteBold">Discord</a>
-                  <NuxtLink class="button is-transparent m1-4" to="/login">Login</NuxtLink>
-                  <!-- <NuxtLink class="button is-transparent" to="/signup">Sign Up</NuxtLink> -->
                 </div>
+
+                <NuxtLink class="button top-right is-dark are-small" to="/login"><strong>Login</strong></NuxtLink>
                 
                 
               </li>

@@ -65,10 +65,11 @@
               <li>
                 <div v-if="userLoggedIn">
                   <!-- <div class="logo-container"> -->
-                  <!-- <img src="./assets/Primary Icon-cutout.png" width="28" height="28" alt="Logo" class="logo-container"> -->
+                  <img src="./assets/Images/Primary-Icon-cutout.png" width="28" height="28" alt="Logo" class="logo-container">
+                  <!-- <IconsHVZIconImage/> -->
                   <!-- </div> -->
 
-                  <div class="nav-links">
+                  <div class="nav-links" style="display: flex; justify-content: center;">
                     <NuxtLink to="/" class="whiteBold">Home</NuxtLink>
                     <NuxtLink to="/events" class="whiteBold">Invitational</NuxtLink>
                     <NuxtLink to="/weeklong" class="whiteBold">Weeklong</NuxtLink>
@@ -90,7 +91,7 @@
                   <a href="https://www.instagram.com/nphvz" class="whiteBold">Instagram</a>
                   <a href="https://discord.gg/fMAfykJtgJ" class="whiteBold">Discord</a>
                   <NuxtLink class="button is-transparent m1-4" to="/login">Login</NuxtLink>
-                  <NuxtLink class="button is-transparent" to="/signup">Sign Up</NuxtLink>
+                  <!-- <NuxtLink class="button is-transparent" to="/signup">Sign Up</NuxtLink> -->
                 </div>
                 
                 

@@ -23,7 +23,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
         console.log("user does not exist")
         // Make sure that there's no infinite loop
         if (to.path != "/login" && to.path != "/signup" && to.path != "/passwordReset") {
-            router.push("/login")
+            // router.push("/login")
         }
         
         // router.push("/login")

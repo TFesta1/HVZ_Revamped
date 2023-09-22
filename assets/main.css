@@ -22,6 +22,11 @@ html,body
 
 }
 
+body, html {
+    background-color: #1F1F20; /* bg-gray-900 */
+}
+
+
 .tableContainer {
     display: grid;
     place-items: center;

@@ -77,8 +77,9 @@
 			<div>
 				<p style="color: green;">{{ displayPasswordSent().value }}</p>
 			</div>
-			</div>
-			</div>
+			<NuxtLink class="button is-transparent" to="/signup">Sign Up</NuxtLink>
+
+
     </div>
 
 	<footer>

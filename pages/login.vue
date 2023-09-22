@@ -79,7 +79,8 @@
 			</div>
 			<NuxtLink class="button is-transparent" to="/signup">Sign Up</NuxtLink>
 
-
+			</div>
+			</div>
     </div>
 
 	<footer>

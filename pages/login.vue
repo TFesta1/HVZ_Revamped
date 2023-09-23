@@ -53,14 +53,14 @@
 					type="email" 
 					v-model="email"
 					placeholder="Email"
-					class="p-4 bg-gray-600 rounded"
+					class="p-5 bg-gray-600 rounded"
 
 				/>
 				<input 
 					type="password" 
 					v-model="password"
 					placeholder="Password"
-					class="p-4 bg-gray-600 rounded"
+					class="p-5 bg-gray-600 rounded"
 				/>
 				<button  
 					type="submit"
@@ -109,8 +109,8 @@ body {
 	margin: auto;
     padding: 10px;
     border-radius: 2px;
-    width: 50dvw;
-    height: 30dvh;
+    width: 70dvw;
+    height: 36dvh;
     color:#f3f3f3;
     background-color: #161820;
 }
@@ -118,7 +118,7 @@ body {
 footer {
   position: relative;
   right: 0;
-  bottom: -20px;
+  bottom: -10vh;
   left: 0;
   padding: 1rem;
   background-color: #00000000;

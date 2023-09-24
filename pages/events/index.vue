@@ -5,7 +5,7 @@
     $setupUser()  
 
     useHead({
-        title: "event page",
+        title: "Fall Invitational",
         
     })
 

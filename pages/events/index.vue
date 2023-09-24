@@ -155,12 +155,12 @@
     </div>
     <div v-else class="bg-gray-200 h-4 w-1/2 animate-pulse rounded-lg"></div>  Loading bar
     </div> -->
-    <div class ="box is-size-5-mobile has-text-centered" id="Title">
+    <div class ="box is-size-5-mobile is-size-1-desktop has-text-centered" id="Title">
         <strong>KINGED Invitational</strong>
     </div>
 <div class="container" id="Invcon1">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-7-mobile" id="InvboxM1">
+  <div class="box is-size-7-mobile is-size-5-desktop" id="InvboxM1">
     <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
   </div>
  </div>
@@ -168,14 +168,14 @@
 
   <div class="container" id="Invcon2">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-7-mobile" id="InvboxM2">
+  <div class="box is-size-7-mobile is-size-5-desktop" id="InvboxM2">
     </div>
     </div>
     </div>
 
  <div class="container" id="Invcon3">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-7-mobile" id="InvboxM3">
+  <div class="box is-size-7-mobile is-size-5-desktop" id="InvboxM3">
     <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
   </div>
  </div>
@@ -183,7 +183,7 @@
 
   <div class="container" id="Invcon4">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-7-mobile" id="InvboxM4">
+  <div class="box is-size-7-mobile is-size-5-desktop" id="InvboxM4">
     <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
   </div>
  </div>
@@ -191,7 +191,7 @@
 
   <div class="container" id="Invcon5">
   <div class="Invbox" id="InvboxC5">
-  <div class="box is-size-7-mobile " id="InvboxM5">
+  <div class="box is-size-7-mobile is-size-5-desktop" id="InvboxM5">
     <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
   </div>
  </div>
@@ -199,7 +199,7 @@
 
   <div class="container" id="Invcon6">
   <div class="Invbox" id="InvboxC5">
-  <div class="box is-size-7-mobile " id="InvboxF">
+  <div class="box is-size-7-mobile is-size-5-desktop" id="InvboxF">
     <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
   </div>
  </div>

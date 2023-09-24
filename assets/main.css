@@ -113,143 +113,144 @@ body, html {
     cursor: not-allowed;
 }
 
-
+/* Main Homepage */
 @media (min-width:320px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
 
 
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+    #con1 {
+        position: relative;
+        top: 15vh;
+        left: 42.5%;
+    }
+    
+    #box1{
+        padding: 10px;
+        border-radius: 2px;
+        width: 35dvw;
+        height: 29dvh;
+        color:#f1f1f1;
+        background-color: #db6300;
+    }
+    
+    #box2{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 35dvw;
+        height: 29dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+    
+    
+    #con2 {
+        position: relative;
+        bottom: 20dvh;
+        left: -5.5%;
+    }
+    
+    #Imbox1{
+        padding: 10px;
+        border-radius: 2px;
+        color:#f1f1f1;
+        background-color: #db6300;
+        width: 42dvw;
+        height: 40dvh;
+        
+    }
+    
+    #Imbox2{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+    
+        color:#000000;
+        background-color: #fafafa;
+        width: 42dvw;
+        height: 40dvh;
+    }
+    
+    #Card1{
+        position: relative;
+        bottom: 15vh;
+        margin:auto;
+        color:#000000;
+        background-color: #fafafa;
+        width: 50%;
+        height: 100%;
+    }
+    
+    #con3 {
+        position: relative;
+        height: 90dvh;
+    }
+    
+    #col1 {
+        position: absolute;
+        width: 30%;
+        height: 60dvh;
+        padding: 10px;
+        border-radius: 2px;
+        color:#000000;
+        background-color: #fafafa;
+    }
+    
+    #col2 {
+        position: absolute;
+        left: 35%;
+        padding: 10px;
+        border-radius: 2px;
+        width: 30%;
+        height: 60dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+    
+    #col3 {
+        position: absolute;
+        left: 70%;
+        padding: 10px;
+        border-radius: 2px;
+        width: 30%;
+        height: 60dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+    
+    #con4 {
+        position: relative;
+        bottom: 20dvh;
+    }
+    
+    #box3{
+        /* margin-left:-1%; */
+        margin: auto;
+        padding: 10px;
+        border-radius: 2px;
+        width: 71.5dvw;
+        height: 59dvh;
+        color:#f1f1f1;
+        background-color: #db6300;
+    }
+    
+    #box4{
+        position: absolute;
+        margin-left: 0.4%;
+        padding: 10px;
+        border-radius: 2px;
+        width: 70dvw;
+        height: 57dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
  }
 
-#con1 {
-    position: relative;
-    top: 15vh;
-    left: 42.5%;
-}
 
-#box1{
-    padding: 10px;
-    border-radius: 2px;
-    width: 35dvw;
-    height: 29dvh;
-    color:#f1f1f1;
-    background-color: #db6300;
-}
-
-#box2{
-    position: absolute;
-    bottom: 10px;
-    left: -10px;
-    padding: 10px;
-    border-radius: 2px;
-    width: 35dvw;
-    height: 29dvh;
-    color:#000000;
-    background-color: #fafafa;
-}
-
-
-#con2 {
-    position: relative;
-    bottom: 20dvh;
-    left: -5.5%;
-}
-
-#Imbox1{
-    padding: 10px;
-    border-radius: 2px;
-    color:#f1f1f1;
-    background-color: #db6300;
-    width: 42dvw;
-    height: 40dvh;
-    
-}
-
-#Imbox2{
-    position: absolute;
-    bottom: 10px;
-    left: -10px;
-    padding: 10px;
-    border-radius: 2px;
-
-    color:#000000;
-    background-color: #fafafa;
-    width: 42dvw;
-    height: 40dvh;
-}
-
-#Card1{
-    position: relative;
-    bottom: 15vh;
-    margin:auto;
-    color:#000000;
-    background-color: #fafafa;
-    width: 50%;
-    height: 100%;
-}
-
-#con3 {
-    position: relative;
-    height: 90dvh;
-}
-
-#col1 {
-    position: absolute;
-    width: 30%;
-    height: 60dvh;
-    padding: 10px;
-    border-radius: 2px;
-    color:#000000;
-    background-color: #fafafa;
-}
-
-#col2 {
-    position: absolute;
-    left: 35%;
-    padding: 10px;
-    border-radius: 2px;
-    width: 30%;
-    height: 60dvh;
-    color:#000000;
-    background-color: #fafafa;
-}
-
-#col3 {
-    position: absolute;
-    left: 70%;
-    padding: 10px;
-    border-radius: 2px;
-    width: 30%;
-    height: 60dvh;
-    color:#000000;
-    background-color: #fafafa;
-}
-
-#con4 {
-    position: relative;
-    bottom: 20dvh;
-}
-
-#box3{
-    /* margin-left:-1%; */
-    margin: auto;
-    padding: 10px;
-    border-radius: 2px;
-    width: 71.5dvw;
-    height: 59dvh;
-    color:#f1f1f1;
-    background-color: #db6300;
-}
-
-#box4{
-    position: absolute;
-    margin-left: 0.4%;
-    padding: 10px;
-    border-radius: 2px;
-    width: 70dvw;
-    height: 57dvh;
-    color:#000000;
-    background-color: #fafafa;
-}
 
 .navbar {
     display: flex;

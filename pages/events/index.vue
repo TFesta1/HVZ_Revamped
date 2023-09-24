@@ -101,10 +101,10 @@
 
 
 <template>
-    <div class="grid grid-cols-1 gap-4">
+    <!-- <div class="grid grid-cols-1 gap-4">
     
     <div v-if="stateAdmin().value == true">
-        <!-- For admins to add a new event -->
+         For admins to add a new event
         <h3 class="i-name">
             <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded" @click="addEvent" :style="{ display: clickedAddEvent ? 'none' : 'flex' }">
                 {{ adminAddEventTitle }}
@@ -151,11 +151,83 @@
             </div>
         </div>
 
-        <!-- <img src="~/assets/images/down-arrow.png" alt="Down Arrow" /> -->
+        <img src="~/assets/images/down-arrow.png" alt="Down Arrow" /> 
     </div>
-    <div v-else class="bg-gray-200 h-4 w-1/2 animate-pulse rounded-lg"></div> <!-- Loading bar -->
+    <div v-else class="bg-gray-200 h-4 w-1/2 animate-pulse rounded-lg"></div>  Loading bar
+    </div> -->
+    <div class ="box is-size-5-mobile has-text-centered" id="Title">
+        <strong>KINGED Invitational</strong>
+    </div>
+<div class="container" id="Invcon1">
+  <div class="Invbox" id="InvboxC">
+  <div class="box is-size-7-mobile" id="InvboxM1">
+    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
+  </div>
+ </div>
+  </div>
 
+  <div class="container" id="Invcon2">
+  <div class="Invbox" id="InvboxC">
+  <div class="box is-size-7-mobile" id="InvboxM2">
+    </div>
+    </div>
     </div>
 
+ <div class="container" id="Invcon3">
+  <div class="Invbox" id="InvboxC">
+  <div class="box is-size-7-mobile" id="InvboxM3">
+    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
+  </div>
+ </div>
+  </div>
+
+  <div class="container" id="Invcon4">
+  <div class="Invbox" id="InvboxC">
+  <div class="box is-size-7-mobile" id="InvboxM4">
+    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
+  </div>
+ </div>
+  </div>
+
+  <div class="container" id="Invcon5">
+  <div class="Invbox" id="InvboxC5">
+  <div class="box is-size-7-mobile " id="InvboxM5">
+    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
+  </div>
+ </div>
+  </div>
+
+  <div class="container" id="Invcon6">
+  <div class="Invbox" id="InvboxC5">
+  <div class="box is-size-7-mobile " id="InvboxF">
+    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
+  </div>
+ </div>
+  </div>
 
 </template>
+
+<style scoped>
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: overlay;
+}
+
+#app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #00000000;
+  text-align: center;
+}
+</style>

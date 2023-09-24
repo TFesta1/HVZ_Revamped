@@ -280,7 +280,7 @@ body, html {
     margin-bottom: 1rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 320px) {
     .navbar {
         flex-direction: row;
         justify-content: space-between;
@@ -420,3 +420,145 @@ input[type='checkbox'] {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Invitational Page */
+
+@media (min-width:320px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
+    #Title {
+        position: relative;
+        margin:auto;
+        top: 3vh;
+        width: 60dvw;
+    }
+
+    #Invcon1 {
+        position: relative;
+        top: 10vh;
+        left: 5%;
+    }
+    
+    #InvboxC{
+        padding: 10px;
+        border-radius: 2px;
+        width: 70dvw;
+        height: 21dvh;
+        color:#f1f1f1;
+        background-color: #72221d;
+    }
+    
+    #InvboxM1{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 70dvw;
+        height: 21dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+
+    #Invcon2 {
+        position: relative;
+        top: 15vh;
+        left: 25%;
+    }
+    
+    #InvboxM2{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 70dvw;
+        height: 21dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+    #Invcon3 {
+        position: relative;
+        top: 20vh;
+        left: 5%;
+    }
+    
+    #InvboxM3{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 70dvw;
+        height: 21dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+    #Invcon4 {
+        position: relative;
+        top: 25vh;
+        left: 25%;
+    }
+    
+    #InvboxM4{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 70dvw;
+        height: 21dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+    #Invcon5 {
+        position: relative;
+        top: 35vh;
+        margin: auto;
+    }
+    
+    #InvboxM5{
+        position: absolute;
+        margin: auto;
+        bottom: 10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 75dvw;
+        height: 21dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+
+    #Invcon6 {
+        position: relative;
+        top: 40vh;
+        margin: auto;
+    }
+    #InvboxC5{
+        margin:auto;
+        padding: 10px;
+        border-radius: 2px;
+        width: 80dvw;
+        height: 23dvh;
+        color:#f1f1f1;
+        background-color: #72221d;
+    }
+
+    #InvboxF{
+        position: absolute;
+        margin: auto;
+        bottom: 10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 75dvw;
+        height: 21dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+}
+
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }

@@ -210,6 +210,8 @@
 </script>
 
 <template>
+    <div class="container" id="profile">
+        <div class="box" id="ProfileB">
     <div>
         <img :src="navPfp().value" alt="pfp" class="profile-pictures" />
         <form @submit.prevent="apply()" class ="flex flex-col gap-2">
@@ -218,19 +220,19 @@
                 @change="handleFileChange"
                 accept="image/*"
                 ref="fileInput"
-                class="p-2 bg-gray-600 rounded"
+                class="p-5 bg-gray-600 rounded"
             />
             <input
                 type="text"
                 v-model="team"
                 placeholder="Team"
-                class="p-2 bg-gray-600 rounded"
+                class="p-5 bg-gray-600 rounded"
             />
             <input
                 type="text"
                 v-model="nickname"
                 placeholder="Nickname"
-                class="p-2 bg-gray-600 rounded"
+                class="p-5 bg-gray-600 rounded"
             />
             <!-- <input
                 type="text"
@@ -240,7 +242,7 @@
             /> -->
             <button 
                 type="submit"
-                class="p-2 bg-gray-600 rounded"
+                class="p-5 bg-gray-600 rounded"
             >
                 {{ "Apply" }}
             </button>
@@ -264,10 +266,68 @@
         </div>
 
         {{ updatedText }}
+        </div>
     </div>
+    </div>
+<footer>
+    <div class="content has-text-centered">
+    <p>Developed by Taheemuddin Ahmed & Tanner Festa
+    </p>
+  </div> 
+</footer>
 </template>
 
 
 <style scoped>
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: overlay;
+}
 
+
+#app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width:320px) {
+#ProfileB {
+    position: relative;
+    top: 5vh;
+	margin: auto;
+    padding: 10px;
+    border-radius: 2px;
+    width: 70dvw;
+    height: 68dvh;
+    color:#f3f3f3;
+    background-color: #161820;
+}
+}
+
+@media (min-width:800px) {
+#ProfileB {
+    position: relative;
+    top: 5vh;
+	margin: auto;
+    padding: 10px;
+    border-radius: 2px;
+    width: 70dvw;
+    height: 55dvh;
+    color:#f3f3f3;
+    background-color: #161820;
+}
+}
+
+footer {
+  position: relative;
+  right: 0;
+  bottom: -10vh;
+  left: 0;
+  padding: 1rem;
+  background-color: #00000000;
+  text-align: center;
+}
 </style>

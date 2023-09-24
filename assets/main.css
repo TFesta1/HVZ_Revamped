@@ -284,12 +284,14 @@ input[type='checkbox'] {
 
 /* Main Homepage */
 @media (max-width: 900px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
     #con1 {
         position: relative;
         top: 45vh;
         left: 10%;
         
     }
+    
     
     #box1{
         padding: 10px;
@@ -835,3 +837,8 @@ input[type='checkbox'] {
     }
 
 }
+
+
+/* Weeklong Page */
+
+/* Admin page */

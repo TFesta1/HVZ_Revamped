@@ -108,7 +108,7 @@ body {
 footer {
   position: relative;
   right: 0;
-  bottom: -50dvh;
+  bottom: 0dvh;
   left: 0;
   padding: 1rem;
   background-color: #00000000;

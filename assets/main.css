@@ -767,8 +767,14 @@ input[type='checkbox'] {
         width: 30dvw;
     }
 
-    
-
+    #InvboxC{
+        padding: 10px;
+        border-radius: 2px;
+        width: 50dvw;
+        height: 40dvh;
+        color:#f1f1f1;
+        background-color: #72221d;
+    }
 
     #Invcon1 {
         position: relative;

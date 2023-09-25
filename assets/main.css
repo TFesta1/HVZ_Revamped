@@ -351,14 +351,15 @@ input[type='checkbox'] {
         position: absolute;
         left: 5%;
         width: 90%;
-        height: 30dvh;
+        height: 32dvh;
         padding: 10px;
         border-radius: 2px;
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;
     }
-    
+
+
     #col2 {
         position: absolute;
         top: 35dvh;
@@ -366,7 +367,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 90%;
-        height: 30dvh;
+        height: 32dvh;
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;
@@ -379,7 +380,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 90%;
-        height: 30dvh;
+        height: 32dvh;
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;
@@ -396,7 +397,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 90dvw;
-        height: 33dvh;
+        height: 43dvh;
         color:#f1f1f1;
         background-color: #db6300;
     }
@@ -407,7 +408,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 84dvw;
-        height: 30dvh;
+        height: 40dvh;
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;
@@ -493,7 +494,7 @@ input[type='checkbox'] {
         #col1 {
             position: absolute;
             width: 30%;
-            height: 60dvh;
+            height: 50dvh;
             padding: 10px;
             border-radius: 2px;
             color:#000000;
@@ -507,7 +508,7 @@ input[type='checkbox'] {
             padding: 10px;
             border-radius: 2px;
             width: 30%;
-            height: 60dvh;
+            height: 50dvh;
             color:#000000;
             background-color: #fafafa;
             transition: all .2s ease-in-out;
@@ -519,7 +520,7 @@ input[type='checkbox'] {
             padding: 10px;
             border-radius: 2px;
             width: 30%;
-            height: 60dvh;
+            height: 50dvh;
             color:#000000;
             background-color: #fafafa;
             transition: all .2s ease-in-out;
@@ -527,7 +528,7 @@ input[type='checkbox'] {
         
         #con4 {
             position: relative;
-            bottom: 20dvh;
+            bottom: 25dvh;
         }
         
         #box3{
@@ -601,7 +602,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 21dvh;
+        height: 24dvh;
         color:#f1f1f1;
         background-color: #72221d;
         transition: all .2s ease-in-out;
@@ -614,7 +615,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 19dvh;
+        height: 21dvh;
         color:#5e4646;
         background-color: #3d3c3c;
     }
@@ -626,7 +627,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 17dvh;
+        height: 18.5dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -645,7 +646,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 19dvh;
+        height: 21dvh;
         color:#000000;
         background-color: #3d3c3c;
     }
@@ -657,7 +658,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 17dvh;
+        height: 18.5dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -675,7 +676,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 19dvh;
+        height: 21dvh;
         color:#000000;
         background-color: #3d3c3c;
     }
@@ -687,7 +688,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 17dvh;
+        height: 18.5dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -705,7 +706,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 19dvh;
+        height: 21dvh;
         color:#000000;
         background-color: #3d3c3c;
     }
@@ -717,7 +718,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 17dvh;
+        height: 18.5dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -735,7 +736,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 75dvw;
-        height: 21dvh;
+        height: 27dvh;
         color:#000000;
         background-color: #3d3c3c;
     }
@@ -747,7 +748,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 75dvw;
-        height: 16.5dvh;
+        height: 22dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -762,7 +763,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 80dvw;
-        height: 23dvh;
+        height: 30dvh;
         color:#f1f1f1;
         background-color: #72221d;
     }
@@ -774,7 +775,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 75dvw;
-        height: 21dvh;
+        height: 27dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -832,7 +833,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 50dvw;
-        height: 35.5dvh;
+        height: 33dvh;
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;
@@ -865,7 +866,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 50dvw;
-        height: 35.5dvh;
+        height: 33dvh;
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;
@@ -897,7 +898,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 50dvw;
-        height: 35.5dvh;
+        height: 33dvh;
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;
@@ -929,7 +930,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 50dvw;
-        height: 35.5dvh;
+        height: 33dvh;
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;
@@ -961,7 +962,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 34dvh;
+        height: 32dvh;
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;

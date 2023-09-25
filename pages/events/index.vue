@@ -162,7 +162,7 @@
 
 <div class="container" id="Invcon1">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM1T">
+  <div class="box is-size-5-mobile is-size-1-desktop has-text-centered" id="InvboxM1T">
     <p class="has-text-light has-text-weight-bold"> Baby Game Learning</p>
   </div>
   <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM1LT">
@@ -175,24 +175,24 @@
 
   <div class="container" id="Invcon2">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered has-text-light" id="InvboxM2T">
+  <div class="box is-size-5-mobile is-size-2-desktop has-text-centered has-text-light" id="InvboxM2T">
     <p class="has-text-light has-text-weight-bold">Kinging our Checkers</p>
     </div>
 
     <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM2LT">
-        <p>Now that we have trained ourselves, we’re ready to start our attack. Together, we must advance some of our best Checkers from our side of the board, to the other side of the board in order to “king” them. Once they’ve been kinged, they’ll be stronger and act as leaders to rally behind our cause.</p>
+        <p>After training, we are ready to launch our attack by advancing our top Checkers from one side to the other to "king" them. Once kinged, they will become stronger and act as leaders to support our cause.</p>
     </div>
     </div>
     </div>
 
  <div class="container" id="Invcon3">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM3T">
+  <div class="box is-size-5-mobile is-size-2-desktop has-text-centered" id="InvboxM3T">
     <p class="has-text-light has-text-weight-bold">A Counterattack Unfolds</p>
   </div>
 
   <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM3LT">
-    <p>Now that we’ve kinged our Checkers, the Chess pieces are unleashing their counterattack. They are attempting to fold the board on us, crushing us. We have to defend our Kings while we fight off the Pawns, meanwhile sending out groups to stop the board from folding. Beware though, as Bishops will hunt down groups that try to thwart them.</p>
+    <p>After kinging our Checkers, the Chess pieces are attempting to fold the board on us, crushing us. We must defend our Kings, fight off Pawns, and send out groups to prevent the board from folding. Beware of Bishops hunting down thwarted groups.</p>
   </div>
 
  </div>
@@ -200,30 +200,30 @@
 
   <div class="container" id="Invcon4">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM4T">
+  <div class="box is-size-5-mobile is-size-2-desktop has-text-centered" id="InvboxM4T">
     <p class="has-text-light has-text-weight-bold">The Promotion Rush</p>
   </div>
 
   <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM4LT">
-    <p>In a full force effort to stop us, the Chess pieces have rallied their Knights, Bishops and Rooks to wipe us out. We must hold steady against the onslaught of pieces, whilst taking down the pieces. Be warned however, as if any Pawns breach our lines and reach our side of the board, they will promote and be yet another threat to deal with.</p>
+    <p>The Chess pieces have gathered their Knights, Bishops, and Rooks to defeat us. We must resist the onslaught and take down the pieces. Pawns breaching our lines could promote and pose a threat, so we must remain steady and take down the pieces.</p>
   </div>
  </div>
   </div>
 
   <div class="container" id="Invcon5">
   <div class="Invbox" id="InvboxC5">
-  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM5T">
+  <div class="box is-size-5-mobile is-size-2-desktop has-text-centered" id="InvboxM5T">
     <p class="has-text-light has-text-weight-bold">The Queen’s Gambit</p>
   </div>
-  <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM5LT">
-    <p>Now that the other pieces are defeated, it’s time for the Queen. Sadly though, she can outmaneuver us, and capture pieces too easily for a full on assault. Instead, we need to lure her into a trap, where if she moves, we can capture her King, and she’ll be forced to go down to save her King. From there, the King is toast, just get rid of the pawns and that’s Checkmate.</p>
+  <div class="box is-size-7-mobile is-size-3-desktop" id="InvboxM5LT">
+    <p>After defeating other pieces, the Queen must be lured into a trap to capture her King. She can outmaneuver us and capture pieces easily. To save her King, we must eliminate the pawns and use Checkmate to eliminate the pawns, ensuring the King is secure.</p>
   </div>
  </div>
   </div>
 
   <div class="container" id="Invcon6">
   <div class="Invbox" id="InvboxC5">
-  <div class="box is-size-7-mobile is-size-4-desktop has-text-centered" id="InvboxF">
+  <div class="box is-size-7-mobile is-size-2-desktop has-text-centered" id="InvboxF">
     <strong>The Ending</strong>
   </div>
  </div>

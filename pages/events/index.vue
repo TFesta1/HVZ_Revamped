@@ -160,47 +160,69 @@
     </div>
 <div class="container" id="Invcon1">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-7-mobile is-size-5-desktop" id="InvboxM1">
-    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
+  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM1T">
+    <strong> Baby Game Learning</strong>
   </div>
- </div>
+  <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM1LT">
+    <p>Checkers has gotta step up their game. We have to go to all the other baby games and learn from them to become smarter, stronger and better. However we have to be careful, as the Chess Bishops are circling around, and if they catch wind, we’ll lose the element of surprise.</p>
+  </div>
+
+
+  </div>
   </div>
 
   <div class="container" id="Invcon2">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-7-mobile is-size-5-desktop" id="InvboxM2">
+  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM2T">
+    <strong>Kinging our Checkers</strong>
+    </div>
+
+    <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM2LT">
+        <p>Now that we have trained ourselves, we’re ready to start our attack. Together, we must advance some of our best Checkers from our side of the board, to the other side of the board in order to “king” them. Once they’ve been kinged, they’ll be stronger and act as leaders to rally behind our cause.</p>
     </div>
     </div>
     </div>
 
  <div class="container" id="Invcon3">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-7-mobile is-size-5-desktop" id="InvboxM3">
-    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
+  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM3T">
+    <strong>A Counterattack Unfolds</strong>
   </div>
+
+  <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM3LT">
+    <p>Now that we’ve kinged our Checkers, the Chess pieces are unleashing their counterattack. They are attempting to fold the board on us, crushing us. We have to defend our Kings while we fight off the Pawns, meanwhile sending out groups to stop the board from folding. Beware though, as Bishops will hunt down groups that try to thwart them.</p>
+  </div>
+
  </div>
   </div>
 
   <div class="container" id="Invcon4">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-7-mobile is-size-5-desktop" id="InvboxM4">
-    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
+  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM4T">
+    <strong>The Promotion Rush</strong>
+  </div>
+
+  <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM4LT">
+    <p>In a full force effort to stop us, the Chess pieces have rallied their Knights, Bishops and Rooks to wipe us out. We must hold steady against the onslaught of pieces, whilst taking down the pieces. Be warned however, as if any Pawns breach our lines and reach our side of the board, they will promote and be yet another threat to deal with.</p>
   </div>
  </div>
   </div>
 
   <div class="container" id="Invcon5">
   <div class="Invbox" id="InvboxC5">
-  <div class="box is-size-7-mobile is-size-5-desktop" id="InvboxM5">
-    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
+  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM5T">
+    <strong>The Queen’s Gambit</strong>
+  </div>
+  <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM5LT">
+    <p>Now that the other pieces are defeated, it’s time for the Queen. Sadly though, she can outmaneuver us, and capture pieces too easily for a full on assault. Instead, we need to lure her into a trap, where if she moves, we can capture her King, and she’ll be forced to go down to save her King. From there, the King is toast, just get rid of the pawns and that’s Checkmate.</p>
   </div>
  </div>
   </div>
 
   <div class="container" id="Invcon6">
   <div class="Invbox" id="InvboxC5">
-  <div class="box is-size-7-mobile is-size-5-desktop" id="InvboxF">
-    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
+  <div class="box is-size-7-mobile is-size-4-desktop has-text-centered" id="InvboxF">
+    <strong>The Ending</strong>
   </div>
  </div>
   </div>

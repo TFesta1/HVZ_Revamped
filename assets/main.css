@@ -585,14 +585,26 @@ input[type='checkbox'] {
         background-color: #72221d;
     }
     
-    #InvboxM1{
+    #InvboxM1T{
         position: absolute;
         bottom: 10px;
         left: -10px;
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 21dvh;
+        height: 19dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+    #InvboxM1LT{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 70dvw;
+        height: 17.5dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -604,14 +616,26 @@ input[type='checkbox'] {
         left: 25%;
     }
     
-    #InvboxM2{
+    #InvboxM2T{
         position: absolute;
         bottom: 10px;
         left: -10px;
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 21dvh;
+        height: 19dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+    #InvboxM2LT{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 70dvw;
+        height: 17.5dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -622,14 +646,26 @@ input[type='checkbox'] {
         left: 5%;
     }
     
-    #InvboxM3{
+    #InvboxM3T{
         position: absolute;
         bottom: 10px;
         left: -10px;
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 21dvh;
+        height: 19dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+    #InvboxM3LT{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 70dvw;
+        height: 17.5dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -640,14 +676,26 @@ input[type='checkbox'] {
         left: 25%;
     }
     
-    #InvboxM4{
+    #InvboxM4T{
         position: absolute;
         bottom: 10px;
         left: -10px;
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 21dvh;
+        height: 19dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+    #InvboxM4LT{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 70dvw;
+        height: 17.5dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -658,7 +706,7 @@ input[type='checkbox'] {
         margin: auto;
     }
     
-    #InvboxM5{
+    #InvboxM5T{
         position: absolute;
         margin: auto;
         bottom: 10px;
@@ -670,6 +718,17 @@ input[type='checkbox'] {
         background-color: #fafafa;
     }
 
+    #InvboxM5LT{
+        position: absolute;
+        margin: auto;
+        bottom: 10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 75dvw;
+        height: 17dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
 
     #Invcon6 {
         position: relative;
@@ -723,14 +782,26 @@ input[type='checkbox'] {
         background-color: #72221d;
     }
     
-    #InvboxM1{
+    #InvboxM1T{
         position: absolute;
         bottom: 10px;
         left: -10px;
         padding: 10px;
         border-radius: 2px;
         width: 50dvw;
-        height: 41dvh;
+        height: 39dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+    #InvboxM1LT{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 50dvw;
+        height: 36dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -742,14 +813,26 @@ input[type='checkbox'] {
         left: 30%;
     }
     
-    #InvboxM2{
+    #InvboxM2T{
         position: absolute;
         bottom: 10px;
         left: -10px;
         padding: 10px;
         border-radius: 2px;
         width: 50dvw;
-        height: 41dvh;
+        height: 39dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+    #InvboxM2LT{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 50dvw;
+        height: 36dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -760,14 +843,26 @@ input[type='checkbox'] {
         left: -10%;
     }
     
-    #InvboxM3{
+    #InvboxM3T{
         position: absolute;
         bottom: 10px;
         left: -10px;
         padding: 10px;
         border-radius: 2px;
         width: 50dvw;
-        height: 41dvh;
+        height: 39dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+    #InvboxM3LT{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 50dvw;
+        height: 36dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -778,14 +873,26 @@ input[type='checkbox'] {
         left: 30%;
     }
     
-    #InvboxM4{
+    #InvboxM4T{
         position: absolute;
         bottom: 10px;
         left: -10px;
         padding: 10px;
         border-radius: 2px;
         width: 50dvw;
-        height: 41dvh;
+        height: 39dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+    #InvboxM4LT{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 50dvw;
+        height: 36dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -796,7 +903,7 @@ input[type='checkbox'] {
         margin: auto;
     }
     
-    #InvboxM5{
+    #InvboxM5T{
         position: absolute;
         margin: auto;
         bottom: 10px;
@@ -804,6 +911,18 @@ input[type='checkbox'] {
         border-radius: 2px;
         width: 70dvw;
         height: 40dvh;
+        color:#000000;
+        background-color: #fafafa;
+    }
+
+    #InvboxM5LT{
+        position: absolute;
+        margin: auto;
+        bottom: 10px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 70dvw;
+        height: 34dvh;
         color:#000000;
         background-color: #fafafa;
     }

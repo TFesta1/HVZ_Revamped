@@ -228,7 +228,6 @@
   </div>
  </div>
   </div>
-
   
 </template>
 
@@ -249,7 +248,7 @@ body {
 footer {
   position: relative;
   right: 0;
-  bottom: 0;
+  bottom: 0dvh;
   left: 0;
   padding: 1rem;
   background-color: #00000000;

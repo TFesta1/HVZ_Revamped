@@ -159,19 +159,6 @@ body, html {
     padding: 0 0.5rem;
 }
 
-.animate-pulse {
-    animation: pulse 1s infinite;
-  }
-  
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 0.4;
-    }
-    50% {
-      opacity: 1;
-    }
-}
-
 .profile-pictures {
     display: flex;
     justify-content: space-between;
@@ -207,6 +194,7 @@ body, html {
 .sleakAdminButton:active {
   background-color: #ccc; /* Change background color on hover or focus */
 }
+
 
 
 ::-webkit-scrollbar {
@@ -284,14 +272,12 @@ input[type='checkbox'] {
 
 /* Main Homepage */
 @media (max-width: 900px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-
     #con1 {
         position: relative;
         top: 45vh;
         left: 10%;
         
     }
-    
     
     #box1{
         padding: 10px;
@@ -300,6 +286,7 @@ input[type='checkbox'] {
         height: 29dvh;
         color:#f1f1f1;
         background-color: #db6300;
+        transition: all .2s ease-in-out;
     }
     
     #box2{
@@ -328,7 +315,7 @@ input[type='checkbox'] {
         background-color: #db6300;
         width: 90dvw;
         height: 30dvh;
-        
+        transition: all .2s ease-in-out;
     }
     
     #Imbox2{
@@ -369,6 +356,7 @@ input[type='checkbox'] {
         border-radius: 2px;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
     
     #col2 {
@@ -381,6 +369,7 @@ input[type='checkbox'] {
         height: 30dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
     
     #col3 {
@@ -393,6 +382,7 @@ input[type='checkbox'] {
         height: 30dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
     
     #con4 {
@@ -420,12 +410,13 @@ input[type='checkbox'] {
         height: 30dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
     
     }
     
     
-    @media (min-width:901px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:901px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
         #con1 {
             position: relative;
             top: 15vh;
@@ -439,6 +430,7 @@ input[type='checkbox'] {
             height: 29dvh;
             color:#f1f1f1;
             background-color: #db6300;
+            transition: all .2s ease-in-out;
         }
         
         #box2{
@@ -467,7 +459,7 @@ input[type='checkbox'] {
             background-color: #db6300;
             width: 42dvw;
             height: 40dvh;
-            
+            transition: all .2s ease-in-out;
         }
         
         #Imbox2{
@@ -506,6 +498,7 @@ input[type='checkbox'] {
             border-radius: 2px;
             color:#000000;
             background-color: #fafafa;
+            transition: all .2s ease-in-out;
         }
         
         #col2 {
@@ -517,6 +510,7 @@ input[type='checkbox'] {
             height: 60dvh;
             color:#000000;
             background-color: #fafafa;
+            transition: all .2s ease-in-out;
         }
         
         #col3 {
@@ -528,6 +522,7 @@ input[type='checkbox'] {
             height: 60dvh;
             color:#000000;
             background-color: #fafafa;
+            transition: all .2s ease-in-out;
         }
         
         #con4 {
@@ -536,7 +531,6 @@ input[type='checkbox'] {
         }
         
         #box3{
-            /* margin-left:-1%; */
             margin: auto;
             padding: 10px;
             border-radius: 2px;
@@ -544,6 +538,7 @@ input[type='checkbox'] {
             height: 59dvh;
             color:#f1f1f1;
             background-color: #db6300;
+            transition: all .2s ease-in-out;
         }
         
         #box4{
@@ -555,9 +550,35 @@ input[type='checkbox'] {
             height: 57dvh;
             color:#000000;
             background-color: #fafafa;
+            transition: all .2s ease-in-out;
         }
      }
     
+/* Home page animations */
+
+#box1:hover{
+    transform: translate(-10px, -10px);
+    }
+
+#Imbox1:hover{
+    transform: translate(-10px, -10px);
+        }
+
+#col1:hover{
+    transform: translate(-10px, -10px);
+    }
+
+#col2:hover{
+    transform: translate(-10px, -10px);
+    }
+
+#col3:hover{
+    transform: translate(-10px, -10px);
+    }
+
+#box3:hover{
+    transform: scale(1.03);
+    }
 
 /* Invitational Page */
 @media (min-width:320px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
@@ -583,6 +604,7 @@ input[type='checkbox'] {
         height: 21dvh;
         color:#f1f1f1;
         background-color: #72221d;
+        transition: all .2s ease-in-out;
     }
     
     #InvboxM1T{
@@ -760,11 +782,16 @@ input[type='checkbox'] {
 }
 
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+    #InvboxC:hover{
+        transform: translate(-10px, -10px);
+        }
+
     #Title {
         position: relative;
         margin:auto;
         top: 3vh;
         width: 30dvw;
+        transition: all .2s ease-in-out;
     }
 
     #InvboxC{
@@ -774,12 +801,14 @@ input[type='checkbox'] {
         height: 40dvh;
         color:#f1f1f1;
         background-color: #72221d;
+        transition: all .2s ease-in-out;
     }
 
     #Invcon1 {
         position: relative;
         top: 10vh;
         left: -10%;
+        transition: all .2s ease-in-out;
     }
     
     
@@ -793,6 +822,7 @@ input[type='checkbox'] {
         height: 39dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
 
     #InvboxM1LT{
@@ -805,6 +835,7 @@ input[type='checkbox'] {
         height: 36dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
 
 
@@ -824,6 +855,7 @@ input[type='checkbox'] {
         height: 39dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
 
     #InvboxM2LT{
@@ -836,6 +868,7 @@ input[type='checkbox'] {
         height: 36dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
 
     #Invcon3 {
@@ -854,6 +887,7 @@ input[type='checkbox'] {
         height: 39dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
 
     #InvboxM3LT{
@@ -866,6 +900,7 @@ input[type='checkbox'] {
         height: 36dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
 
     #Invcon4 {
@@ -884,6 +919,7 @@ input[type='checkbox'] {
         height: 39dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
 
     #InvboxM4LT{
@@ -896,6 +932,7 @@ input[type='checkbox'] {
         height: 36dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
 
     #Invcon5 {
@@ -914,6 +951,7 @@ input[type='checkbox'] {
         height: 40dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
 
     #InvboxM5LT{
@@ -926,6 +964,7 @@ input[type='checkbox'] {
         height: 34dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
 
 
@@ -939,9 +978,10 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 71dvw;
-        height: 42dvh;
+        height: 43dvh;
         color:#f1f1f1;
         background-color: #72221d;
+        transition: all .2s ease-in-out;
     }
 
     #InvboxF{
@@ -954,11 +994,21 @@ input[type='checkbox'] {
         height: 40dvh;
         color:#000000;
         background-color: #fafafa;
+        transition: all .2s ease-in-out;
     }
 
 }
 
+/* Invitational Animations */
 
+#InvboxC:hover{
+    transform: translate(-5px, -5px);
+    }
+
+
+#InvboxC5:hover{
+        transform: scale(1.02);
+        }
 /* Weeklong Page */
 
 /* Admin page */

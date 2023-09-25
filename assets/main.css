@@ -615,8 +615,8 @@ input[type='checkbox'] {
         border-radius: 2px;
         width: 70dvw;
         height: 19dvh;
-        color:#ffffff;
-        background-color: #ffe8e8;
+        color:#5e4646;
+        background-color: #3d3c3c;
     }
 
     #InvboxM1LT{
@@ -626,7 +626,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 17.5dvh;
+        height: 17dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -647,7 +647,7 @@ input[type='checkbox'] {
         width: 70dvw;
         height: 19dvh;
         color:#000000;
-        background-color: #fafafa;
+        background-color: #3d3c3c;
     }
 
     #InvboxM2LT{
@@ -657,7 +657,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 17.5dvh;
+        height: 17dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -677,7 +677,7 @@ input[type='checkbox'] {
         width: 70dvw;
         height: 19dvh;
         color:#000000;
-        background-color: #fafafa;
+        background-color: #3d3c3c;
     }
 
     #InvboxM3LT{
@@ -687,7 +687,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 17.5dvh;
+        height: 17dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -707,7 +707,7 @@ input[type='checkbox'] {
         width: 70dvw;
         height: 19dvh;
         color:#000000;
-        background-color: #fafafa;
+        background-color: #3d3c3c;
     }
 
     #InvboxM4LT{
@@ -717,7 +717,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 70dvw;
-        height: 17.5dvh;
+        height: 17dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -737,7 +737,7 @@ input[type='checkbox'] {
         width: 75dvw;
         height: 21dvh;
         color:#000000;
-        background-color: #fafafa;
+        background-color: #3d3c3c;
     }
 
     #InvboxM5LT{
@@ -747,7 +747,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 75dvw;
-        height: 17dvh;
+        height: 16.5dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -821,7 +821,7 @@ input[type='checkbox'] {
         width: 50dvw;
         height: 39dvh;
         color:#000000;
-        background-color: #fafafa;
+        background-color: #3d3c3c;
         transition: all .2s ease-in-out;
     }
 
@@ -832,7 +832,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 50dvw;
-        height: 36dvh;
+        height: 35.5dvh;
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;
@@ -854,7 +854,7 @@ input[type='checkbox'] {
         width: 50dvw;
         height: 39dvh;
         color:#000000;
-        background-color: #fafafa;
+        background-color: #3d3c3c;
         transition: all .2s ease-in-out;
     }
 
@@ -865,7 +865,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 50dvw;
-        height: 36dvh;
+        height: 35.5dvh;
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;
@@ -886,7 +886,7 @@ input[type='checkbox'] {
         width: 50dvw;
         height: 39dvh;
         color:#000000;
-        background-color: #fafafa;
+        background-color: #3d3c3c;
         transition: all .2s ease-in-out;
     }
 
@@ -897,7 +897,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 50dvw;
-        height: 36dvh;
+        height: 35.5dvh;
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;
@@ -918,7 +918,7 @@ input[type='checkbox'] {
         width: 50dvw;
         height: 39dvh;
         color:#000000;
-        background-color: #fafafa;
+        background-color: #3d3c3c;
         transition: all .2s ease-in-out;
     }
 
@@ -929,7 +929,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 50dvw;
-        height: 36dvh;
+        height: 35.5dvh;
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;
@@ -950,7 +950,7 @@ input[type='checkbox'] {
         width: 70dvw;
         height: 40dvh;
         color:#000000;
-        background-color: #fafafa;
+        background-color: #3d3c3c;
         transition: all .2s ease-in-out;
     }
 

@@ -162,8 +162,8 @@
 
 <div class="container" id="Invcon1">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered has-text-light" id="InvboxM1T">
-    <strong> Baby Game Learning</strong>
+  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM1T">
+    <p class="has-text-light has-text-weight-bold"> Baby Game Learning</p>
   </div>
   <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM1LT">
     <p>Checkers has gotta step up their game. We have to go to all the other baby games and learn from them to become smarter, stronger and better. However we have to be careful, as the Chess Bishops are circling around, and if they catch wind, we’ll lose the element of surprise.</p>
@@ -176,7 +176,7 @@
   <div class="container" id="Invcon2">
   <div class="Invbox" id="InvboxC">
   <div class="box is-size-5-mobile is-size-3-desktop has-text-centered has-text-light" id="InvboxM2T">
-    <strong>Kinging our Checkers</strong>
+    <p class="has-text-light has-text-weight-bold">Kinging our Checkers</p>
     </div>
 
     <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM2LT">
@@ -188,7 +188,7 @@
  <div class="container" id="Invcon3">
   <div class="Invbox" id="InvboxC">
   <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM3T">
-    <strong>A Counterattack Unfolds</strong>
+    <p class="has-text-light has-text-weight-bold">A Counterattack Unfolds</p>
   </div>
 
   <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM3LT">
@@ -201,7 +201,7 @@
   <div class="container" id="Invcon4">
   <div class="Invbox" id="InvboxC">
   <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM4T">
-    <strong>The Promotion Rush</strong>
+    <p class="has-text-light has-text-weight-bold">The Promotion Rush</p>
   </div>
 
   <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM4LT">
@@ -213,7 +213,7 @@
   <div class="container" id="Invcon5">
   <div class="Invbox" id="InvboxC5">
   <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM5T">
-    <strong>The Queen’s Gambit</strong>
+    <p class="has-text-light has-text-weight-bold">The Queen’s Gambit</p>
   </div>
   <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM5LT">
     <p>Now that the other pieces are defeated, it’s time for the Queen. Sadly though, she can outmaneuver us, and capture pieces too easily for a full on assault. Instead, we need to lure her into a trap, where if she moves, we can capture her King, and she’ll be forced to go down to save her King. From there, the King is toast, just get rid of the pawns and that’s Checkmate.</p>

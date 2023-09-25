@@ -46,7 +46,7 @@
   <div class="box" id="box2">
     <p class="is-size-5-mobile is-size-6-tablet is-size-3-desktop has-text-centered has-text-weight-bold"> New Paltz's Humans Vs Zombies</p>
 
-    <p class="is-size-6-mobile is-size-5-desktop">NPHvZ was founded in 2009, Humans vs. Zombies is like a manhunt with blasters, where zombies must do a two-handed tag on a human to tag them. Humans can defend themselves by throwing a sock or using their blaster to "study" zombies. Here in New Paltz HvZ, we have various events and weekly games on Tuesdays from 8 p.m. to 10 p.m. in Parker Quad and Saturdays from 6 p.m. to 8 p.m. in the Elting Gym.</p>
+    <p class="is-size-7-mobile is-size-6-tablet is-size-5-desktop">NPHvZ was founded in 2009, Humans vs. Zombies is like a manhunt with blasters, where zombies must do a two-handed tag on a human to tag them. Humans can defend themselves by throwing a sock or using their blaster to "stun" zombies. Here in New Paltz HvZ, we have various events and weekly games on Tuesdays from 8 p.m. to 10 p.m. in Parker Quad and Saturdays from 6 p.m. to 8 p.m. in the Elting Gym.</p>
   </div>
  </div>
   </div>
@@ -74,28 +74,60 @@
   <div class="box is-size-7-mobile is-size-3-desktop has-text-centered" id="col1"> 
     <p class="is-size-4-mobile is-size-4-tablet is-size-3-desktop has-text-centered has-text-weight-bold">Mini Games!</p>
     
-    <p class="is-size-5-mobile is-size-4-tablet is-size-3-desktop has-text-centered">Mini Games!</p>
+    <p class="is-size-6-mobile is-size-4-tablet is-size-3-desktop has-text-centered">Mini Games!</p>
     
   </div>
   <div class="box is-size-7-mobile is-size-3-desktop has-text-centered" id="col2"> 
     <p class="is-size-4-mobile is-size-4-tablet is-size-3-desktop has-text-centered has-text-weight-bold">Day Games!</p>
     
-    <p class="is-size-5-mobile is-size-4-tablet is-size-3-desktop has-text-centered">Day Games!</p>
+    <p class="is-size-6-mobile is-size-4-tablet is-size-3-desktop has-text-centered">Day Games!</p>
   </div>
 
   <div class="box is-size-7-mobile is-size-3-desktop has-text-centered" id="col3"> 
     <p class="is-size-4-mobile is-size-4-tablet is-size-3-desktop has-text-centered has-text-weight-bold">Weeklong!</p>
     
-    <p class="is-size-5-mobile is-size-4-tablet is-size-3-desktop has-text-centered">Weeklong!</p>
+    <p class="is-size-6-mobile is-size-4-tablet is-size-3-desktop has-text-centered">Weeklong!</p>
   </div>
   </div>
 
   <div class="container" id="con4">
   <div class="box" id="box3">
-  <div class="box is-size-7-mobile is-size-2-desktop has-text-centered" id="box4">
+  <div class="box is-size-7-mobile is-size-2-desktop" id="box4">
     <p class="is-size-4-mobile is-size-4-tablet is-size-3-desktop has-text-centered has-text-weight-bold">NPHvZ Rules</p>
     
-    <p class="is-size-5-mobile is-size-4-tablet is-size-3-desktop has-text-centered">NPHvZ Rule</p>
+    <p class="is-size-7-mobile is-size-4-tablet is-size-3-desktop">
+      1. Rule #1 "Don't be a D**k!" Follow good sportmanship and play fair!
+    </p>
+    <p class="is-size-7-mobile is-size-4-tablet is-size-3-desktop">
+      2. 
+    </p>
+    <p class="is-size-7-mobile is-size-4-tablet is-size-3-desktop">
+      3. 
+    </p>
+    <p class="is-size-7-mobile is-size-4-tablet is-size-3-desktop">
+      4. 
+    </p>
+    <p class="is-size-7-mobile is-size-4-tablet is-size-3-desktop">
+      5. 
+    </p>
+    <p class="is-size-7-mobile is-size-4-tablet is-size-3-desktop">
+      6. 
+    </p>
+    <p class="is-size-7-mobile is-size-4-tablet is-size-3-desktop">
+      7. 
+    </p>
+    <p class="is-size-7-mobile is-size-4-tablet is-size-3-desktop">
+      8. 
+    </p>
+    <p class="is-size-7-mobile is-size-4-tablet is-size-3-desktop">
+      9. 
+    </p>
+    <p class="is-size-7-mobile is-size-4-tablet is-size-3-desktop">
+      10. 
+    </p>
+
+
+
   </div>
   </div>
   </div>

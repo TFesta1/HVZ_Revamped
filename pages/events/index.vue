@@ -162,7 +162,7 @@
 
 <div class="container" id="Invcon1">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM1T">
+  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered has-text-light" id="InvboxM1T">
     <strong> Baby Game Learning</strong>
   </div>
   <div class="box is-size-7-mobile is-size-4-desktop" id="InvboxM1LT">
@@ -175,7 +175,7 @@
 
   <div class="container" id="Invcon2">
   <div class="Invbox" id="InvboxC">
-  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM2T">
+  <div class="box is-size-5-mobile is-size-3-desktop has-text-centered has-text-light" id="InvboxM2T">
     <strong>Kinging our Checkers</strong>
     </div>
 

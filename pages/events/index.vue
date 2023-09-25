@@ -158,6 +158,8 @@
     <div class ="box is-size-5-mobile is-size-1-desktop has-text-centered" id="Title">
         <strong>KINGED Invitational</strong>
     </div>
+
+
 <div class="container" id="Invcon1">
   <div class="Invbox" id="InvboxC">
   <div class="box is-size-5-mobile is-size-3-desktop has-text-centered" id="InvboxM1T">

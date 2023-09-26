@@ -44,7 +44,7 @@
  <div class="container" id="con1">
   <div class="box" id="box1">
   <div class="box" id="box2">
-    <p class="is-size-5-mobile is-size-6-tablet is-size-3-desktop has-text-centered has-text-weight-bold"> New Paltz's Humans Vs Zombies</p>
+    <p class="is-size-7-mobile is-size-6-tablet is-size-3-desktop has-text-centered has-text-weight-bold"> New Paltz's Humans Vs Zombies</p>
 
     <p class="is-size-7-mobile is-size-6-tablet is-size-5-desktop">Humans vs. Zombies is a modified game of tag, where zombies must do a two-handed tag on a human to tag them. Humans can defend themselves by throwing a sock or using their blaster to "stun" zombies. Here in New Paltz HvZ, we have various events and weekly games on Tuesdays from 8PM - 10PM in Parker Quad and Saturdays from 6PM - 8PM in the Elting Gym.</p>
   </div>
@@ -72,28 +72,28 @@
 
   <div class="container" id="con3">
   <div class="box is-size-7-mobile is-size-3-desktop has-text-centered" id="col1"> 
-    <p class="is-size-3-mobile is-size-4-tablet is-size-3-desktop has-text-centered has-text-weight-bold">Mini Games!</p>
+    <p class="is-size-5-mobile is-size-4-tablet is-size-3-desktop has-text-centered has-text-weight-bold">Mini Games!</p>
 
-    <p class="is-size-6-mobile is-size-4-tablet is-size-4-desktop">Every week we host mini games either in Parker Quad at 8PM on Tuesdays or in the Elting Gym on Saturdays at 6PM! Here we play various gamemodes and have fun! Blasters & Bands are always provided and students can feel welcome joining at any time!</p>
+    <p class="is-size-7-mobile is-size-4-tablet is-size-4-desktop">Every week we host mini games either in Parker Quad at 8PM on Tuesdays or in the Elting Gym on Saturdays at 6PM! Here we play various gamemodes and have fun! Blasters & Bands are always provided and students can feel welcome joining at any time!</p>
   </div>
 
   <div class="box is-size-7-mobile is-size-3-desktop has-text-centered" id="col2"> 
-    <p class="is-size-4-mobile is-size-4-tablet is-size-3-desktop has-text-centered has-text-weight-bold">Day Games!</p>
+    <p class="is-size-5-mobile is-size-4-tablet is-size-3-desktop has-text-centered has-text-weight-bold">Day Games!</p>
     
-    <p class="is-size-6-mobile is-size-4-tablet is-size-4-desktop has-text-centered">Day Games or Invitationals are games where we play Humans Vs Zombies for the entire day! Here students can partipate in Missions and follow the lore that our Content Team has developed! In addition, sometimes we hold collaborations with other clubs for more immersive games!</p>
+    <p class="is-size-7-mobile is-size-4-tablet is-size-4-desktop has-text-centered">Day Games or Invitationals are games where we play Humans Vs Zombies for the entire day! Here students can partipate in Missions and follow the lore that our Content Team has developed! In addition, sometimes we hold collaborations with other clubs for more immersive games!</p>
   </div>
 
   <div class="box is-size-7-mobile is-size-3-desktop has-text-centered" id="col3"> 
-    <p class="is-size-4-mobile is-size-4-tablet is-size-3-desktop has-text-centered has-text-weight-bold">Weeklong!</p>
+    <p class="is-size-5-mobile is-size-4-tablet is-size-3-desktop has-text-centered has-text-weight-bold">Weeklong!</p>
     
-    <p class="is-size-6-mobile is-size-4-tablet is-size-4-desktop has-text-centered">Weeklong is a semester-long event where students play Humans Vs Zombies for a week, starting on Sunday with a hidden Original Zombie and continuing with daily missions until Friday's finale. Club members are in play when outside in a safe area!</p>
+    <p class="is-size-7-mobile is-size-4-tablet is-size-4-desktop has-text-centered">Weeklong is a semester-long event where students play Humans Vs Zombies for a week, starting on Sunday with a hidden Original Zombie and continuing with daily missions until Friday's finale. Club members are in play when outside in a safe area!</p>
   </div>
   </div>
 
   <div class="container" id="con4">
   <div class="box" id="box3">
   <div class="box is-size-7-mobile is-size-2-desktop" id="box4">
-    <p class="is-size-4-mobile is-size-4-tablet is-size-3-desktop has-text-centered has-text-weight-bold">NPHvZ Rules</p>
+    <p class="is-size-6-mobile is-size-4-tablet is-size-3-desktop has-text-centered has-text-weight-bold">NPHvZ Rules</p>
     
     <p class="is-size-7-mobile is-size-4-tablet is-size-3-desktop">
       1. Rule #1 "Don't be a D**k!" Follow good sportmanship and play fair!

@@ -275,15 +275,14 @@ input[type='checkbox'] {
     #con1 {
         position: relative;
         top: 45vh;
-        left: 10%;
-        
+        left: 10%;   
     }
     
     #box1{
         padding: 10px;
         border-radius: 2px;
         width: 80dvw;
-        height: 29dvh;
+        height: 30dvh;
         color:#f1f1f1;
         background-color: #db6300;
         transition: all .2s ease-in-out;
@@ -296,7 +295,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 80dvw;
-        height: 29dvh;
+        height: 30dvh;
         color:#000000;
         background-color: #fafafa;
     }
@@ -397,7 +396,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 90dvw;
-        height: 43dvh;
+        height: 60dvh;
         color:#f1f1f1;
         background-color: #db6300;
     }
@@ -408,7 +407,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 84dvw;
-        height: 40dvh;
+        /* height: 67dvh; */
         color:#000000;
         background-color: #fafafa;
         transition: all .2s ease-in-out;
@@ -748,7 +747,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 75dvw;
-        height: 22dvh;
+        height: 21dvh;
         color:#000000;
         background-color: #fafafa;
     }

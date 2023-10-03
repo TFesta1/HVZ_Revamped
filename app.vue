@@ -81,13 +81,13 @@
 
                 </div>
                 <div v-else class="buttons is-pulled-left">
+                  <NuxtLink class="button top-right is-dark are-small" to="/login"><strong>Login</strong></NuxtLink>
                   <NuxtLink to="/" class="whiteBold">Home</NuxtLink>
                   <NuxtLink to="/events" class="whiteBold">Invitational</NuxtLink>
                   <a href="https://www.instagram.com/nphvz" class="whiteBold">Instagram</a>
                   <a href="https://discord.gg/fMAfykJtgJ" class="whiteBold">Discord</a>
                 </div>
 
-                <NuxtLink class="button top-right is-dark are-small" to="/login"><strong>Login</strong></NuxtLink>
                 
                 
               </li>

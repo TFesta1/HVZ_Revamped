@@ -101,6 +101,7 @@
 
 
 <template>
+    <!-- <Modal modalText="DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"/> -->
     <!-- <div class="grid grid-cols-1 gap-4">
     
     <div v-if="stateAdmin().value == true">
@@ -155,13 +156,17 @@
     </div>
     <div v-else class="bg-gray-200 h-4 w-1/2 animate-pulse rounded-lg"></div>  Loading bar
     </div> -->
-    <div class ="box is-size-5-mobile is-size-1-desktop has-text-centered" id="Title">
+    <div style="justify-content: center;" class ="box is-size-5-mobile is-size-1-desktop has-text-centered" id="Title">
         <strong>KINGED Invitational</strong>
+        <Modal modalText="Kinged explanation"/>
     </div>
 
 
 <div class="container" id="Invcon1">
+  <Modal modalText="Baby explanation"/>
+
   <div class="Invbox" id="InvboxC">
+
   <div class="box is-size-5-mobile is-size-1-desktop has-text-centered" id="InvboxM1T">
     <p class="has-text-light has-text-weight-bold"> Baby Game Learning</p>
   </div>

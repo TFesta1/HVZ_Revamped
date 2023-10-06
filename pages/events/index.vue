@@ -104,7 +104,7 @@
         <strong>KINGED Invitational</strong>
     </div>
 
-  <div class="card" id="Card2">
+ <div class="card" id="Card2">
   <div class="card-image">
     <figure class="image is-3by4">
       <img src="~assets/images/Fall_2023_Day.png" style="width:100%; height:100%" alt="Invitational Poster">
@@ -112,8 +112,7 @@
     
   </div>
   </div> 
-
-<!-- <div class="container" id="Invcon1">
+ <!-- <div class="container" id="Invcon1">
  <Modal modalText="
  Scattered around campus, there are 5 baby games. Each player must go to 4 baby games and learn what they teach you.
 
@@ -131,9 +130,9 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
 
 
   </div>
-  </div>
+  </div> -->
 
-  <div class="container" id="Invcon2">
+  <!-- <div class="container" id="Invcon2">
     <Modal modalText="We have 3 NPC Checkers to escort across the board. They will only advance forwards, never retreating, and never altering their path. They will only move while they have other Checkers to defend them.
     Once a Checker has reached the other side of the board, they will be “Kinged”, where they can now turn around and move in any direction. They will also have a small blaster to defend themselves.
     The Checkers do not need to get all of the checkers kinged, just most of them. If a Checker is tagged too many times, they will take a knee, defeated.
@@ -148,9 +147,9 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
         <p>After training, we are ready to launch our attack by advancing our top Checkers from one side to the other to "king" them. Once kinged, they will become stronger and act as leaders to support our cause.</p>
     </div>
     </div>
-    </div>
+    </div> -->
 
- <div class="container" id="Invcon3">
+ <!-- <div class="container" id="Invcon3">
     <Modal modalText="
     Game will start in Peregrine Quad. Humans will have to defend all three Kinged Checkers.
     Around the quad, there are 4 “corners” that need to be folded in. Suicide squads will have to run out and fold the board inwards.
@@ -168,9 +167,9 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
   </div>
 
  </div>
-  </div>
+  </div> -->
 
-  <div class="container" id="Invcon4">
+  <!-- <div class="container" id="Invcon4">
     <Modal modalText="Humans must defend their Kings against the onslaught of Chess pieces.
     During the onslaught, Knights, Bishops and Rooks may emerge to take out our pieces. We must take down all 6 of those pieces before we can work on retreating back to our side of the board to regroup.
     The humans must defeat at least the original 6 pieces before they can leave, however any promoted Pawns will appear in Mission 5.
@@ -184,9 +183,9 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
     <p>The Chess pieces have gathered their Knights, Bishops, and Rooks to defeat us. We must resist the onslaught and take down the pieces. Pawns breaching our lines could promote and pose a threat, so we must remain steady and take down the pieces.</p>
   </div>
  </div>
-  </div>
+  </div> -->
 
-  <div class="container" id="Invcon5">
+  <!-- <div class="container" id="Invcon5">
   <div class="Invbox" id="InvboxC5">
   <div class="box is-size-5-mobile is-size-2-desktop has-text-centered" id="InvboxM5T">
     <p class="has-text-light has-text-weight-bold">The Queen’s Gambit</p>
@@ -195,9 +194,9 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
     <p>After defeating other pieces, the Queen must be lured into a trap to capture her King. She can outmaneuver us and capture pieces easily. To save her King, we must eliminate the pawns and use Checkmate to eliminate the pawns, ensuring the King is secure.</p>
   </div>
  </div>
-  </div>
+  </div> -->
 
-  <div class="container" id="Invcon6">
+  <!-- <div class="container" id="Invcon6">
   <div class="Invbox" id="InvboxC5">
   <div class="box is-size-7-mobile is-size-2-desktop has-text-centered" id="InvboxF">
     <strong>The Ending</strong>

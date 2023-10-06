@@ -25,6 +25,7 @@ html,body
 body, html {
     background-color: #1F1F20; /* bg-gray-900 */
 }
+ 
 
 
 .tableContainer {
@@ -608,7 +609,7 @@ input[type='checkbox'] {
     #Title {
         position: relative;
         margin:auto;
-        top: 3vh;
+        top: 5vh;
         width: 60dvw;
     }
 
@@ -618,6 +619,7 @@ input[type='checkbox'] {
         left: 5%;
     }
     
+
     #InvboxC{
         padding: 10px;
         border-radius: 2px;
@@ -800,12 +802,23 @@ input[type='checkbox'] {
         background-color: #fafafa;
     }
 
+    #Footer {
+        position: relative;
+        margin: auto;
+        top: 50vh;
+        padding: 10px;
+        border-radius: 2px;
+        width: 75dvw;
+        color:#cccccc;
+        background-color:#1F1F20;
+    }
 }
 
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
     #InvboxC:hover{
         transform: translate(-10px, -10px);
         }
+
 
     #Title {
         position: relative;

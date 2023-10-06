@@ -95,78 +95,25 @@
         await loadInfoEvents()
     })
 
-    
-
 </script>
 
 
 <template>
-    <!-- <Modal modalText="DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"/> -->
-    <!-- <div class="grid grid-cols-1 gap-4">
-    
-    <div v-if="stateAdmin().value == true">
-         For admins to add a new event
-        <h3 class="i-name">
-            <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded" @click="addEvent" :style="{ display: clickedAddEvent ? 'none' : 'flex' }">
-                {{ adminAddEventTitle }}
-            </button>
-        </h3>
-        <div class="modal-container" :style="{ display: clickedAddEvent ? 'flex' : 'none' }">
-            <div class="modal">
-                <h2>{{ adminAddEventTitle }}</h2>
-                <form @submit.prevent="onSubmit">
-                    <label class="text-black">
-                        Title:
-                        <textarea v-model="form.header" name="description" class="description-box text-black"></textarea>
-                    </label>
-                    <label class="text-black">
-                        Content:
-                        <textarea v-model="form.content" name="description" class="description-box text-black"></textarea>
-                    </label>
-                    <button type="submit" class="submit-modal text-black modal-button" style="background-color:rgb(140, 188, 67)" @click="addEvent">Submit</button>
-                </form>
-                <button class="modal-button" style="background-color:#4c51bf" @click="closeModal">Close</button>
-            </div>
-            <div class="modal-background"></div>
-        </div>
-    </div>
-    
-    <div v-if="dataLoaded">
-        <div v-for="(event, index) in infoEvents" :key="index" class="bg-white p-4 rounded-md shadow">
-            <div class="flex items-center justify-center mb-2">
-                <div class="flex items-center">
-                <div class="text-lg font-semibold text-black">{{ event.header }}</div>
-                <div v-if="!event.isShown">
-                    <IconsArrowDown class="svgImage text-black" @click="infoEvents[index].isShown = true"/>
-                </div>
-                <div v-else>
-                    <IconsArrowUp class="svgImage text-black" @click="infoEvents[index].isShown = false"/>
-                </div>
-                </div>
-                <div v-if="stateAdmin().value == true">
-                    <IconsTrash class="svgImage text-red-500" @click="deleteInfoEvent(event)"/>
-                </div>
-            </div>
-            <div v-if="event.isShown" class="mt-4 text-black">
-                {{ event.content }}
-            </div>
-        </div>
-
-        <img src="~/assets/images/down-arrow.png" alt="Down Arrow" /> 
-    </div>
-    <div v-else class="bg-gray-200 h-4 w-1/2 animate-pulse rounded-lg"></div>  Loading bar
-    </div> -->
+ 
     <div style="justify-content: center;" class ="box is-size-5-mobile is-size-1-desktop has-text-centered" id="Title">
         <strong>KINGED Invitational</strong>
-        <Modal modalText="Kinged explanation"/>
     </div>
 
 
 <div class="container" id="Invcon1">
-  <Modal modalText="Baby explanation"/>
+ <Modal modalText="
+ Scattered around campus, there are 5 baby games. Each player must go to 4 baby games and learn what they teach you.
 
+Circling around campus are two ZNPCs, the Bishops. If they see groups of checkers that are larger than z amount of people, they will run towards the center of campus to alert their King of a possible revolution. The Bishop can only move on the concrete paths.
+If a Bishop is stunned, they will stop where they are, stunned. After their stun timer, they will continue to roam around campus like nothing happened.
+Once a Checker has finished their learning, they may return to the SUB Concourse to leave the mission.
+ " title="Mission 1" id="InfoM1"/>
   <div class="Invbox" id="InvboxC">
-
   <div class="box is-size-5-mobile is-size-1-desktop has-text-centered" id="InvboxM1T">
     <p class="has-text-light has-text-weight-bold"> Baby Game Learning</p>
   </div>
@@ -179,6 +126,11 @@
   </div>
 
   <div class="container" id="Invcon2">
+    <Modal modalText="We have 3 NPC Checkers to escort across the board. They will only advance forwards, never retreating, and never altering their path. They will only move while they have other Checkers to defend them.
+    Once a Checker has reached the other side of the board, they will be “Kinged”, where they can now turn around and move in any direction. They will also have a small blaster to defend themselves.
+    The Checkers do not need to get all of the checkers kinged, just most of them. If a Checker is tagged too many times, they will take a knee, defeated.
+    Patrolling the game area are the two Knights, adorned in their armor. They will charge at whoever is left alone, or small groups not defending the Checker.
+    " title="Mission 2" id="InfoM1"/>
   <div class="Invbox" id="InvboxC">
   <div class="box is-size-5-mobile is-size-2-desktop has-text-centered has-text-light" id="InvboxM2T">
     <p class="has-text-light has-text-weight-bold">Kinging our Checkers</p>
@@ -191,6 +143,13 @@
     </div>
 
  <div class="container" id="Invcon3">
+    <Modal modalText="
+    Game will start in Peregrine Quad. Humans will have to defend all three Kinged Checkers.
+    Around the quad, there are 4 “corners” that need to be folded in. Suicide squads will have to run out and fold the board inwards.
+    When Humans reach a corner, the mod will hand them a cardboard corner that must be held by two Humans. The Humans must bring the corner back to the Kinged Checkers, where it is safe.
+    Once at least two corners have been folded, the Humans can start to escort back to Pomodoros. If they’ve folded three corners, there will be a faster escort.
+    If all four corners are folded, the mission instantly ends without an escort phase.
+    Otherwise, the mission ends when the first Kinged Checker reaches the stairs." title="Mission 3" id="InfoM1"/>
   <div class="Invbox" id="InvboxC">
   <div class="box is-size-5-mobile is-size-2-desktop has-text-centered" id="InvboxM3T">
     <p class="has-text-light has-text-weight-bold">A Counterattack Unfolds</p>
@@ -204,6 +163,10 @@
   </div>
 
   <div class="container" id="Invcon4">
+    <Modal modalText="Humans must defend their Kings against the onslaught of Chess pieces.
+    During the onslaught, Knights, Bishops and Rooks may emerge to take out our pieces. We must take down all 6 of those pieces before we can work on retreating back to our side of the board to regroup.
+    The humans must defeat at least the original 6 pieces before they can leave, however any promoted Pawns will appear in Mission 5.
+    " title="Mission 4" id="InfoM1"/>
   <div class="Invbox" id="InvboxC">
   <div class="box is-size-5-mobile is-size-2-desktop has-text-centered" id="InvboxM4T">
     <p class="has-text-light has-text-weight-bold">The Promotion Rush</p>
@@ -233,6 +196,13 @@
   </div>
  </div>
   </div>
+
+
+  <div class="container"> 
+    <div class="box is-size-7-mobile is-size-5-desktop has-text-centered" id="Footer">
+        <p>Developed by Taheemuddin Ahmed & Tanner Festa</p>
+    </div>
+  </div>
   
 </template>
 
@@ -242,6 +212,11 @@ body {
   min-height: 100vh;
   flex-direction: column;
   overflow: overlay;
+
+  background-image: "~assets/images/fall2023_background.png";
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #app {

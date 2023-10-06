@@ -52,6 +52,7 @@
     justify-content: center;
     align-items: center;
     z-index: 100;
+    transition: all .2s ease-in-out;
   }
   
   .modal {

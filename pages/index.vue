@@ -54,8 +54,8 @@
   <div class="container" id="con2">
   <div class="box" id="Imbox1">
   <div class="box" id="Imbox2"> 
-    <figure class="image is-128x128">
-     <img src="https://bulma.io/images/placeholders/128x128.png">
+    <figure class="image is-16by9">
+     <img src="~assets/images/Page 3.png" style="" alt="Main Picture">
      </figure>
     </div>
   </div>
@@ -125,9 +125,6 @@
     <p class="is-size-7-mobile is-size-4-tablet is-size-3-desktop">
       10. Blasters cannot be able to shoot over 100FPS!
     </p>
-
-
-
   </div>
   </div>
   </div>

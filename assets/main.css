@@ -618,6 +618,16 @@ input[type='checkbox'] {
         top: 10vh;
         left: 5%;
     }
+
+    #Card2{
+        position: relative;
+        top: 10vh;
+        margin:auto;
+        color:#000000;
+        background-color: #fafafa;
+        width: 90%;
+        height: 100%;
+    }
     
 
     #InvboxC{
@@ -817,6 +827,16 @@ input[type='checkbox'] {
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
     #InvboxC:hover{
         transform: translate(-10px, -10px);
+        }
+
+    #Card2{
+            position: relative;
+            top: 10vh;
+            margin:auto;
+            color:#000000;
+            background-color: #fafafa;
+            width: 90%;
+            height: 100%;
         }
 
 

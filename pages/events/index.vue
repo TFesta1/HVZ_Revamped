@@ -104,8 +104,16 @@
         <strong>KINGED Invitational</strong>
     </div>
 
+  <div class="card" id="Card2">
+  <div class="card-image">
+    <figure class="image is-3by4">
+      <img src="~assets/images/Fall_2023_Day.png" style="width:100%; height:100%" alt="Invitational Poster">
+    </figure>
+    
+  </div>
+  </div> 
 
-<div class="container" id="Invcon1">
+<!-- <div class="container" id="Invcon1">
  <Modal modalText="
  Scattered around campus, there are 5 baby games. Each player must go to 4 baby games and learn what they teach you.
 
@@ -195,7 +203,7 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
     <strong>The Ending</strong>
   </div>
  </div>
-  </div>
+  </div> -->
 
 
   <div class="container"> 

@@ -55,7 +55,7 @@
   <div class="box" id="Imbox1">
   <div class="box" id="Imbox2"> 
     <figure class="image is-16by9">
-     <img src="~assets/images/Page 3.png" style="" alt="Main Picture">
+     <img src="~assets/images/Outdoor1.png" alt="Main Picture">
      </figure>
     </div>
   </div>

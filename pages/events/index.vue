@@ -185,7 +185,7 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
  </div>
   </div>
 
-  <!-- <div class="container" id="Invcon5">
+  <div class="container" id="Invcon5">
   <div class="Invbox" id="InvboxC5">
   <div class="box is-size-5-mobile is-size-2-desktop has-text-centered" id="InvboxM5T">
     <p class="has-text-light has-text-weight-bold">The Queen’s Gambit</p>
@@ -194,7 +194,7 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
     <p>After defeating other pieces, the Queen must be lured into a trap to capture her King. She can outmaneuver us and capture pieces easily. To save her King, we must eliminate the pawns and use Checkmate to eliminate the pawns, ensuring the King is secure.</p>
   </div>
  </div>
-  </div> -->
+  </div>
 
   <!-- <div class="container" id="Invcon6">
   <div class="Invbox" id="InvboxC5">
@@ -208,7 +208,7 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
   <div class="box" id="Imbox3">
   <div class="box" id="Imbox4"> 
     <figure class="image is-16by9">
-     <img src="~assets/images/Mission4.png" alt="Main Picture">
+     <img src="~assets/images/Mission5.png" alt="Main Picture">
      </figure>
     </div>
   </div>

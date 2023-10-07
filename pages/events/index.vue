@@ -149,7 +149,7 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
     </div>
     </div>
 
- <!-- <div class="container" id="Invcon3">
+ <div class="container" id="Invcon3">
     <Modal modalText="
     Game will start in Peregrine Quad. Humans will have to defend all three Kinged Checkers.
     Around the quad, there are 4 “corners” that need to be folded in. Suicide squads will have to run out and fold the board inwards.
@@ -167,7 +167,7 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
   </div>
 
  </div>
-  </div> -->
+  </div>
 
   <!-- <div class="container" id="Invcon4">
     <Modal modalText="Humans must defend their Kings against the onslaught of Chess pieces.
@@ -208,7 +208,7 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
   <div class="box" id="Imbox3">
   <div class="box" id="Imbox4"> 
     <figure class="image is-16by9">
-     <img src="~assets/images/Mission1.png" alt="Main Picture">
+     <img src="~assets/images/Mission3.png" alt="Main Picture">
      </figure>
     </div>
   </div>

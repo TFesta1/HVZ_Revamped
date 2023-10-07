@@ -132,7 +132,7 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
   </div>
   </div>
 
-  <!-- <div class="container" id="Invcon2">
+  <div class="container" id="Invcon2">
     <Modal modalText="We have 3 NPC Checkers to escort across the board. They will only advance forwards, never retreating, and never altering their path. They will only move while they have other Checkers to defend them.
     Once a Checker has reached the other side of the board, they will be “Kinged”, where they can now turn around and move in any direction. They will also have a small blaster to defend themselves.
     The Checkers do not need to get all of the checkers kinged, just most of them. If a Checker is tagged too many times, they will take a knee, defeated.
@@ -147,7 +147,7 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
         <p>After training, we are ready to launch our attack by advancing our top Checkers from one side to the other to "king" them. Once kinged, they will become stronger and act as leaders to support our cause.</p>
     </div>
     </div>
-    </div> -->
+    </div>
 
  <!-- <div class="container" id="Invcon3">
     <Modal modalText="

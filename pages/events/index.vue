@@ -113,7 +113,7 @@
   </div> 
 
  <!-- <div class="container" id="Invcon1">
- <Modal modalText="nnn
+ <Modal modalText="nnnnmfjfmm
  Scattered around campus, there are 5 baby games. Each player must go to 4 baby games and learn what they teach you.
 
 Circling around campus are two ZNPCs, the Bishops. If they see groups of checkers that are larger than z amount of people, they will run towards the center of campus to alert their King of a possible revolution. The Bishop can only move on the concrete paths.

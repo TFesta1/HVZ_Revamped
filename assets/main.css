@@ -785,6 +785,32 @@ input[type='checkbox'] {
         background-color: #fafafa;
     }
 
+
+    #Imbox3{
+        position: relative;
+        top: 40vh;
+        padding: 10px;
+        border-radius: 2px;
+        color:#f1f1f1;
+        background-color: #72221d;
+        width: 90dvw;
+        height: 30dvh;
+        transition: all .2s ease-in-out;
+    }
+    
+    #Imbox4{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+    
+        color:#000000;
+        background-color: #fafafa;
+        width: 90dvw;
+        height: 30dvh;
+    }
+
     #Invcon6 {
         position: relative;
         top: 40vh;
@@ -846,6 +872,32 @@ input[type='checkbox'] {
         top: 3vh;
         width: 30dvw;
         transition: all .2s ease-in-out;
+    }
+
+    #Imbox3{
+        position: relative;
+        left: 10%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 2px;
+        color:#f1f1f1;
+        background-color: #72221d;
+        width: 70dvw;
+        height: 74dvh;
+        transition: all .2s ease-in-out;
+    }
+    
+    #Imbox4{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+    
+        color:#000000;
+        background-color: #fafafa;
+        width: 70dvw;
+        height: 74dvh;
     }
 
     #InvboxC{

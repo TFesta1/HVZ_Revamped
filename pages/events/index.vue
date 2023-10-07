@@ -169,7 +169,7 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
  </div>
   </div>
 
-  <!-- <div class="container" id="Invcon4">
+  <div class="container" id="Invcon4">
     <Modal modalText="Humans must defend their Kings against the onslaught of Chess pieces.
     During the onslaught, Knights, Bishops and Rooks may emerge to take out our pieces. We must take down all 6 of those pieces before we can work on retreating back to our side of the board to regroup.
     The humans must defeat at least the original 6 pieces before they can leave, however any promoted Pawns will appear in Mission 5.
@@ -183,7 +183,7 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
     <p>The Chess pieces have gathered their Knights, Bishops, and Rooks to defeat us. We must resist the onslaught and take down the pieces. Pawns breaching our lines could promote and pose a threat, so we must remain steady and take down the pieces.</p>
   </div>
  </div>
-  </div> -->
+  </div>
 
   <!-- <div class="container" id="Invcon5">
   <div class="Invbox" id="InvboxC5">
@@ -208,7 +208,7 @@ Once a Checker has finished their learning, they may return to the SUB Concourse
   <div class="box" id="Imbox3">
   <div class="box" id="Imbox4"> 
     <figure class="image is-16by9">
-     <img src="~assets/images/Mission3.png" alt="Main Picture">
+     <img src="~assets/images/Mission4.png" alt="Main Picture">
      </figure>
     </div>
   </div>

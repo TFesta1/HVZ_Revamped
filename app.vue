@@ -84,6 +84,7 @@
                   <NuxtLink class="button top-right is-dark are-small" to="/login"><strong>Login</strong></NuxtLink>
                   <NuxtLink to="/" class="whiteBold">Home</NuxtLink>
                   <NuxtLink to="/events" class="whiteBold">Invitational</NuxtLink>
+                  <NuxtLink to="/weeklong/viewWeeklong" class="whiteBold">Weeklong</NuxtLink>
                   <a href="https://www.instagram.com/nphvz" class="whiteBold">Instagram</a>
                   <a href="https://discord.gg/fMAfykJtgJ" class="whiteBold">Discord</a>
                 </div>

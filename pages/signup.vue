@@ -68,7 +68,7 @@
             }
 
             // isSignUp.value = false
-            router.push("/")
+            router.push("/login")
             signInErrorMsg.value = ""
 
             //On a successful login, this gets set to nothing

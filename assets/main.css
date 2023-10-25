@@ -25,6 +25,7 @@ html,body
 body, html {
     background-color: #1F1F20; /* bg-gray-900 */
 }
+ 
 
 
 .tableContainer {
@@ -417,7 +418,7 @@ input[type='checkbox'] {
         padding: 10px;
         border-radius: 2px;
         width: 90dvw;
-        height: 60dvh;
+        height: 55dvh;
         color:#f1f1f1;
         background-color: #db6300;
     }
@@ -479,7 +480,7 @@ input[type='checkbox'] {
             color:#f1f1f1;
             background-color: #db6300;
             width: 42dvw;
-            height: 40dvh;
+            height: 44dvh;
             transition: all .2s ease-in-out;
         }
         
@@ -493,7 +494,7 @@ input[type='checkbox'] {
             color:#000000;
             background-color: #fafafa;
             width: 42dvw;
-            height: 40dvh;
+            height: 44dvh;
         }
         
         #Card1{
@@ -608,7 +609,7 @@ input[type='checkbox'] {
     #Title {
         position: relative;
         margin:auto;
-        top: 3vh;
+        top: 5vh;
         width: 60dvw;
     }
 
@@ -617,7 +618,18 @@ input[type='checkbox'] {
         top: 10vh;
         left: 5%;
     }
+
+    #Card2{
+        position: relative;
+        top: 10vh;
+        margin:auto;
+        color:#000000;
+        background-color: #fafafa;
+        width: 90%;
+        height: 100%;
+    }
     
+
     #InvboxC{
         padding: 10px;
         border-radius: 2px;
@@ -773,6 +785,32 @@ input[type='checkbox'] {
         background-color: #fafafa;
     }
 
+
+    #Imbox3{
+        position: relative;
+        top: 60vh;
+        padding: 10px;
+        border-radius: 2px;
+        color:#f1f1f1;
+        background-color: #72221d;
+        width: 90dvw;
+        height: 30dvh;
+        transition: all .2s ease-in-out;
+    }
+    
+    #Imbox4{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+    
+        color:#000000;
+        background-color: #fafafa;
+        width: 90dvw;
+        height: 30dvh;
+    }
+
     #Invcon6 {
         position: relative;
         top: 40vh;
@@ -800,6 +838,16 @@ input[type='checkbox'] {
         background-color: #fafafa;
     }
 
+    #Footer {
+        position: relative;
+        margin: auto;
+        top: 50vh;
+        padding: 10px;
+        border-radius: 2px;
+        width: 75dvw;
+        color:#cccccc;
+        background-color:#1F1F20;
+    }
 }
 
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
@@ -807,12 +855,49 @@ input[type='checkbox'] {
         transform: translate(-10px, -10px);
         }
 
+    #Card2{
+            position: relative;
+            top: 10vh;
+            margin:auto;
+            color:#000000;
+            background-color: #fafafa;
+            width: 90%;
+            height: 100%;
+        }
+
+
     #Title {
         position: relative;
         margin:auto;
         top: 3vh;
         width: 30dvw;
         transition: all .2s ease-in-out;
+    }
+
+    #Imbox3{
+        position: relative;
+        left: 10%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 2px;
+        color:#f1f1f1;
+        background-color: #72221d;
+        width: 70dvw;
+        height: 74dvh;
+        transition: all .2s ease-in-out;
+    }
+    
+    #Imbox4{
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 2px;
+    
+        color:#000000;
+        background-color: #fafafa;
+        width: 70dvw;
+        height: 74dvh;
     }
 
     #InvboxC{

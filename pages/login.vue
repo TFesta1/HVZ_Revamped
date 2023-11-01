@@ -21,6 +21,7 @@
 		if (!error) {
 			// isSignUp.value = false
 			router.push("/")
+			location.reload();
 		}
 		else {
 			console.log(error)

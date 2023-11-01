@@ -50,7 +50,7 @@
         if (!error) {
             const emails = ref<User[]>([]);
 
-            const responseUsers = await axios.get('api/models/users');
+            const responseUsers = await axios.get('../api/models/users');
             const items = responseUsers.data.data;
 
             emails.value = items
@@ -68,11 +68,14 @@
             }
 
             // isSignUp.value = false
-            router.push("/login")
+            router.push("/")
             signInErrorMsg.value = ""
 
             //On a successful login, this gets set to nothing
-            displayPasswordSent().value = "Password sent from HVZRelations. Check spam if not in inbox"
+            displayPasswordSent().value = "Sign in with the same creditials"
+
+            //Refresh the website
+            location.reload();
             
 
             try {

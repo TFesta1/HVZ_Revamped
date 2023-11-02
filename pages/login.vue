@@ -86,8 +86,8 @@
 
 	<footer>
   <div class="content has-text-centered">
-    <p>Developed by Taheemuddin Ahmed & Tanner Festa
-    </p>
+    <!-- <p>Developed by Taheemuddin Ahmed & Tanner Festa
+    </p> -->
   </div> 
 </footer>
 </template>

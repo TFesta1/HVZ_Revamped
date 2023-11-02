@@ -279,7 +279,7 @@
         </div>
         
       </div>
-    <div v-else class="bg-gray-200 h-4 w-1/2 animate-pulse rounded-lg"></div> <!-- Loading bar -->
+     <div v-else class="bg-gray-200 h-4 w-1/2 animate-pulse rounded-lg"></div>
   </div>
 
 </template>
@@ -287,5 +287,7 @@
 
 
 <style scoped>
+
+
 
 </style>

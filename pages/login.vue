@@ -152,6 +152,7 @@ body {
 	position: relative;
     padding: 10px;
 	bottom: -5vh;
+	right: 5%;
     border-radius: 2px;
     width: 80dvw;
     height: 35dvh;

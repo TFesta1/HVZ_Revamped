@@ -1,3 +1,6 @@
+
+
+
 <script setup lang="ts">
     import { User } from "types"
     import axios from 'axios';
@@ -227,7 +230,7 @@
 </script>
 
 <template>
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap" id="WeeklongT" >
       <div v-if="usersLoaded">
         <div v-if="isNotInWeeklong || stateAdmin().value">
           <div v-if="!stateAdmin().value">
@@ -265,6 +268,7 @@
               
             </p>
           </div>
+
           <!-- <div v-else  class="w-full md:w-1/7 p-4 mt-4">
             <p>No GI Code Available</p>
           </div> -->
@@ -279,6 +283,9 @@
         </div>
         
       </div>
+
+
+
      <div v-else class="bg-gray-200 h-4 w-1/2 animate-pulse rounded-lg"></div>
   </div>
 

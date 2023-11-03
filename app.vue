@@ -61,7 +61,7 @@
       <div class="w-full">
         <NuxtLayout>
           <header>
-            <ul class="navbar">
+            <ul class="navbar" id="NavBar">
               <li>
                 <div v-if="userLoggedIn">
                   <div class="nav-links" style="display: flex; justify-content: center;">

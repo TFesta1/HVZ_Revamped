@@ -1117,4 +1117,73 @@ input[type='checkbox'] {
         }
 /* Weeklong Page */
 
+@media (min-width: 320px) {
+
+    #WeeklongT {
+        position: relative;
+        margin-left: 1%;
+        top: 5vh;
+        width: 90vw;
+        padding: 10px;
+        border-radius: 2px; 
+    }
+   
+    #WLText {
+      position: relative;
+      top: 7vh;
+       padding: 10px;
+       border-radius: 2px;
+    }
+   
+    #WLSC { 
+       position: relative;
+       margin-left: 4%;
+       top: 8vh;
+       width: 90vw;
+       padding: 10px;
+       color:#f1f1f1;
+       background-color: #db6300;
+       border-radius: 2px; 
+    }
+   
+    #WLSCB {
+        position: relative;
+        top: 5px;
+    }
+
+}
+
+@media (min-width: 961px) {
+    #WeeklongT {
+    
+    }
+   
+    #WLText {
+       margin: auto;
+       padding: 10px;
+       border-radius: 2px;
+    }
+   
+    #WLSC { 
+       position: relative;
+       margin-left: 1%;
+       top: 8vh;
+       width: 30vw;
+       padding: 10px;
+       color:#f1f1f1;
+       background-color: #db6300;
+       border-radius: 2px; 
+    }
+   
+    #WLSCB {
+        position: relative;
+        top: 5px;
+    }
+    
+}
+
+
+
 /* Admin page */
+
+

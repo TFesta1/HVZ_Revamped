@@ -179,11 +179,13 @@ body {
 }
 
 #SignupB {
+    position: relative;
 	margin: auto;
     padding: 10px;
+    top: 5vh;
     border-radius: 2px;
-    width: 70dvw;
-    height: 30dvh;
+    width: 90dvw;
+    
     color:#f3f3f3;
     background-color: #161820;
 }

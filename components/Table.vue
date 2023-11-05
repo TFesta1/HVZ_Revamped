@@ -301,11 +301,11 @@
 </script>
 
 <template>
-    <div class="overflow-x-auto">
-        <table class="table-auto w-full">
+    <div class="overflow-x-auto" id="WeeklongT">
+        <table class="table-auto">
             <thead>
             <tr>
-                <th class="px-4 py-2 whiteBold" v-for="header in headers">{{ header }}</th>
+                <th class="px-4 py-2 whiteBold " v-for="header in headers">{{ header }}</th>
             </tr>
             </thead>
             <tbody>

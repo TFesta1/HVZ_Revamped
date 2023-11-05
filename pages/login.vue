@@ -71,14 +71,14 @@
 					{{ "Login" }}
 				</button>
 			</form>
-			<a href="/passwordReset">Forgot Password?</a>
 			<div>
 				{{ signInErrorMsg }}
 			</div>
 			<div>
 				<p style="color: green;">{{ displayPasswordSent().value }}</p>
 			</div>
-			<NuxtLink class="button is-medium is-fullwidth is-dark" to="/signup">Sign Up</NuxtLink>
+			<NuxtLink class="button is-medium is-fullwidth is-dark" to="/signup" id="SignUp">Sign Up</NuxtLink>
+			<a href="/passwordReset" id="ForgotPass">Forgot Password?</a>
 			</div>
 			</div> 
 			<!-- We need the sign up centered and half the length of the other buttons while being the same color please -->
@@ -106,20 +106,66 @@ body {
   flex-direction: column;
 }
 
-#LoginB {
+@media (min-width:320px)  {
+#SignUp {
+	position: relative;
+	top: 1vh;
+}
+
+#ForgotPass {
 	margin: auto;
+	position: relative;
     padding: 10px;
+	bottom: -1vh;
+}
+
+#LoginB {
+	
+	margin: auto;
+	position: relative;
+    padding: 10px;
+	bottom: -5vh;
     border-radius: 2px;
-    width: 70dvw;
-    height: 36dvh;
+    width: 80dvw;
     color:#f3f3f3;
     background-color: #161820;
 }
+}
+
+@media (min-width:961px)  {
+#SignUp {
+	position: relative;
+	top: 1vh;
+	border-radius: 2px;
+	padding: 10px;
+}
+
+#ForgotPass {
+	margin: auto;
+	position: relative;
+    padding: 10px;
+	bottom: -1vh;
+}
+
+#LoginB {
+	margin: auto;
+	position: relative;
+    padding: 10px;
+	bottom: -5vh;
+	right: 5%;
+    border-radius: 2px;
+    width: 80dvw;
+    height: 35dvh;
+    color:#f3f3f3;
+    background-color: #161820;
+}
+}
+
 
 footer {
   position: relative;
   right: 0;
-  bottom: -10vh;
+  bottom: -40vh;
   left: 0;
   padding: 1rem;
   background-color: #00000000;

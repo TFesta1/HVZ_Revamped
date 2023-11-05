@@ -59,10 +59,11 @@
 
 <template>
     <div>
+        <div class="box" id="WLSC">
         <div class="w-full max-w-xs">
             <p>
                 Your Secret Key:
-                <span class="text-green-500">
+                <span class="text-sky-400">
                     {{ yourSecretKey }}
                 </span>
             </p>
@@ -72,12 +73,13 @@
                 placeholder="Enter Another Person's Secret Key"
                 v-model="secretKey"
             >
-            <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded" @click="handleSubmit">Submit</button>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded" id ="WLSCB" @click="handleSubmit">Submit</button>
             <p>{{ statusMessage }}</p>
             <div v-if="errorMessage">
                 <div class="bg-red-200 bg-opacity-75 text-red-800 p-1 rounded-lg">{{ errorMessage }}
             </div>
         </div>
+    </div>
   </div>
 
     </div>

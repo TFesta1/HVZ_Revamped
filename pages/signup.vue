@@ -58,14 +58,14 @@
                 .map((item : User) => ({
                     email: item.email
             }));
-            const emailsLength: number = emails.value.length
-            console.log(emails.value.length, "emails.length")
-            if(emailsLength >= 1)
-            {
-                signInErrorMsg.value = "Email already registered"
-                displayPasswordSent().value = ""
-                return
-            }
+            // const emailsLength: number = emails.value.length
+            // console.log(emails.value.length, "emails.length")
+            // if(emailsLength >= 1)
+            // {
+            //     signInErrorMsg.value = "Email already registered"
+            //     displayPasswordSent().value = ""
+            //     return
+            // }
 
             // isSignUp.value = false
             router.push("/")
